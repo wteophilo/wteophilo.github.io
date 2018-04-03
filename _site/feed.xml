@@ -1,14 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T09:23:20-03:00</updated><id>http://localhost:4000/</id><title type="html">Blog do Willian</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-03-08T07:32:20-03:00</published><updated>2018-03-08T07:32:20-03:00</updated><id>http://localhost:4000/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T16:35:05-03:00</updated><id>http://localhost:4000/</id><title type="html">Blog do Willian</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Olá Vuejs</title><link href="http://localhost:4000/ola-vuejs/" rel="alternate" type="text/html" title="Olá Vuejs" /><published>2018-04-03T14:01:00-03:00</published><updated>2018-04-03T14:01:00-03:00</updated><id>http://localhost:4000/ola-vuejs</id><content type="html" xml:base="http://localhost:4000/ola-vuejs/">&lt;p&gt;Nos últimos tempos foram lançados vários frameworks Javascript, cada um revolucionando o mercado a sua maneira e o mais novo é Vuejs,este é o primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;O que é o Vuejs?&lt;/li&gt;
+  &lt;li&gt;Instalando o Vue CLI&lt;/li&gt;
+  &lt;li&gt;Iniciando um projeto&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;jekyll-also-offers-powerful-support-for-code-snippets&quot;&gt;Jekyll also offers powerful support for code snippets:&lt;/h3&gt;
+&lt;h3 id=&quot;o-que-é-o-vuejs&quot;&gt;O que é o Vuejs?&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;O Vuejs é um framework Javascript  para criação de componentes reutilizáveis, algumas vantagens dele são:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Core possui até o momento os incríveis 17kb&lt;/li&gt;
+  &lt;li&gt;DOM virtual(como o React do Facebook)&lt;/li&gt;
+  &lt;li&gt;Componentes visuais reativos e combináveis&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Software" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;h3 id=&quot;instalando-o-vue-cli&quot;&gt;Instalando o Vue CLI&lt;/h3&gt;
+
+&lt;p&gt;Antes de instalar o Vue é preciso ter o Nodejs com pelo menos a versão 6.0 instalado no sistema operacional.
+Com o Node instalado vamos instalar o Vue CLI que irá nos auxiliar com a criação e manutenção de nossos projetos, para instalar o Vue CLI execute o seguinte comando no terminal:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; -g vue-cli&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lembrando que &lt;strong&gt;-g&lt;/strong&gt; significa &lt;strong&gt;global&lt;/strong&gt; ou seja caso seu usuário não tenha permissão de instalação podem ocorrer alguns erros… então execute o comando com permissão de administrador.&lt;/p&gt;
+
+&lt;p&gt;Para verificarmos a instalação do vue  digite no terminal:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue --version
+2.7.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No meu caso tenho o Vue 2.7.0 instalado, mas é bem provável que já existe uma versão mais recente.&lt;/p&gt;
+
+&lt;h3 id=&quot;iniciando-um-projeto&quot;&gt;Iniciando um projeto&lt;/h3&gt;
+
+&lt;p&gt;Agora vamos criar um projeto usando o terminal execute o seguinte comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue init &amp;lt;template-name&amp;gt; &amp;lt;project-name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;O que significa cada um desses comandos?&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vue init: iniciando o projeto&lt;/li&gt;
+  &lt;li&gt;template-name: template do projeto, a lista de todos os templates verificados &lt;a href=&quot;https://github.com/vuejs-templates&quot;&gt;aqui&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;project-name: nome do projeto&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Então para continuarmos o exemplo criei um projeto chamado olavue com o template &lt;a href=&quot;https://github.com/vuejs-templates/webpack-simple&quot;&gt;webpack-simple&lt;/a&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue init webpack-simple olavue&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ao executar o comando serão feitos algumas perguntas, como o nome do projeto, descrição, autor etc.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;A newer version of vue-cli is available.
+
+This will &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Vue 2.x version of the template.
+
+&lt;span class=&quot;k&quot;&gt;For &lt;/span&gt;Vue 1.x use: vue init webpack-simple#1.0 olavue
+
+? Project name olavue
+? Project description A Vue.js project
+? Author Willian Teophilo &amp;lt;wteophilo@gmail.com&amp;gt;
+? License MIT
+? Use sass? No
+
+   vue-cli · Generated &lt;span class=&quot;s2&quot;&gt;&quot;olavue&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+
+   To get started:
+
+     &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;olavue
+     npm &lt;span class=&quot;nb&quot;&gt;install
+     &lt;/span&gt;npm run dev&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Com o projeto criado precisamos instalar as dependências, para isso acesse a pasta do projeto e execute o seguinte comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;e por fim levantar o servidor:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm run dev
+
+cross-env &lt;span class=&quot;nv&quot;&gt;NODE_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;development webpack-dev-server --open --hot
+
+Project is running at http://localhost:8080/
+webpack output is served &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; /dist/
+404s will fallback to /index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Se tudo deu certo o projeto é disponibilizado em http://localhost:8080/ será exibido a seguinte tela:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/olavue.png&quot; alt=&quot;olavue&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próximo&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><category term="javascript" /><summary type="html">Nos últimos tempos foram lançados vários frameworks Javascript, cada um revolucionando o mercado a sua maneira e o mais novo é Vuejs,este é o primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:</summary></entry></feed>
