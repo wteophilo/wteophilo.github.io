@@ -2,36 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to Jekyll! - Blog do Willian</title>
+	<title>Requisitos Smart - Blog do Willian</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Blog do Willian" property="og:site_name">
   
-    <meta content="Welcome to Jekyll!" property="og:title">
+    <meta content="Requisitos Smart" property="og:title">
   
   
     <meta content="article" property="og:type">
   
   
-    <meta content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes." property="og:description">
+    <meta content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+" property="og:description">
   
   
-    <meta content="http://localhost:4000/welcome-to-jekyll/" property="og:url">
+    <meta content="http://localhost:4000/requisitos-smart/" property="og:url">
   
   
-    <meta content="2018-03-08T07:32:20-03:00" property="article:published_time">
+    <meta content="2018-04-03T21:35:00-03:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/workflow.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/requisitos_smart.jpg" property="og:image">
   
   
     
   
   
     
-    <meta content="Software" property="article:tag">
+    <meta content="arquitetura" property="article:tag">
+    
+    <meta content="requisitos" property="article:tag">
     
   
 
@@ -39,19 +42,20 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@wilteophilo">
   
-    <meta name="twitter:title" content="Welcome to Jekyll!">
+    <meta name="twitter:title" content="Requisitos Smart">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/welcome-to-jekyll/">
+    <meta name="twitter:url" content="http://localhost:4000/requisitos-smart/">
   
   
-    <meta name="twitter:description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+    <meta name="twitter:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/workflow.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/requisitos_smart.jpg">
   
 
-	<meta name="description" content="You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.">
+	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="">
@@ -118,38 +122,71 @@
   <div class="page-content">
     
     <div class="page-cover-image">
-      <img class="page-image" src=/assets/img/workflow.jpg alt="Welcome to Jekyll!">
+      <img class="page-image" src=/assets/img/requisitos_smart.jpg alt="Requisitos Smart">
     </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">Welcome to Jekyll!</h1>
-        <div class="page-date"><span>2018, Mar 08&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">Requisitos Smart</h1>
+        <div class="page-date"><span>2018, Apr 03&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+      <p>Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
+Basicamente existem três tipos de requisitos:</p>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<ul>
+  <li>Funcionais</li>
+  <li>Não Funcionais</li>
+  <li>Arquiteturais</li>
+</ul>
 
-<h3 id="jekyll-also-offers-powerful-support-for-code-snippets">Jekyll also offers powerful support for code snippets:</h3>
+<p>Neste artigo vamos focar nos <strong>requisitos arquiteturais</strong>. Este tipo de requisito é geralmente confundido com requisitos não relacionais mas a utilização é uma pouco diferente.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>Durante o levantamento de requisitos podemos classificar quando um requisito possui algum significado a nossa arquitetura, ou seja,  é necessário alguma tomada de decisão tecnológica.</p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>Existem algumas técnicas que podemos utilizar para validação dos requisitos arquiteturais:</p>
 
+<ul>
+  <li>Requisitos SMART.</li>
+  <li>Modelo FURPS+.</li>
+  <li>O modelo ISO/IEC 9126.</li>
+  <li>QAW</li>
+</ul>
+
+<h2 id="requisitos-smart"><strong>Requisitos SMART</strong></h2>
+
+<p>A técnica SMART nos permite avaliar se um determinado requisito é valido ou não, o ponto chave desta técnica é transformar um requisito com frases subjetivas em algum mais técnico.</p>
+
+<p>Esta transformação deve seguir cinco passos e que as iniciais do método:</p>
+
+<ul>
+  <li><strong>Specific(Especifico)</strong>: Um requisito deve ser específico ou seja com nível adequado de detalhes</li>
+  <li><strong>Measurable(Mensurável)</strong>: Com um objetivo alcançável para facilitar assim o teste de validação.</li>
+  <li><strong>Attainable(Atingível)</strong>: O requisito deve ser viável</li>
+  <li><strong>Realizable(Realizável)</strong>:O requisito deve ser realizável,muitas vezes o requisito é atingível mas não realizável no prazo determinado do projeto.</li>
+  <li><strong>Traceable(Rastreável)</strong>: O requisito deve ser rastreável  desde sua concepção e especificação até o desenho, implementação e teste.</li>
+</ul>
+
+<p>Como sempre vamos a um exemplo:</p>
+
+<p>Requisito
+“O sistema Web deve ser rápido e capaz de processar grandes quantidades de requisições simultâneas”.</p>
+
+<p>Após a aplicação do SMART: 
+“A tela de cadastro de usuários Web deve possuir um tempo de resposta menor de 8 segundos e suportar até 20 usuários simultaneamente em horários de pico( 15:00 às 19:00)”.</p>
+
+<p>Por enquanto é só isso, nos vemos na próximo.</p>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=Welcome to Jekyll!&url=http://localhost:4000/welcome-to-jekyll/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/welcome-to-jekyll/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/welcome-to-jekyll/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=Requisitos Smart&url=http://localhost:4000/requisitos-smart/" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/requisitos-smart/" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/requisitos-smart/" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#Software" class="tag">&#35; Software</a>
+            <a href="/tags#arquitetura" class="tag">&#35; arquitetura</a>
+          
+            <a href="/tags#requisitos" class="tag">&#35; requisitos</a>
           
         </div>
       </div>

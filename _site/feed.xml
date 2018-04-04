@@ -1,5 +1,49 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T16:35:05-03:00</updated><id>http://localhost:4000/</id><title type="html">Blog do Willian</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Olá Vuejs</title><link href="http://localhost:4000/ola-vuejs/" rel="alternate" type="text/html" title="Olá Vuejs" /><published>2018-04-03T14:01:00-03:00</published><updated>2018-04-03T14:01:00-03:00</updated><id>http://localhost:4000/ola-vuejs</id><content type="html" xml:base="http://localhost:4000/ola-vuejs/">&lt;p&gt;Nos últimos tempos foram lançados vários frameworks Javascript, cada um revolucionando o mercado a sua maneira e o mais novo é Vuejs,este é o primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-03T21:48:40-03:00</updated><id>http://localhost:4000/</id><title type="html">Blog do Willian</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Requisitos Smart</title><link href="http://localhost:4000/requisitos-smart/" rel="alternate" type="text/html" title="Requisitos Smart" /><published>2018-04-03T21:35:00-03:00</published><updated>2018-04-03T21:35:00-03:00</updated><id>http://localhost:4000/requisitos-smart</id><content type="html" xml:base="http://localhost:4000/requisitos-smart/">&lt;p&gt;Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
+Basicamente existem três tipos de requisitos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Funcionais&lt;/li&gt;
+  &lt;li&gt;Não Funcionais&lt;/li&gt;
+  &lt;li&gt;Arquiteturais&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Neste artigo vamos focar nos &lt;strong&gt;requisitos arquiteturais&lt;/strong&gt;. Este tipo de requisito é geralmente confundido com requisitos não relacionais mas a utilização é uma pouco diferente.&lt;/p&gt;
+
+&lt;p&gt;Durante o levantamento de requisitos podemos classificar quando um requisito possui algum significado a nossa arquitetura, ou seja,  é necessário alguma tomada de decisão tecnológica.&lt;/p&gt;
+
+&lt;p&gt;Existem algumas técnicas que podemos utilizar para validação dos requisitos arquiteturais:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Requisitos SMART.&lt;/li&gt;
+  &lt;li&gt;Modelo FURPS+.&lt;/li&gt;
+  &lt;li&gt;O modelo ISO/IEC 9126.&lt;/li&gt;
+  &lt;li&gt;QAW&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;requisitos-smart&quot;&gt;&lt;strong&gt;Requisitos SMART&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;A técnica SMART nos permite avaliar se um determinado requisito é valido ou não, o ponto chave desta técnica é transformar um requisito com frases subjetivas em algum mais técnico.&lt;/p&gt;
+
+&lt;p&gt;Esta transformação deve seguir cinco passos e que as iniciais do método:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Specific(Especifico)&lt;/strong&gt;: Um requisito deve ser específico ou seja com nível adequado de detalhes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Measurable(Mensurável)&lt;/strong&gt;: Com um objetivo alcançável para facilitar assim o teste de validação.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Attainable(Atingível)&lt;/strong&gt;: O requisito deve ser viável&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Realizable(Realizável)&lt;/strong&gt;:O requisito deve ser realizável,muitas vezes o requisito é atingível mas não realizável no prazo determinado do projeto.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Traceable(Rastreável)&lt;/strong&gt;: O requisito deve ser rastreável  desde sua concepção e especificação até o desenho, implementação e teste.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Como sempre vamos a um exemplo:&lt;/p&gt;
+
+&lt;p&gt;Requisito
+“O sistema Web deve ser rápido e capaz de processar grandes quantidades de requisições simultâneas”.&lt;/p&gt;
+
+&lt;p&gt;Após a aplicação do SMART: 
+“A tela de cadastro de usuários Web deve possuir um tempo de resposta menor de 8 segundos e suportar até 20 usuários simultaneamente em horários de pico( 15:00 às 19:00)”.&lt;/p&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próximo.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="arquitetura" /><category term="requisitos" /><summary type="html">Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos. Basicamente existem três tipos de requisitos:</summary></entry><entry><title type="html">Olá Vuejs</title><link href="http://localhost:4000/ola-vuejs/" rel="alternate" type="text/html" title="Olá Vuejs" /><published>2018-04-03T14:01:00-03:00</published><updated>2018-04-03T14:01:00-03:00</updated><id>http://localhost:4000/ola-vuejs</id><content type="html" xml:base="http://localhost:4000/ola-vuejs/">&lt;p&gt;Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;O que é o Vuejs?&lt;/li&gt;
@@ -11,21 +55,20 @@
 
 &lt;p&gt;O Vuejs é um framework Javascript  para criação de componentes reutilizáveis, algumas vantagens dele são:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Core possui até o momento os incríveis 17kb&lt;/li&gt;
+  &lt;li&gt;Core muito pequeno os incríveis 17kb&lt;/li&gt;
   &lt;li&gt;DOM virtual(como o React do Facebook)&lt;/li&gt;
   &lt;li&gt;Componentes visuais reativos e combináveis&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;instalando-o-vue-cli&quot;&gt;Instalando o Vue CLI&lt;/h3&gt;
 
-&lt;p&gt;Antes de instalar o Vue é preciso ter o Nodejs com pelo menos a versão 6.0 instalado no sistema operacional.
-Com o Node instalado vamos instalar o Vue CLI que irá nos auxiliar com a criação e manutenção de nossos projetos, para instalar o Vue CLI execute o seguinte comando no terminal:&lt;/p&gt;
+&lt;p&gt;Com o Node(a partir da versão 6.0) instalado vamos instalar o Vue CLI que irá nos auxiliar com a criação e manutenção de nossos projetos, para instalar o Vue CLI execute o seguinte comando no terminal:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; -g vue-cli&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Lembrando que &lt;strong&gt;-g&lt;/strong&gt; significa &lt;strong&gt;global&lt;/strong&gt; ou seja caso seu usuário não tenha permissão de instalação podem ocorrer alguns erros… então execute o comando com permissão de administrador.&lt;/p&gt;
+&lt;p&gt;Lembrando que &lt;strong&gt;-g&lt;/strong&gt; significa &lt;strong&gt;global&lt;/strong&gt; ou seja se seu usuário não tenha permissão de administrador podem ocorrer alguns erros… então execute o comando com permissão de administrador.&lt;/p&gt;
 
-&lt;p&gt;Para verificarmos a instalação do vue  digite no terminal:&lt;/p&gt;
+&lt;p&gt;Podemos confirmar a instalação do vue digitando o seguinte comando:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue --version
 2.7.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
@@ -34,15 +77,15 @@ Com o Node instalado vamos instalar o Vue CLI que irá nos auxiliar com a criaç
 
 &lt;h3 id=&quot;iniciando-um-projeto&quot;&gt;Iniciando um projeto&lt;/h3&gt;
 
-&lt;p&gt;Agora vamos criar um projeto usando o terminal execute o seguinte comando:&lt;/p&gt;
+&lt;p&gt;Agora vamos criar um novo projeto usando o terminal execute o seguinte comando:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue init &amp;lt;template-name&amp;gt; &amp;lt;project-name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;O que significa cada um desses comandos?&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;vue init: iniciando o projeto&lt;/li&gt;
-  &lt;li&gt;template-name: template do projeto, a lista de todos os templates verificados &lt;a href=&quot;https://github.com/vuejs-templates&quot;&gt;aqui&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;vue init: iniciando o projeto com vue&lt;/li&gt;
+  &lt;li&gt;template-name: template do projeto, a lista de todos os &lt;a href=&quot;https://github.com/vuejs-templates&quot;&gt;templates&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;project-name: nome do projeto&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -86,8 +129,8 @@ Project is running at http://localhost:8080/
 webpack output is served &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; /dist/
 404s will fallback to /index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Se tudo deu certo o projeto é disponibilizado em http://localhost:8080/ será exibido a seguinte tela:&lt;/p&gt;
+&lt;p&gt;Se tudo deu certo o projeto é disponibilizado em http://localhost:8080/ e a seguinte página é exibida:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/olavue.png&quot; alt=&quot;olavue&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próximo&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><category term="javascript" /><summary type="html">Nos últimos tempos foram lançados vários frameworks Javascript, cada um revolucionando o mercado a sua maneira e o mais novo é Vuejs,este é o primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:</summary></entry></feed>
+&lt;p&gt;Por enquanto é só isso, nos vemos na próximo&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><category term="javascript" /><summary type="html">Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:</summary></entry></feed>
