@@ -28,6 +28,8 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   #GitHub-flavored emoji plugin for Jekyll http://rubygems.org/gems/jemoji
   gem "jemoji"
+  #A Jekyll plugin to add metadata tags for search engines and social networks to better index and display your site's content. https://jekyll.github.io/jekyll-seo-tag
+  gem 'jekyll-seo-tag'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
