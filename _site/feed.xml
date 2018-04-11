@@ -1,4 +1,150 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-05T06:47:52-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Blog do Willian</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Requisitos Smart</title><link href="http://localhost:4000/2018/04/03/requisitos-smart.html" rel="alternate" type="text/html" title="Requisitos Smart" /><published>2018-04-03T21:35:00-03:00</published><updated>2018-04-03T21:35:00-03:00</updated><id>http://localhost:4000/2018/04/03/requisitos-smart</id><content type="html" xml:base="http://localhost:4000/2018/04/03/requisitos-smart.html">&lt;p&gt;Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-11T20:54:12-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Blog do Willian</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Olá RSpec</title><link href="http://localhost:4000/2018/04/11/ola-rspec.html" rel="alternate" type="text/html" title="Olá RSpec" /><published>2018-04-11T20:50:00-03:00</published><updated>2018-04-11T20:50:00-03:00</updated><id>http://localhost:4000/2018/04/11/ola-rspec</id><content type="html" xml:base="http://localhost:4000/2018/04/11/ola-rspec.html">&lt;p&gt;O RSpec é um framework de testes escrito em Ruby que segue &lt;a href=&quot;https://pt.wikipedia.org/wiki/Behavior_Driven_Development&quot;&gt;BDD&lt;/a&gt;(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.&lt;/p&gt;
+
+&lt;h2 id=&quot;instalando&quot;&gt;Instalando&lt;/h2&gt;
+
+&lt;p&gt;Para usar o RSpec basta instalar a gem:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rspec&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;ou em seu projeto rails adicione as seguintes linhas:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:test&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rspec-rails'&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Após instalado a gem basta executar o seguinte comando no terminal:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec --init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Após a executar o comando serão adicionados ao projeto a pasta &lt;strong&gt;spec&lt;/strong&gt;  e o arquivo &lt;strong&gt;spec_helper.rb&lt;/strong&gt; neste arquivo podemos realizar algumas configurações do rspec, vamos falar mais sobre em um outro post.&lt;/p&gt;
+
+&lt;p&gt;Além dos arquivos citados anteriormente ganhamos alguns novos generators: models,job,feature etc, veja &lt;a href=&quot;https://relishapp.com/rspec/rspec-rails/docs/generators&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;usando-o-rspec&quot;&gt;Usando o RSpec&lt;/h2&gt;
+
+&lt;p&gt;Então temos nosso model &lt;strong&gt;Item&lt;/strong&gt; com uma validação:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationRecord&lt;/span&gt;  
+  &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:quantity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;presence: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;E nosso teste onde queremos fazer dois testes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Verificar se o campo &lt;strong&gt;name&lt;/strong&gt; está preenchido.&lt;/li&gt;
+  &lt;li&gt;Mostrar uma mensagem caso não esteja.&lt;/li&gt;
+  &lt;li&gt;Estamos usando a gem &lt;a href=&quot;https://github.com/thoughtbot/factory_bot_rails&quot;&gt;FactoryBot&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;	  
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'rails_helper'&lt;/span&gt;  
+      
+&lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;type: :model&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;FactoryBot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Create a Item with all fields fill&quot;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
+    	 &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;valid?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_truthy&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;  
+     
+    
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Create a Item without a name&quot;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
+        &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;  
+        &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;valid?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_falsey&lt;/span&gt;  
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;  
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Então vamos por partes e mostrar o que significa cada comando em nosso teste:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;RSpec.describe Item, type: :model  do:&lt;/strong&gt; Nesta linha estamos mostrando para o RSpec qual classe queremos testar e qual é tipo desta classe podem ser model,controller etc.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Context&lt;/strong&gt;: O contexto do nosso teste separando assim nossos testes por funcionalidade.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;It&lt;/strong&gt;: É usado para descrever o cenário que estamos testando.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Expect&lt;/strong&gt;: Resultado esperado do teste, pode ser tanto um resultado positivo quando negativo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;executando-testes&quot;&gt;Executando Testes&lt;/h2&gt;
+
+&lt;p&gt;Para executar os testes basta executar o seguinte comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rake spec&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Como nossos teste são bem simples todos vão passar sem problemas então o resultado é :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;...................
+Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;1.5 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.56 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+2 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Outra maneira de executar os testes de uma forma mais visual seria executar o seguinte comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec spec --format doc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Para mostrar o –format doc do rspec de forma mais eficiente,vou adicionar mais testes no projeto assim visualmente vai ficar mais bonito:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt; 
+ReportController
+  Percentage infected
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+  Percentage non infected
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+  Lost Points
+	Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+
+SuvivorsController
+  Index
+    should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+  Create a suvivor
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 201
+    should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 406
+  &lt;span class=&quot;k&quot;&gt;Return &lt;/span&gt;a single suvivor
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+    Should &lt;span class=&quot;k&quot;&gt;return  &lt;/span&gt;status 404
+  Report a Suvivor
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+    Should &lt;span class=&quot;k&quot;&gt;return  &lt;/span&gt;status 404
+
+TradeController
+  Items &lt;span class=&quot;k&quot;&gt;from &lt;/span&gt;a single suvivor
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+  Make trade
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
+    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 406
+
+Item
+  Create a Item with all fields fill
+  Create a Item without a name
+
+ItemController
+  Validate Field Suvivors:
+    Create a Suvivor with all fields fill
+    Create a Suvivor without a name
+  Inventory
+    Verify &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;has items on inventory
+    Verify total of points
+
+Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.59228 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.31 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+19 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Até agora só foi mostrado os testes com sucesso mas e se ao alterar alguma linha o nosso teste “quebrar”?Como posso saber qual teste ou arquivo está com problemas?Essa é uma das partes que eu acho mais legal no RSpec, quando um teste falha ele mostra qual linha do teste esta errado e qual o teste está errado, veja abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt; 
+Item
+  Create a Item with all fields fill
+  Create a Item without a name &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;FAILED - 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+Failures:
+1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Item Create a Item without a name
+ Failure/Error: expect&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;item.valid?&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.to be_truthy
+
+   expected: truthy value
+        got: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
+ &lt;span class=&quot;c1&quot;&gt;# ./spec/models/item_spec.rb:11:in `block (2 levels) in &amp;lt;top (required)&amp;gt;'&lt;/span&gt;
+
+Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.66646 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.61 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+19 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/models/item_spec.rb:9 &lt;span class=&quot;c1&quot;&gt;# Item Create a Item without a name&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próximo&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">O RSpec é um framework de testes escrito em Ruby que segue BDD(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.</summary></entry><entry><title type="html">Requisitos Smart</title><link href="http://localhost:4000/2018/04/03/requisitos-smart.html" rel="alternate" type="text/html" title="Requisitos Smart" /><published>2018-04-03T21:35:00-03:00</published><updated>2018-04-03T21:35:00-03:00</updated><id>http://localhost:4000/2018/04/03/requisitos-smart</id><content type="html" xml:base="http://localhost:4000/2018/04/03/requisitos-smart.html">&lt;p&gt;Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
 Basicamente existem três tipos de requisitos:&lt;/p&gt;
 
 &lt;ul&gt;
