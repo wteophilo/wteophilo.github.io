@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Requisitos Smart - Willian Teophilo</title>
+	<title>RSpec-Executando Apenas um Teste - Willian Teophilo</title>
 
   <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
 
     <meta content="Willian Teophilo" property="og:site_name">
   
-    <meta content="Requisitos Smart" property="og:title">
+    <meta content="RSpec-Executando Apenas um Teste" property="og:title">
   
   
     <meta content="article" property="og:type">
@@ -17,23 +17,25 @@
     <meta content="Willian Teophilo" property="og:description">
   
   
-    <meta content="http://localhost:4000/2018/04/03/requisitos-smart.html" property="og:url">
+    <meta content="http://localhost:4000/2018/04/11/executando-apenas-um-teste.html" property="og:url">
   
   
-    <meta content="2018-04-03T21:35:00-03:00" property="article:published_time">
+    <meta content="2018-04-11T21:03:00-03:00" property="article:published_time">
     <meta content="http://localhost:4000/about/" property="article:author">
   
   
-    <meta content="http://localhost:4000/assets/img/requisitos_smart.jpg" property="og:image">
+    <meta content="http://localhost:4000/assets/img/wteophilo.jpg" property="og:image">
   
   
     
   
   
     
-    <meta content="arquitetura" property="article:tag">
+    <meta content="TDD" property="article:tag">
     
-    <meta content="requisitos" property="article:tag">
+    <meta content="RSpec" property="article:tag">
+    
+    <meta content="Ruby on Rails" property="article:tag">
     
   
 
@@ -41,16 +43,16 @@
     <meta name="twitter:site" content="@">
     <meta name="twitter:creator" content="@wilteophilo">
   
-    <meta name="twitter:title" content="Requisitos Smart">
+    <meta name="twitter:title" content="RSpec-Executando Apenas um Teste">
   
   
-    <meta name="twitter:url" content="http://localhost:4000/2018/04/03/requisitos-smart.html">
+    <meta name="twitter:url" content="http://localhost:4000/2018/04/11/executando-apenas-um-teste.html">
   
   
     <meta name="twitter:description" content="Willian Teophilo">
   
   
-    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/requisitos_smart.jpg">
+    <meta name="twitter:image:src" content="http://localhost:4000/assets/img/wteophilo.jpg">
   
 
 	<meta name="description" content="">
@@ -77,20 +79,20 @@
 </head>
 
 <!-- Begin Jekyll SEO tag v2.4.0 -->
-<title>Requisitos Smart | Willian Teophilo</title>
+<title>RSpec-Executando Apenas um Teste | Willian Teophilo</title>
 <meta name="generator" content="Jekyll v3.7.3" />
-<meta property="og:title" content="Requisitos Smart" />
+<meta property="og:title" content="RSpec-Executando Apenas um Teste" />
 <meta name="author" content="Willian Teophilo" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos. Basicamente existem três tipos de requisitos:" />
-<meta property="og:description" content="Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos. Basicamente existem três tipos de requisitos:" />
-<link rel="canonical" href="http://localhost:4000/2018/04/03/requisitos-smart.html" />
-<meta property="og:url" content="http://localhost:4000/2018/04/03/requisitos-smart.html" />
+<meta name="description" content="Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa." />
+<meta property="og:description" content="Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa." />
+<link rel="canonical" href="http://localhost:4000/2018/04/11/executando-apenas-um-teste.html" />
+<meta property="og:url" content="http://localhost:4000/2018/04/11/executando-apenas-um-teste.html" />
 <meta property="og:site_name" content="Willian Teophilo" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-04-03T21:35:00-03:00" />
+<meta property="article:published_time" content="2018-04-11T21:03:00-03:00" />
 <script type="application/ld+json">
-{"description":"Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos. Basicamente existem três tipos de requisitos:","author":{"@type":"Person","name":"Willian Teophilo"},"@type":"BlogPosting","url":"http://localhost:4000/2018/04/03/requisitos-smart.html","headline":"Requisitos Smart","dateModified":"2018-04-03T21:35:00-03:00","datePublished":"2018-04-03T21:35:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/04/03/requisitos-smart.html"},"@context":"http://schema.org"}</script>
+{"description":"Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa.","author":{"@type":"Person","name":"Willian Teophilo"},"@type":"BlogPosting","url":"http://localhost:4000/2018/04/11/executando-apenas-um-teste.html","headline":"RSpec-Executando Apenas um Teste","dateModified":"2018-04-11T21:03:00-03:00","datePublished":"2018-04-11T21:03:00-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2018/04/11/executando-apenas-um-teste.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 <body>
@@ -136,72 +138,46 @@
   <article class="article-page">
   <div class="page-content">
     
-    <div class="page-cover-image">
-      <img class="page-image" src=/assets/img/requisitos_smart.jpg alt="Requisitos Smart">
-    </div> <!-- End Page Cover Image -->
     
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">Requisitos Smart</h1>
-        <div class="page-date"><span>2018, Apr 03&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <h1 class="page-title">RSpec-Executando Apenas um Teste</h1>
+        <div class="page-date"><span>2018, Apr 11&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
       </header>
-      <p>Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
-Basicamente existem três tipos de requisitos:</p>
+      <p>Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa.</p>
 
-<ul>
-  <li>Funcionais</li>
-  <li>Não Funcionais</li>
-  <li>Arquiteturais</li>
-</ul>
+<h3 id="rspec-caminho">RSpec caminho</h3>
+<p>Digamos que estamos fazendo um projeto em ruby, separamos nossos testes por pasta e queremos executar apenas um arquivo, então basta executar o comando:</p>
 
-<p>Neste artigo vamos focar nos <strong>requisitos arquiteturais</strong>. Este tipo de requisito é geralmente confundido com requisitos não relacionais mas a utilização é uma pouco diferente.</p>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">rspec /pasta/arquivo_spec.rb</code></pre></figure>
 
-<p>Durante o levantamento de requisitos podemos classificar quando um requisito possui algum significado a nossa arquitetura, ou seja,  é necessário alguma tomada de decisão tecnológica.</p>
+<p>Assim todos os teste dentro do arquivo serão executados.</p>
 
-<p>Existem algumas técnicas que podemos utilizar para validação dos requisitos arquiteturais:</p>
+<h3 id="executando-teste-pelo-título">Executando teste pelo título</h3>
+<p>As vezes queremos executar apenas um teste dentro do nosso arquivo de teste, podemos fazer isso usando o sufixo -e “título”, por exemplo:</p>
 
-<ul>
-  <li>Requisitos SMART.</li>
-  <li>Modelo FURPS+.</li>
-  <li>O modelo ISO/IEC 9126.</li>
-  <li>QAW</li>
-</ul>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">rspec /nome_classe/arquivo_spec.rb -e <span class="s2">"título"</span></code></pre></figure>
 
-<h2 id="requisitos-smart"><strong>Requisitos SMART</strong></h2>
+<h3 id="executando-teste-pela-linha">Executando teste pela linha</h3>
+<p>Podemos também executar um teste por uma linha do arquivo,vamos utilizar o mesmo conceito do item anterior mas ao invés de buscar o título apenas utilizamos a linha que queremos executar.</p>
 
-<p>A técnica SMART nos permite avaliar se um determinado requisito é valido ou não, o ponto chave desta técnica é transformar um requisito com frases subjetivas em algum mais técnico.</p>
-
-<p>Esta transformação deve seguir cinco passos e que as iniciais do método:</p>
-
-<ul>
-  <li><strong>Specific(Especifico)</strong>: Um requisito deve ser específico ou seja com nível adequado de detalhes</li>
-  <li><strong>Measurable(Mensurável)</strong>: Com um objetivo alcançável para facilitar assim o teste de validação.</li>
-  <li><strong>Attainable(Atingível)</strong>: O requisito deve ser viável</li>
-  <li><strong>Realizable(Realizável)</strong>:O requisito deve ser realizável,muitas vezes o requisito é atingível mas não realizável no prazo determinado do projeto.</li>
-  <li><strong>Traceable(Rastreável)</strong>: O requisito deve ser rastreável  desde sua concepção e especificação até o desenho, implementação e teste.</li>
-</ul>
-
-<p>Como sempre vamos a um exemplo:</p>
-
-<p>Requisito
-“O sistema Web deve ser rápido e capaz de processar grandes quantidades de requisições simultâneas”.</p>
-
-<p>Após a aplicação do SMART: 
-“A tela de cadastro de usuários Web deve possuir um tempo de resposta menor de 8 segundos e suportar até 20 usuários simultaneamente em horários de pico( 15:00 às 19:00)”.</p>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">rspec /nome_classe/arquivo_spec.rb:linha</code></pre></figure>
 
 <p>Por enquanto é só isso, nos vemos na próxima.</p>
 
       <div class="page-footer">
         <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text=Requisitos Smart&url=http://localhost:4000/2018/04/03/requisitos-smart.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
-          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/04/03/requisitos-smart.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
-          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/04/03/requisitos-smart.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+          <a href="https://twitter.com/intent/tweet?text=RSpec-Executando Apenas um Teste&url=http://localhost:4000/2018/04/11/executando-apenas-um-teste.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=http://localhost:4000/2018/04/11/executando-apenas-um-teste.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=http://localhost:4000/2018/04/11/executando-apenas-um-teste.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
         </div>
         <div class="page-tag">
           
-            <a href="/tags#arquitetura" class="tag">&#35; arquitetura</a>
+            <a href="/tags#TDD" class="tag">&#35; TDD</a>
           
-            <a href="/tags#requisitos" class="tag">&#35; requisitos</a>
+            <a href="/tags#RSpec" class="tag">&#35; RSpec</a>
+          
+            <a href="/tags#Ruby on Rails" class="tag">&#35; Ruby on Rails</a>
           
         </div>
       </div>

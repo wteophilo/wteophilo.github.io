@@ -45,4 +45,4 @@ Requisito
 Após a aplicação do SMART: 
 "A tela de cadastro de usuários Web deve possuir um tempo de resposta menor de 8 segundos e suportar até 20 usuários simultaneamente em horários de pico( 15:00 às 19:00)".
 
-Por enquanto é só isso, nos vemos na próximo.
+Por enquanto é só isso, nos vemos na próxima.
