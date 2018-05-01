@@ -1,4 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-14T10:30:07-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">RSpec-It vs Xit</title><link href="http://localhost:4000/2018/04/14/rspec-it-vs-xit.html" rel="alternate" type="text/html" title="RSpec-It vs Xit" /><published>2018-04-14T09:41:00-03:00</published><updated>2018-04-14T09:41:00-03:00</updated><id>http://localhost:4000/2018/04/14/rspec-it-vs-xit</id><content type="html" xml:base="http://localhost:4000/2018/04/14/rspec-it-vs-xit.html">&lt;p&gt;Hoje vamos falar um pouco mais sobre o rspec e como pular alguns testes…
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-01T16:42:42-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Estrutura Vuejs</title><link href="http://localhost:4000/2018/05/01/estrutura-vuejs.html" rel="alternate" type="text/html" title="Estrutura Vuejs" /><published>2018-05-01T14:20:00-03:00</published><updated>2018-05-01T14:20:00-03:00</updated><id>http://localhost:4000/2018/05/01/estrutura-vuejs</id><content type="html" xml:base="http://localhost:4000/2018/05/01/estrutura-vuejs.html">&lt;p&gt;Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Estrutura de pastas de um projeto Vuejs&lt;/li&gt;
+  &lt;li&gt;Templates webpack&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Caso não tenha visto o primeiro post clique &lt;a href=&quot;https://wteophilo.github.io/2018/04/03/ola-vuejs.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;estrutura-vuejs&quot;&gt;Estrutura Vuejs&lt;/h2&gt;
+
+&lt;p&gt;Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto, abaixo listei as pastas ou arquivos mais comuns:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;build/&lt;/strong&gt;
+Esse diretório contém as configurações reais do servidor de desenvolvimento e da compilação do webpack de produção.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;src/&lt;/strong&gt;
+Contêm todos código fonte da sua aplicação, a estrutura de como ficarão os arquivos é da escolha do desenvolvedor… então organize com cuidado.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;static/&lt;/strong&gt;:
+Diretório onde serão inseridos os arquivos estaticos(css,imagens etc) a ser processados pelo webpack, estes arquivos serão copiados diretamente no mesmo diretório em que os assets gerados pelo Werbpack, consulte qual gerenciador que você utilizará para mais detalhes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;test/unit&lt;/strong&gt;:
+Contêm arquivos relcionados aos testes unitários.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;test/e2e&lt;/strong&gt;:
+Contêm arquivos testes e2e(&lt;a href=&quot;https://vuejs-templates.github.io/webpack/e2e.html&quot;&gt;End-to-End Testing&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;index.html&lt;/strong&gt;:
+Este é o template para single page. Durante o desenvolvimento e as compilações, o Webpack gera assets e URLs desses assets gerados serão automaticamente injetadas nesse modelo para renderizar o HTML final.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;package.json&lt;/strong&gt;:
+Contém todas as dependências do projeto.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;templates-webpack&quot;&gt;Templates WebPack&lt;/h2&gt;
+
+&lt;p&gt;Quando vamos criar um projeto vimos que podemos escolher a estrutura(template) do projeto, cada um desses templates utilizam estruturas de pasta diferente. O Vuejs utiliza como bundler tanto &lt;a href=&quot;https://webpack.js.org/&quot;&gt;webpack&lt;/a&gt; quanto o &lt;a href=&quot;http://browserify.org/&quot;&gt;browserify&lt;/a&gt;. Neste &lt;a href=&quot;https://medium.freecodecamp.org/browserify-vs-webpack-b3d7ca08a0a9&quot;&gt;link&lt;/a&gt; existe um post comparando os templates.&lt;/p&gt;
+
+&lt;h3 id=&quot;tipos-templates&quot;&gt;Tipos Templates&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/webpack&quot;&gt;webpack&lt;/a&gt;: É o pacote mais completo ou seja ele utiliza o webpack como bundler,possui   vue-loader com hot reload, javascript lint e testes unitários.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/webpack-simple&quot;&gt;webpack-simple&lt;/a&gt;: utiliza o webpack como bundler mas com menos recursos.O webpack-simple não possui hot reload, javascript lint e nem testes unitários.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/browserify&quot;&gt;browserify&lt;/a&gt;: usa o browserify como module bundler. Possui o vue-loader com hot reload, javascript lint e testes unitários.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/browserify-simple&quot;&gt;browserify-simple&lt;/a&gt;: usa o browserify como module bundler, sem hot reload, lint ou testes unitários.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/simple&quot;&gt;simple&lt;/a&gt;: o template mais simples, não utiliza nenhum bundle possui apenas uma única página com o Vue sendo carregado através de um endereço &lt;a href=&quot;Content Delivery Network&quot;&gt;CDN&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;buildjs&quot;&gt;Build.js&lt;/h3&gt;
+&lt;p&gt;Se você já conhece o Vuejs provavelmente está se perguntando porque não falei sobre o arquivo build.js, não esqueci dele apenas deixe-o por último.&lt;/p&gt;
+
+&lt;p&gt;Basicamente o arquivo build.js é todo o conteúdo da pasta &lt;strong&gt;src&lt;/strong&gt;, onde as páginas se transformam em javascript e assim são carregados em memória, deixando que toda alteração feita pelo desenvolvedor seja carrega e exibida em instantes.&lt;/p&gt;
+
+&lt;h3 id=&quot;babel&quot;&gt;Babel&lt;/h3&gt;
+&lt;p&gt;Mas quem faz essa transformação dos arquivos? O Vuejs utiliza o transpilador &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; basicamente transcreve código escrito em ES2015(ecmascript 6) para ES5(ecmascript 5) garantindo assim compatibilidade entre os browsers.&lt;/p&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><summary type="html">Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes: Estrutura de pastas de um projeto Vuejs Templates webpack</summary></entry><entry><title type="html">RSpec-It vs Xit</title><link href="http://localhost:4000/2018/04/14/rspec-it-vs-xit.html" rel="alternate" type="text/html" title="RSpec-It vs Xit" /><published>2018-04-14T09:41:00-03:00</published><updated>2018-04-14T09:41:00-03:00</updated><id>http://localhost:4000/2018/04/14/rspec-it-vs-xit</id><content type="html" xml:base="http://localhost:4000/2018/04/14/rspec-it-vs-xit.html">&lt;p&gt;Hoje vamos falar um pouco mais sobre o rspec e como pular alguns testes…
 Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma feature e os testes quebram em outros locais…sei que você vai voltar e resolver o problema ;).&lt;/p&gt;
 
 &lt;p&gt;Sabemos que quando declaramos um novo teste e não o preenchemos o log é exibido como pendente.&lt;/p&gt;
@@ -341,4 +406,4 @@ webpack output is served &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; /dist
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/olavue.png&quot; alt=&quot;olavue&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><category term="javascript" /><summary type="html">Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:</summary></entry></feed>
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><summary type="html">Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:</summary></entry></feed>
