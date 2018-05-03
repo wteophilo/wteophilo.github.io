@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-01T16:42:42-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Estrutura Vuejs</title><link href="http://localhost:4000/2018/05/01/estrutura-vuejs.html" rel="alternate" type="text/html" title="Estrutura Vuejs" /><published>2018-05-01T14:20:00-03:00</published><updated>2018-05-01T14:20:00-03:00</updated><id>http://localhost:4000/2018/05/01/estrutura-vuejs</id><content type="html" xml:base="http://localhost:4000/2018/05/01/estrutura-vuejs.html">&lt;p&gt;Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-02T21:51:23-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Relatórios Rspec</title><link href="http://localhost:4000/2018/05/01/relatorios-rspec.html" rel="alternate" type="text/html" title="Relatórios Rspec" /><published>2018-05-01T17:03:00-03:00</published><updated>2018-05-01T17:03:00-03:00</updated><id>http://localhost:4000/2018/05/01/relatorios-rspec</id><content type="html" xml:base="http://localhost:4000/2018/05/01/relatorios-rspec.html">&lt;p&gt;Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.&lt;/p&gt;
+
+&lt;p&gt;Digamos que estamos testando uma classe Calculator que basicamente faz a soma de dois números…&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calculator&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;e nosso teste:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;calculator&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Calculator&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;described_class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()}&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#sum&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with positive numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
+			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with negative and positive numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with negative numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Ao executarmos esse teste temos a seguinte saida:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rspec spec
+	
+Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.02381 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 0.17227 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+3 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Mas queremos um relatório melhor com mais informações e visualmente melhor do que apenas mostrar o que deu certou ou não.
+Pensando nisso o rspec possui o comando &lt;strong&gt;–format documentation&lt;/strong&gt;, vejamos como fica ao usarmos esse comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rspec spec --format documentation
+
+Calculator
+  &lt;span class=&quot;c1&quot;&gt;#sum&lt;/span&gt;
+    with positive numbers
+    with negative and positive numbers
+    with negative numbers
+
+Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.00389 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 0.23323 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+3 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Até mesmo com erros o log fica bem melhor de visualizar:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rspec spec --format documentation
+
+Failures:
+
+  1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Calculator#sum with positive numbers
+     Failure/Error: expect&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.to eq&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;112&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+     
+       expected: 112
+            got: 12
+     
+       &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;compared &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==)&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# ./spec/calculator/calculator_spec.rb:8:in `block (3 levels) in &amp;lt;top (required)&amp;gt;'&lt;/span&gt;
+
+Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.11017 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 0.24823 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+3 examples, 1 failure
+
+Failed examples:
+
+rspec ./spec/calculator/calculator_spec.rb:6 &lt;span class=&quot;c1&quot;&gt;# Calculator#sum with positive numbers&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Você deve estar se perguntando “Pô legal mas sempre vou precisar digitar tudo isso??”A resposta é &lt;strong&gt;não&lt;/strong&gt; e para resolvermos existem duas maneiras.&lt;/p&gt;
+
+&lt;p&gt;A primeira solução é criar dentro do projeto o arquivo .rspec e adicionar nossas configurações nele como por exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;--require spec_helper
+--format documentation
+--color&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;A segunda maneira seria alterar o arquivo spec_help.rb localizado no projeto rails na pasta spec, basta adicionar a seguinte linha:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;RSpec.configure &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; |config|
+  config.formatter &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; :documentation
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As duas maneiras vão carregar as configurações e aplicar ao executar os nossos testes.Para mais informações de output do rspec sempre leia a &lt;a href=&quot;https://relishapp.com/rspec/rspec-core/v/2-5/docs/command-line/format-option&quot;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;E para finalizar podemos também exportar o conteúdo de nossos teste para um arquivo txt ou html, para fazer isso basta adicionar a seguinte instrução:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;--format html --out nome_arquivo.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Assim teremos uma página html como imagem no início do nosso post.&lt;/p&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.</summary></entry><entry><title type="html">Estrutura Vuejs</title><link href="http://localhost:4000/2018/05/01/estrutura-vuejs.html" rel="alternate" type="text/html" title="Estrutura Vuejs" /><published>2018-05-01T14:20:00-03:00</published><updated>2018-05-01T14:20:00-03:00</updated><id>http://localhost:4000/2018/05/01/estrutura-vuejs</id><content type="html" xml:base="http://localhost:4000/2018/05/01/estrutura-vuejs.html">&lt;p&gt;Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Estrutura de pastas de um projeto Vuejs&lt;/li&gt;
   &lt;li&gt;Templates webpack&lt;/li&gt;
@@ -199,78 +298,6 @@ Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma f
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;...................
 Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;1.5 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.56 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
 2 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Outra maneira de executar os testes de uma forma mais visual seria executar o seguinte comando:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec spec --format doc&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Para mostrar o –format doc do rspec de forma mais eficiente,vou adicionar mais testes no projeto assim visualmente vai ficar mais bonito:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt; 
-ReportController
-  Percentage infected
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-  Percentage non infected
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-  Lost Points
-	Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-
-SuvivorsController
-  Index
-    should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-  Create a suvivor
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 201
-    should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 406
-  &lt;span class=&quot;k&quot;&gt;Return &lt;/span&gt;a single suvivor
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-    Should &lt;span class=&quot;k&quot;&gt;return  &lt;/span&gt;status 404
-  Report a Suvivor
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-    Should &lt;span class=&quot;k&quot;&gt;return  &lt;/span&gt;status 404
-
-TradeController
-  Items &lt;span class=&quot;k&quot;&gt;from &lt;/span&gt;a single suvivor
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-  Make trade
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 200
-    Should &lt;span class=&quot;k&quot;&gt;return &lt;/span&gt;status 406
-
-Item
-  Create a Item with all fields fill
-  Create a Item without a name
-
-ItemController
-  Validate Field Suvivors:
-    Create a Suvivor with all fields fill
-    Create a Suvivor without a name
-  Inventory
-    Verify &lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;has items on inventory
-    Verify total of points
-
-Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.59228 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.31 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-19 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Até agora só foi mostrado os testes com sucesso mas e se ao alterar alguma linha o nosso teste “quebrar”?Como posso saber qual teste ou arquivo está com problemas?Essa é uma das partes que eu acho mais legal no RSpec, quando um teste falha ele mostra qual linha do teste esta errado e qual o teste está errado, veja abaixo:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt; 
-Item
-  Create a Item with all fields fill
-  Create a Item without a name &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;FAILED - 1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-
-Failures:
-1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Item Create a Item without a name
- Failure/Error: expect&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;item.valid?&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.to be_truthy
-
-   expected: truthy value
-        got: &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
- &lt;span class=&quot;c1&quot;&gt;# ./spec/models/item_spec.rb:11:in `block (2 levels) in &amp;lt;top (required)&amp;gt;'&lt;/span&gt;
-
-Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.66646 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.61 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-19 examples, 1 failure
-
-Failed examples:
-
-rspec ./spec/models/item_spec.rb:9 &lt;span class=&quot;c1&quot;&gt;# Item Create a Item without a name&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">O RSpec é um framework de testes escrito em Ruby que segue BDD(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.</summary></entry><entry><title type="html">Requisitos Smart</title><link href="http://localhost:4000/2018/04/03/requisitos-smart.html" rel="alternate" type="text/html" title="Requisitos Smart" /><published>2018-04-03T21:35:00-03:00</published><updated>2018-04-03T21:35:00-03:00</updated><id>http://localhost:4000/2018/04/03/requisitos-smart</id><content type="html" xml:base="http://localhost:4000/2018/04/03/requisitos-smart.html">&lt;p&gt;Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
 Basicamente existem três tipos de requisitos:&lt;/p&gt;
