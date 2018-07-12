@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-02T21:51:23-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Relatórios Rspec</title><link href="http://localhost:4000/2018/05/01/relatorios-rspec.html" rel="alternate" type="text/html" title="Relatórios Rspec" /><published>2018-05-01T17:03:00-03:00</published><updated>2018-05-01T17:03:00-03:00</updated><id>http://localhost:4000/2018/05/01/relatorios-rspec</id><content type="html" xml:base="http://localhost:4000/2018/05/01/relatorios-rspec.html">&lt;p&gt;Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-21T15:50:05-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Tipos de Variáveis em Ruby</title><link href="http://localhost:4000/2018/07/12/tipos-de-variaveis.html" rel="alternate" type="text/html" title="Tipos de Variáveis em Ruby" /><published>2018-07-12T14:54:00-03:00</published><updated>2018-07-12T14:54:00-03:00</updated><id>http://localhost:4000/2018/07/12/tipos-de-variaveis</id><content type="html" xml:base="http://localhost:4000/2018/07/12/tipos-de-variaveis.html">&lt;p&gt;Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Willian&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Neste post vamos ver:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Declarando uma variável&lt;/li&gt;
+  &lt;li&gt;Tipos de variáveis&lt;/li&gt;
+  &lt;li&gt;Problemas de conversão&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;declarando-uma-variável&quot;&gt;Declarando uma variável&lt;/h2&gt;
+
+&lt;p&gt;Para declarar uma variável é bem simples basta dar um nome e atribuir seu valor assim o tipo da variável é definido implicitamente. Veja o exemplo abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;tipos-de-variáveis&quot;&gt;Tipos de variáveis&lt;/h2&gt;
+
+&lt;p&gt;Como falamos anteriormente o Ruby possui alguns tipos, são eles:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Fixnum&lt;/strong&gt;: números inteiros&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Float&lt;/strong&gt;: números decimais&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Bignum&lt;/strong&gt;: números inteiros muito grandes&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;String&lt;/strong&gt;: valores alfanumérico&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;FalseClass/TrueClass&lt;/strong&gt;: valores booleanos&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Você deve estar se perguntando “Então podemos alterar o valor de uma variável sem precisar fazer conversões… mas isso não dá problema não?” Como podemos ver no exemplo abaixo apenas trocando os valores não tem problema&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;problemas-de-conversão&quot;&gt;Problemas de conversão&lt;/h2&gt;
+
+&lt;p&gt;Mas em nosso código do dia a dia provavelmente vamos usar uma variável em outros lugares é ai que mora o perigo…
+Vamos analisar a seguinte situação digamos que temos uma a variável com o nome “idade” do tipo inteiro(Fixnum), por algum motivo durante o desenvolvimento achamos melhor trocar o seu valor para String mas esquecemos que somamos algum outro valor inteiro ao longo do código, o que acontece? Segue código abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'WIL'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;WIL&quot;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;implicit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conversion&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fixnum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;into&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`+'
+	from (irb):16
+	from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Se fizermos a operação inversa e tentar somar uma String em um inteiro(Fixnum) também temos o mesmo problema de conversão:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;WIL&quot;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'t be coerced into Fixnum
+	from (irb):36:in `+'&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/home/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rvm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rubies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&amp;lt;main&amp;gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Em Ruby tudo é classe inclusive os tipos são classes então se alterarmos o tipo da variável e nessa variável usamos um método exclusivo da classe também vamos ter problemas, veja o exemplo abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;caixa_alta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upcase&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;caixa_alta&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;NoMethodError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;undefined&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`upcase' for 30:Fixnum
+        from (irb):41:in `&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caixa_alta&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'
+        from (irb):43
+        from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `&amp;lt;main&amp;gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo: String nome = &quot;Willian&quot;</summary></entry><entry><title type="html">Relatórios Rspec</title><link href="http://localhost:4000/2018/05/01/relatorios-rspec.html" rel="alternate" type="text/html" title="Relatórios Rspec" /><published>2018-05-01T17:03:00-03:00</published><updated>2018-05-01T17:03:00-03:00</updated><id>http://localhost:4000/2018/05/01/relatorios-rspec</id><content type="html" xml:base="http://localhost:4000/2018/05/01/relatorios-rspec.html">&lt;p&gt;Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.&lt;/p&gt;
 
 &lt;p&gt;Digamos que estamos testando uma classe Calculator que basicamente faz a soma de dois números…&lt;/p&gt;
 
