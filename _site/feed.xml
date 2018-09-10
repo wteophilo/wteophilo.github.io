@@ -1,4 +1,87 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-07-21T15:50:05-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Tipos de Variáveis em Ruby</title><link href="http://localhost:4000/2018/07/12/tipos-de-variaveis.html" rel="alternate" type="text/html" title="Tipos de Variáveis em Ruby" /><published>2018-07-12T14:54:00-03:00</published><updated>2018-07-12T14:54:00-03:00</updated><id>http://localhost:4000/2018/07/12/tipos-de-variaveis</id><content type="html" xml:base="http://localhost:4000/2018/07/12/tipos-de-variaveis.html">&lt;p&gt;Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-10T20:35:22-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Condicionais em Ruby</title><link href="http://localhost:4000/2018/09/10/condicionais-em-ruby.html" rel="alternate" type="text/html" title="Condicionais em Ruby" /><published>2018-09-10T18:51:00-03:00</published><updated>2018-09-10T18:51:00-03:00</updated><id>http://localhost:4000/2018/09/10/condicionais-em-ruby</id><content type="html" xml:base="http://localhost:4000/2018/09/10/condicionais-em-ruby.html">&lt;p&gt;Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If / elsif / else&lt;/li&gt;
+  &lt;li&gt;unless&lt;/li&gt;
+  &lt;li&gt;case&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Mas não podemos falar de condicionais se não falarmos de operadores relacionais e os operadores lógicos.&lt;/p&gt;
+
+&lt;h2 id=&quot;operadores-relacionais&quot;&gt;Operadores relacionais&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Igualdade &lt;strong&gt;==&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Diferente &lt;strong&gt;!=&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Maior que &lt;strong&gt;&amp;gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Maior ou igual &lt;strong&gt;&amp;gt;=&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Menor &lt;strong&gt;&amp;lt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Menor ou igual &lt;strong&gt;&amp;lt;=&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;operadores-lógicos&quot;&gt;Operadores Lógicos&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&amp;amp;&amp;amp; (and)&lt;/li&gt;
+  &lt;li&gt;|| (or)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Vamos explorar um pouco mais sobre as condicionais com um pouco dos operadores relacionais.&lt;/p&gt;
+
+&lt;h2 id=&quot;if&quot;&gt;IF&lt;/h2&gt;
+&lt;p&gt;O if verifica se uma condição é verdadeira e apartir dessa verificação executa um trecho de código, segue o código abaixo utilizando também a igualdade:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Isso é verdade!&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;else&quot;&gt;ELSE&lt;/h2&gt;
+&lt;p&gt;O else seria um complemento do If, caso a verificação do if seja falsa o trecho de  código executado é o else, segue o exemplo abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor menor que 10&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor igual a 30&quot;&lt;/span&gt;	
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;elsif&quot;&gt;ELSIF&lt;/h2&gt;
+&lt;p&gt;O elsif é utilizado quando precisamos de mais condicionais em nosso if, segue abaixo um exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+ 	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor menor que 10&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor igual a 20&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor maior de 50&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor igual a 30&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;unless&quot;&gt;UNLESS&lt;/h2&gt;
+&lt;p&gt;O Unless é o oposto do if ou seja ele é executado  quando a resposta da condição for falsa(false).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor = 30&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;case&quot;&gt;CASE&lt;/h2&gt;
+
+&lt;p&gt;O Case é muito parecido com o If, mas podemos utilizar quando existem vários Ifs encadiados onde cada condição é testada com a cláusula &lt;strong&gt;when&lt;/strong&gt;,segue o código abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;mes_do_aniversario&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mes_do_aniversario&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Você nasceu do primeiro semestre&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
+	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Você nasceu do primeiro semestre&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+ &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Não existe esse mês&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:</summary></entry><entry><title type="html">Tipos de Variáveis em Ruby</title><link href="http://localhost:4000/2018/07/12/tipos-de-variaveis.html" rel="alternate" type="text/html" title="Tipos de Variáveis em Ruby" /><published>2018-07-12T14:54:00-03:00</published><updated>2018-07-12T14:54:00-03:00</updated><id>http://localhost:4000/2018/07/12/tipos-de-variaveis</id><content type="html" xml:base="http://localhost:4000/2018/07/12/tipos-de-variaveis.html">&lt;p&gt;Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Willian&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
