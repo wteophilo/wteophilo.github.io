@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-10T20:35:22-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Condicionais em Ruby</title><link href="http://localhost:4000/2018/09/10/condicionais-em-ruby.html" rel="alternate" type="text/html" title="Condicionais em Ruby" /><published>2018-09-10T18:51:00-03:00</published><updated>2018-09-10T18:51:00-03:00</updated><id>http://localhost:4000/2018/09/10/condicionais-em-ruby</id><content type="html" xml:base="http://localhost:4000/2018/09/10/condicionais-em-ruby.html">&lt;p&gt;Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-07T16:19:34-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Escopos de Variáveis em Ruby</title><link href="http://localhost:4000/2018/10/07/escopos-variaveis-ruby.html" rel="alternate" type="text/html" title="Escopos de Variáveis em Ruby" /><published>2018-10-07T16:11:00-03:00</published><updated>2018-10-07T16:11:00-03:00</updated><id>http://localhost:4000/2018/10/07/escopos-variaveis-ruby</id><content type="html" xml:base="http://localhost:4000/2018/10/07/escopos-variaveis-ruby.html">&lt;p&gt;Anteriormente falamos sobre os &lt;a href=&quot;https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html&quot;&gt;tipos de variáveis&lt;/a&gt;  que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.&lt;/p&gt;
+
+&lt;p&gt;O Ruby não possui nenhuma palavra chave para definir um escopo, usamos simbolos para identifica-los. Os escopos são:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Local&lt;/li&gt;
+  &lt;li&gt;Global($)&lt;/li&gt;
+  &lt;li&gt;Instância(@)&lt;/li&gt;
+  &lt;li&gt;Classe(@@)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Com o decorrer deste post vamos mostrar exemplos da utilização dessas variáveis.&lt;/p&gt;
+
+&lt;h2 id=&quot;variáveis-locais&quot;&gt;Variáveis Locais&lt;/h2&gt;
+
+&lt;p&gt;As variáveis locais só podem ser acessadas dentro do método/bloco onde foram declaradas, veja o código abaixo:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;conta_ate_dez&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ao tentar acessar a variável &lt;strong&gt;“i”&lt;/strong&gt; fora do método o erro abaixo será exibido:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; undefined &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;variable or method &lt;span class=&quot;se&quot;&gt;`i&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' for main:Object (NameError)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;variáveis-globais&quot;&gt;Variáveis Globais($)&lt;/h2&gt;
+
+&lt;p&gt;As variáveis globais  podem ser acessadas em qualquer parte de do código, por conveção o simbolo &lt;strong&gt;$&lt;/strong&gt; (cifrão) deve ser utilizado. Segue o exemplo abaixo:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;vg&quot;&gt;$global&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2.5.3&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The scope is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defined?&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$global&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;The&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scope&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;variable&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;variáveis-de-instância&quot;&gt;Variáveis de Instância(@)&lt;/h2&gt;
+
+&lt;p&gt;Uma variável de instância é uma variável cujo valor é específico ao objeto e não à classe. Em geral possui uma valor diferente em cada objeto membro da classe, utilizamos o &lt;strong&gt;@&lt;/strong&gt; para identificar esse tipo de variável. Abaixo um exemplo desse tipo de variável:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ComicBook&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;
+        &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Boku no Hero&quot;&lt;/span&gt;
+        &lt;span class=&quot;vi&quot;&gt;@year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2014&lt;/span&gt;
+        &lt;span class=&quot;vi&quot;&gt;@author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Kōhei Horikoshi'&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Um método bem legal para listar todas as variáveis de instância de um objeto é &lt;strong&gt;instance_variables&lt;/strong&gt;, vamos executar esse método na classe que criamos acima:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;manga&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ComicBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;manga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance_variables&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:@year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:@autor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;variáveis-de-classe&quot;&gt;Variáveis de Classe(@@)&lt;/h2&gt;
+
+&lt;p&gt;Uma variável de classe é uma variável  que armazena seu próprio estado, quando o estado é alterado em algum objeto automaticamente o estado é alterado para todos os objetos, utilizamos &lt;strong&gt;@@&lt;/strong&gt; para indentificar esse tipo de variável. Abaixo um exemplo:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Vehicle&lt;/span&gt;
+    &lt;span class=&quot;vc&quot;&gt;@@number_of_doors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;number_of_doors&lt;/span&gt;
+        &lt;span class=&quot;vc&quot;&gt;@@number_of_doors&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Vehicle&lt;/span&gt;
+    &lt;span class=&quot;vc&quot;&gt;@@number_of_doors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Number of doors &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Vehicle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;number_of_doors&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - Vehicle&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doors&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Vehicle&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Number of doors &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;number_of_doors&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - Car&quot;&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doors&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Car&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Anteriormente falamos sobre os tipos de variáveis que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.</summary></entry><entry><title type="html">Condicionais em Ruby</title><link href="http://localhost:4000/2018/09/10/condicionais-em-ruby.html" rel="alternate" type="text/html" title="Condicionais em Ruby" /><published>2018-09-10T18:51:00-03:00</published><updated>2018-09-10T18:51:00-03:00</updated><id>http://localhost:4000/2018/09/10/condicionais-em-ruby</id><content type="html" xml:base="http://localhost:4000/2018/09/10/condicionais-em-ruby.html">&lt;p&gt;Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;If / elsif / else&lt;/li&gt;
