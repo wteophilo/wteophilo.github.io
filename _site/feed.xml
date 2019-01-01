@@ -1,4 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-10-07T16:19:34-03:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Escopos de Variáveis em Ruby</title><link href="http://localhost:4000/2018/10/07/escopos-variaveis-ruby.html" rel="alternate" type="text/html" title="Escopos de Variáveis em Ruby" /><published>2018-10-07T16:11:00-03:00</published><updated>2018-10-07T16:11:00-03:00</updated><id>http://localhost:4000/2018/10/07/escopos-variaveis-ruby</id><content type="html" xml:base="http://localhost:4000/2018/10/07/escopos-variaveis-ruby.html">&lt;p&gt;Anteriormente falamos sobre os &lt;a href=&quot;https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html&quot;&gt;tipos de variáveis&lt;/a&gt;  que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-12-31T16:52:56-02:00</updated><id>http://localhost:4000/</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">User Based Simularity</title><link href="http://localhost:4000/2018/10/07/user-based-simularity.html" rel="alternate" type="text/html" title="User Based Simularity" /><published>2018-10-07T17:02:00-03:00</published><updated>2018-10-07T17:02:00-03:00</updated><id>http://localhost:4000/2018/10/07/user-based-simularity</id><content type="html" xml:base="http://localhost:4000/2018/10/07/user-based-simularity.html">&lt;p&gt;Hoje vamos falar sobre o algoritmo de recomendação User Base Simularity.
+Algoritmos de recomendação são um tipo de algoritmo utilizado na área de Machine Learning, esse tipo de algoritmo nos ajuda a recomendar algum item para para nossos usuários.&lt;/p&gt;
+
+&lt;p&gt;Muitas empresas grandes como Netflix, Amazon, Netshoes etc utilizam esses algortimos para alavancar suas vendas ou manter seus usuários, ao enviar um item que o usuário quer a chance de mante-los é muito maior vamos usar o exemplo clássico do Netflix nós não queremos assistir um filme/série ruim a partir do itens que já consumimos o algoritmo nos envia uma lista de novos items que podem ser interessantes.&lt;/p&gt;
+
+&lt;p&gt;Mas como é feito esse tipo de situação? Digamos que temos ecomerce de livros e queremos recomendar um novo livro para nossos usuários:&lt;/p&gt;
+
+&lt;p&gt;||||||
+|—|—|—|—|&lt;/p&gt;
+
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Machine Learning" /><summary type="html">Hoje vamos falar sobre o algoritmo de recomendação User Base Simularity. Algoritmos de recomendação são um tipo de algoritmo utilizado na área de Machine Learning, esse tipo de algoritmo nos ajuda a recomendar algum item para para nossos usuários.</summary></entry><entry><title type="html">Escopos de Variáveis em Ruby</title><link href="http://localhost:4000/2018/10/07/escopos-variaveis-ruby.html" rel="alternate" type="text/html" title="Escopos de Variáveis em Ruby" /><published>2018-10-07T16:11:00-03:00</published><updated>2018-10-07T16:11:00-03:00</updated><id>http://localhost:4000/2018/10/07/escopos-variaveis-ruby</id><content type="html" xml:base="http://localhost:4000/2018/10/07/escopos-variaveis-ruby.html">&lt;p&gt;Anteriormente falamos sobre os &lt;a href=&quot;https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html&quot;&gt;tipos de variáveis&lt;/a&gt;  que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.&lt;/p&gt;
 
 &lt;p&gt;O Ruby não possui nenhuma palavra chave para definir um escopo, usamos simbolos para identifica-los. Os escopos são:&lt;/p&gt;
 
@@ -580,94 +590,4 @@ Basicamente existem três tipos de requisitos:&lt;/p&gt;
 &lt;p&gt;Após a aplicação do SMART: 
 “A tela de cadastro de usuários Web deve possuir um tempo de resposta menor de 8 segundos e suportar até 20 usuários simultaneamente em horários de pico( 15:00 às 19:00)”.&lt;/p&gt;
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="arquitetura" /><category term="requisitos" /><summary type="html">Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos. Basicamente existem três tipos de requisitos:</summary></entry><entry><title type="html">Olá Vuejs</title><link href="http://localhost:4000/2018/04/03/ola-vuejs.html" rel="alternate" type="text/html" title="Olá Vuejs" /><published>2018-04-03T14:01:00-03:00</published><updated>2018-04-03T14:01:00-03:00</updated><id>http://localhost:4000/2018/04/03/ola-vuejs</id><content type="html" xml:base="http://localhost:4000/2018/04/03/ola-vuejs.html">&lt;p&gt;Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;O que é o Vuejs?&lt;/li&gt;
-  &lt;li&gt;Instalando o Vue CLI&lt;/li&gt;
-  &lt;li&gt;Iniciando um projeto&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;o-que-é-o-vuejs&quot;&gt;O que é o Vuejs?&lt;/h3&gt;
-
-&lt;p&gt;O Vuejs é um framework Javascript  para criação de componentes reutilizáveis, algumas vantagens dele são:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Core muito pequeno os incríveis 17kb&lt;/li&gt;
-  &lt;li&gt;DOM virtual(como o React do Facebook)&lt;/li&gt;
-  &lt;li&gt;Componentes visuais reativos e combináveis&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;instalando-o-vue-cli&quot;&gt;Instalando o Vue CLI&lt;/h3&gt;
-
-&lt;p&gt;Com o Node(a partir da versão 6.0) instalado vamos instalar o Vue CLI que irá nos auxiliar com a criação e manutenção de nossos projetos, para instalar o Vue CLI execute o seguinte comando no terminal:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; -g vue-cli&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Lembrando que &lt;strong&gt;-g&lt;/strong&gt; significa &lt;strong&gt;global&lt;/strong&gt; ou seja se seu usuário não tenha permissão de administrador podem ocorrer alguns erros… então execute o comando com permissão de administrador.&lt;/p&gt;
-
-&lt;p&gt;Podemos confirmar a instalação do vue digitando o seguinte comando:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue --version
-2.7.0&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;No meu caso tenho o Vue 2.7.0 instalado, mas é bem provável que já existe uma versão mais recente.&lt;/p&gt;
-
-&lt;h3 id=&quot;iniciando-um-projeto&quot;&gt;Iniciando um projeto&lt;/h3&gt;
-
-&lt;p&gt;Agora vamos criar um novo projeto usando o terminal execute o seguinte comando:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue init &amp;lt;template-name&amp;gt; &amp;lt;project-name&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;O que significa cada um desses comandos?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vue init: iniciando o projeto com vue&lt;/li&gt;
-  &lt;li&gt;template-name: template do projeto, a lista de todos os &lt;a href=&quot;https://github.com/vuejs-templates&quot;&gt;templates&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;project-name: nome do projeto&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Então para continuarmos o exemplo criei um projeto chamado olavue com o template &lt;a href=&quot;https://github.com/vuejs-templates/webpack-simple&quot;&gt;webpack-simple&lt;/a&gt;:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;vue init webpack-simple olavue&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Ao executar o comando serão feitos algumas perguntas, como o nome do projeto, descrição, autor etc.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;A newer version of vue-cli is available.
-
-This will &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;Vue 2.x version of the template.
-
-&lt;span class=&quot;k&quot;&gt;For &lt;/span&gt;Vue 1.x use: vue init webpack-simple#1.0 olavue
-
-? Project name olavue
-? Project description A Vue.js project
-? Author Willian Teophilo &amp;lt;wteophilo@gmail.com&amp;gt;
-? License MIT
-? Use sass? No
-
-   vue-cli · Generated &lt;span class=&quot;s2&quot;&gt;&quot;olavue&quot;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
-
-   To get started:
-
-     &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;olavue
-     npm &lt;span class=&quot;nb&quot;&gt;install
-     &lt;/span&gt;npm run dev&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Com o projeto criado precisamos instalar as dependências, para isso acesse a pasta do projeto e execute o seguinte comando:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;e por fim levantar o servidor:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;npm run dev
-
-cross-env &lt;span class=&quot;nv&quot;&gt;NODE_ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;development webpack-dev-server --open --hot
-
-Project is running at http://localhost:8080/
-webpack output is served &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; /dist/
-404s will fallback to /index.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Se tudo deu certo o projeto é disponibilizado em http://localhost:8080/ e a seguinte página é exibida:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/img/olavue.png&quot; alt=&quot;olavue&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><summary type="html">Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post:</summary></entry></feed>
+&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="arquitetura" /><category term="requisitos" /><summary type="html">Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos. Basicamente existem três tipos de requisitos:</summary></entry></feed>
