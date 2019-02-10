@@ -41,8 +41,8 @@
 <lastmod>2018-10-07T16:11:00-03:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2018/10/07/user-based-simularity.html</loc>
-<lastmod>2018-10-07T17:02:00-03:00</lastmod>
+<loc>http://localhost:4000/2019/02/10/intro-factorybot.html</loc>
+<lastmod>2019-02-10T20:38:00-02:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
@@ -52,5 +52,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/page/2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page/3/</loc>
 </url>
 </urlset>
