@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RSpec-Executando apenas um teste
+excerpt: Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa...
 date: 2018-04-11 21:03 -0300
 tags: [TDD,RSpec,Ruby on Rails]
 ---

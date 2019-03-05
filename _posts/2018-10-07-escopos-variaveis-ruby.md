@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Escopos de Variáveis em Ruby
+excerpt: Anteriormente falamos sobre os tipos de variáveis que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis...
 date: 2018-10-07 16:11 -0300
 tags: [Ruby]
 ---

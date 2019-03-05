@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tipos de Variáveis em Ruby
+excerpt: Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada quando declaramos uma variável precisamos definir também seu tipo...
 date: 2018-07-12 14:54 -0300
 tags: [Ruby]
 ---

@@ -2,7 +2,8 @@
 layout: post
 title: Estrutura Vuejs
 date: 2018-05-01 14:20 -0300
-img: estrutura_pastas_vuejs.jpg
+excerpt: Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto...
+img: estrutura_vuejs/estrutura_pastas_vuejs.jpg
 tags: [vuejs]
 ---
 

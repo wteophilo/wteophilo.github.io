@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Condicionais em Ruby
+excerpt: Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby...
 date: 2018-09-10 18:51 -0300
 tags: [Ruby]
 

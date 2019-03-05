@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RSpec-It vs Xit
+excerpt: Para pularmos um item de nossos testes é necessário apenas adicionarmos o comando xit ao invés do it na descrição do teste...
 date: 2018-04-14 09:41 -0300
 tags: [TDD,RSpec,Ruby on Rails]
 ---

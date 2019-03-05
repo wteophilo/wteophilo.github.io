@@ -2,8 +2,9 @@
 layout: post
 title: Relatórios Rspec
 date: 2018-05-01 17:03 -0300
+excerpt: Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs...
 tags: [TDD,RSpec,Ruby on Rails]
-img: rspec_reports.png
+img: relatorios_rspec/rspec_reports.jpg
 ---
 
 Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.

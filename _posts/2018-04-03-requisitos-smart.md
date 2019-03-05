@@ -2,8 +2,9 @@
 layout: post
 comments: true
 title: Requisitos Smart
-date: 2018-04-03 21:35 -0300
-img: requisitos_smart.jpg
+date: 2018-04-03 21:35 -0300]
+excerpt: A técnica SMART nos permite avaliar se um determinado requisito é valido ou não, o ponto chave desta técnica é transformar um requisito com frases subjetivas em algum mais técnico...
+img: requisitos_smart/requisitos_smart.jpg
 tags: [arquitetura,requisitos]
 ---
 

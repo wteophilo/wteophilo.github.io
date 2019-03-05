@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Introdução FactoryBot
+excerpt: Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot...
+tags: [Ruby]
 date: 2019-02-10 20:38 -0200
 ---
 Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot. Nos primórdios do Rails era utilizados arquivos YAML/CSV  onde cada arquivo conter dados de um único modelo esses arquivos são conhecidos como [fixtures][fixtures], segue exemplo:
