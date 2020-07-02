@@ -1,0 +1,11 @@
+version: "3.2"
+
+services:
+  blog_will:
+    tty: true
+    stdin_open: true
+    image: blog_will
+    build:
+      context: .
+    volumes:
+      - ".:/gem"
