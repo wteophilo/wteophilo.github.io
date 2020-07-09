@@ -38,4 +38,5 @@ yarn-debug.log*
 /_site/Gemfile
 /_site/Gemfile.lock
 /_site/docker-compose
+/_site/Makefile
 

@@ -34,3 +34,6 @@ paginate: 5
 paginate_path: "/page/:num"
 
 exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+host: 0.0.0.0
+port: 4000

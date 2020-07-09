@@ -2,9 +2,9 @@ FROM ruby:2.6.3-alpine3.9
 
 ENV LANG C.UTF-8
 
-WORKDIR /gem
+WORKDIR /app
 
-COPY . /gem
+COPY . /app
 
 RUN gem install bundler:2.0.1 && \
     bundler config default 2.0.1 && \
@@ -13,3 +13,5 @@ RUN gem install bundler:2.0.1 && \
     apk add --no-cache build-base git && \
     bundle install && \
     rm -r /var/cache/apk/
+
+CMD ["./scripts/web.sh"]

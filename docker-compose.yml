@@ -1,11 +1,14 @@
 version: "3.2"
 
 services:
-  blog_will:
+  web:
     tty: true
     stdin_open: true
     image: blog_will
     build:
       context: .
     volumes:
-      - ".:/gem"
+      - ".:/app"
+    container_name: blog_will
+    expose:
+      - 4000
