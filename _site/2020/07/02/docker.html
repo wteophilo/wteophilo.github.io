@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Docker - Willian Teophilo</title>
+
+  <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
+
+    <meta content="Willian Teophilo" property="og:site_name">
+  
+    <meta content="Docker" property="og:title">
+  
+  
+    <meta content="article" property="og:type">
+  
+  
+    <meta content="Willian Teophilo" property="og:description">
+  
+  
+    <meta content="https://wteophilo.github.io/2020/07/02/docker.html" property="og:url">
+  
+  
+    <meta content="2020-07-02T20:09:00+00:00" property="article:published_time">
+    <meta content="https://wteophilo.github.io/about/" property="article:author">
+  
+  
+    <meta content="https://wteophilo.github.io/assets/img/docker/docker.png" property="og:image">
+  
+  
+    
+  
+  
+    
+    <meta content="Docker" property="article:tag">
+    
+  
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@wilteophilo">
+  
+    <meta name="twitter:title" content="Docker">
+  
+  
+    <meta name="twitter:url" content="https://wteophilo.github.io/2020/07/02/docker.html">
+  
+  
+    <meta name="twitter:description" content="Willian Teophilo">
+  
+  
+    <meta name="twitter:image:src" content="https://wteophilo.github.io/assets/img/docker/docker.png">
+  
+
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="/assets/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#263959">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#263959">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#263959">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="/assets/fonts/font-awesome/css/font-awesome.min.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+</head>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Docker | Willian Teophilo</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Docker" />
+<meta name="author" content="Willian Teophilo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância…" />
+<meta property="og:description" content="Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância…" />
+<link rel="canonical" href="https://wteophilo.github.io/2020/07/02/docker.html" />
+<meta property="og:url" content="https://wteophilo.github.io/2020/07/02/docker.html" />
+<meta property="og:site_name" content="Willian Teophilo" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-02T20:09:00+00:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://wteophilo.github.io/2020/07/02/docker.html","dateModified":"2020-07-02T20:09:00+00:00","datePublished":"2020-07-02T20:09:00+00:00","headline":"Docker","mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2020/07/02/docker.html"},"author":{"@type":"Person","name":"Willian Teophilo"},"description":"Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância…","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+<body>
+  <script id="dsq-count-scr" src="//wteophilo-github-io.disqus.com/count.js" async></script>
+  <div class="wrapper">
+    <aside class="sidebar">
+  <header>
+    <div class="about">
+      <div class="cover-author-image">
+        <a href="/"><img src="/assets/img/wteophilo.jpg" alt="Willian Teophilo"></a>
+      </div>
+      <div class="author-name">Willian Teophilo</div>
+      <p>Sempre em busca de algo novo para aprender.</p>
+    </div>
+  </header> <!-- End Header -->
+  <footer>
+    <section class="contact">
+      <h3 class="contact-title">Contact me</h3>
+      <ul>
+        
+          <li><a href="https://twitter.com/wilteophilo" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        
+        
+          <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        
+        
+          <li class="github"><a href="http://github.com/wteophilo" target="_blank"><i class="fa fa-github"></i></a></li>
+        
+        
+          <li class="linkedin"><a href="https://in.linkedin.com/in/wteophilo" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        
+        
+          <li class="email"><a href="mailto:wteophilo@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+        
+      </ul>
+    </section> <!-- End Section Contact -->
+    <div class="copyright">
+      <p>2020 &copy; Willian Teophilo</p>
+    </div>
+  </footer> <!-- End Footer -->
+</aside> <!-- End Sidebar -->
+<div class="content-box clearfix">
+  <article class="article-page">
+  <div class="page-content">
+    
+    <div class="page-cover-image">
+      <img class="page-image" src=/assets/img/docker/docker.png alt="Docker">
+    </div> <!-- End Page Cover Image -->
+    
+    <div class="wrap-content">
+      <header class="header-page">
+        <h1 class="page-title">Docker</h1>
+        <div class="page-date"><span>2020, Jul 02&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+      </header>
+      <p>Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este <a href="https://docs.docker.com/get-docker/">link</a>.</p>
+
+<p>Neste post vamos falar sobre:</p>
+
+<ul>
+  <li>Docker x VMs</li>
+  <li>Dockerfile</li>
+  <li>Docker Compose</li>
+  <li>Comandos básicos Docker</li>
+</ul>
+
+<h3 id="docker-x-vms">Docker x VMs</h3>
+
+<h4 id="máquinas-virtuais-vms">Máquinas virtuais (VMs)</h4>
+
+<p>Máquinas virtuais (VMs) são uma abstração de hardware físico que transforma um servidor em muitos servidores. O hypervisor permite que várias VMs sejam executadas em uma única máquina. Cada VM inclui uma cópia completa de um sistema operacional, aplicativo, binários e bibliotecas necessários  ocupando dezenas de GBs.</p>
+
+<p><img src="/assets/img/docker/container-vm" alt="vpmimage" /></p>
+
+<h5 id="docker">Docker</h5>
+
+<p>Os contêineres são uma abstração na camada de aplicativo que agrupa código e dependências juntos. Vários contêineres podem ser executados na mesma máquina e compartilhar o kernel do sistema operacional com outros contêineres, cada um executando como processos isolados Os contêineres ocupam menos espaço que as VMs podem lidar com mais aplicativos e requerem menos VMs e sistemas operacionais.</p>
+
+<p><img src="/assets/img/docker/docker-containerized.jpg" alt="dockerimage" /></p>
+
+<h3 id="dockerfile">Dockerfile</h3>
+
+<p>Um Dockerfile é um documento de texto que contém as instruções  para montar uma imagem.</p>
+
+<p>Exemplo Dockerfile:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ruby:2.7.1-alpine3.10
+
+WORKDIR /app
+EXPOSE 80
+
+COPY . /app
+
+RUN apk update &amp;&amp; \
+    apk add libxslt-dev build-base libxml2-dev curl jq tzdata sqlite-dev yarn &amp;&amp; \
+    bundle install &amp;&amp; \
+    yarn install 
+</code></pre></div></div>
+
+<p>O que faz cada instrução do exemplo acima:</p>
+
+<ul>
+  <li>FROM: imagem a ser utilizada, no exemplo estávamos usando uma imagem de Ubuntu alpine + Ruby 2.7</li>
+  <li>WORKDIR: pasta de trabalho normalmente ao acessar o container</li>
+  <li>EXPOSE: expõe a porta do container</li>
+  <li>COPY: copia o conteúdo da sua máquina e adiciona em uma pasta no container</li>
+  <li>RUN: executa comandos durante o build da imagem por exemplo instala algumas bibliotecas necessárias para o funcionamento do container</li>
+</ul>
+
+<h3 id="docker-compose">Docker Compose</h3>
+
+<p>O Docker Compose é uma ferramenta para orquestar contêineres, com ela podemos subir vários containers ao mesmo tempo por exemplo nosso mais um banco de dados. Para utiliza-lo é preciso um arquivo <a href="http://yaml.org/">YAML</a> para configurar os serviços do seu aplicativo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.6"
+services:
+  web:
+    image: api
+    build:
+      context: .
+      volumes:
+      - "/app/.bundle"
+      - "/app/vendor"
+      - ".:/app"
+      - "bundle:/usr/local/bundle"
+    container_name: api_app
+    ports:
+      - 80:3000
+    depends_on:
+      - mysql
+      - redis
+    env_file: .env.docker
+    environment:
+      RAILS_ENV: development
+    links:
+      - mysql
+      - redis
+
+  mysql:
+    image: mysql:5.7
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_USER=root
+    container_name: api_mysql
+
+  redis:
+     image: redis:alpine
+     container_name: api_redis
+     ports:
+       - 6379:6379
+volumes:
+  bundle:
+</code></pre></div></div>
+
+<h3 id="comandos-básicos-docker">Comandos básicos Docker</h3>
+
+<p>Criando uma imagem basta utilizar o comando <code class="highlighter-rouge">build</code></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build .
+</code></pre></div></div>
+
+<p>Podemos adicionar tag na nossa nova imagem usando <code class="highlighter-rouge">-t</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t "minha-image" .
+</code></pre></div></div>
+
+<h5 id="acessando-container">Acessando container</h5>
+
+<p>Para executar um comando dentro do container por exemplo executar um bundle install, caso não tenha especificado no Dockerfile usamos <code class="highlighter-rouge">run</code> e o comando:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it minha-imagem comando
+</code></pre></div></div>
+
+<p>Se o container estiver em pé e não queria subir outro container basta usar o comando <code class="highlighter-rouge">exec</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it minha-imagem comando
+</code></pre></div></div>
+
+<h4 id="listando-imagens">Listando imagens</h4>
+
+<p>O comando para listar todas as imagens baixadas em seu computador:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker images
+</code></pre></div></div>
+
+<p>Podemos mesclar os comandos do Docker com do terminal, digamos que queremos localizar uma imagem em específico.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker imagens | grep minha-imagem
+</code></pre></div></div>
+
+<p>Para verificar quais containers estão rodando no momento em sua máquina use o comando baixo:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
+
+<p>Na coluna status terão dois valores:</p>
+
+<ul>
+  <li>Up - funcionando</li>
+  <li>Exit - não funcionado</li>
+</ul>
+
+<h4 id="apagando-imagens">Apagando imagens</h4>
+
+<p>Para apagar uma image basta utilizar o comando <code class="highlighter-rouge">rmi</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi hash-imagem
+</code></pre></div></div>
+
+<p>Apagando várias imagens</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi $(docker images | grep minha-imagem)
+</code></pre></div></div>
+
+<h4 id="logs">Logs</h4>
+
+<p>Podemos verificar também os logs de um de nossos containers usando o comando <code class="highlighter-rouge">logs</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs minha-imagem
+</code></pre></div></div>
+
+<h4 id="volumes">Volumes</h4>
+
+<p>O <a href="https://docs.docker.com/storage/volumes/">volume</a> é o mecanismo preferido para persistir os dados gerados e usados ​​pelos contêineres do Docker, embora as montagens de ligação dependam da estrutura de diretórios da máquina host, os volumes são completamente gerenciados pelo Docker.</p>
+
+<p>Podemos criar um volume usando o comando <code class="highlighter-rouge">create</code> como mostra o exemplo a seguir:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;nome/hash&gt;
+</code></pre></div></div>
+
+<p>Para listar todos os volumes basta usar <code class="highlighter-rouge">ls</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume ls
+</code></pre></div></div>
+
+<p>Apagando um volume:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume rm &lt;nome/hash&gt;
+</code></pre></div></div>
+
+<p>Caso queria apagar todos os volumes de uma vez utilize o comando <code class="highlighter-rouge">prune</code>:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume prune
+</code></pre></div></div>
+
+<h4 id="networks">Networks</h4>
+
+<p>Um dos motivos pelos quais os contêineres e serviços do Docker são tão poderosos é que você pode conectá-los ou conectá-los a cargas de trabalho que não são do Docker, para mais informações sobre networks no docker segue o <a href="https://docs.docker.com/network/">link</a>.</p>
+
+<p>Os comandos para manipular um network são os mesmos mostrados nos volumes:</p>
+
+<p>Criando volume:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network create &lt;nome/hash&gt;
+</code></pre></div></div>
+
+<p>Listando volume:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network ls
+</code></pre></div></div>
+
+<p>Delete volume:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network rm &lt;nome/hash&gt;
+</code></pre></div></div>
+
+<p>Por fim algumas dicas para finalizar esse post. Todos estes comandos podem ser usados com o docker-compose caso esteja usando o compose em seu projeto. 
+Como existem vários comandos do docker e se tiver alguma dúvida em relação de algum deles basta adicionar –help:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build --help
+</code></pre></div></div>
+
+<p>ou consultar a documentação oficial do <a href="https://docs.docker.com/">docker</a>. 
+E como uma última dica caso tenha um PC com HD/SSD pequeno sempre fique de olho no volume.</p>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
+
+      <div class="page-footer">
+        <div class="page-share">
+          <a href="https://twitter.com/intent/tweet?text=Docker&url=https://wteophilo.github.io/2020/07/02/docker.html" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
+          <a href="https://facebook.com/sharer.php?u=https://wteophilo.github.io/2020/07/02/docker.html" title="Share on Facebook" rel="nofollow" target="_blank">Facebook</a>
+          <a href="https://plus.google.com/share?url=https://wteophilo.github.io/2020/07/02/docker.html" title="Share on Google+" rel="nofollow" target="_blank">Google+</a>
+        </div>
+        <div class="page-tag">
+          
+            <a href="/tags#Docker" class="tag">&#35; Docker</a>
+          
+        </div>
+      </div>
+		<section class="comment-area">
+  <div class="comment-wrapper">
+    
+    <div id="disqus_thread" class="article-comments"></div>
+    <script>
+      (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//wteophilo-github-io.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+  </div>
+</section> <!-- End Comment Area -->
+	
+    </div> <!-- End Wrap Content -->
+  </div> <!-- End Page Content -->
+</article> <!-- End Article Page -->
+
+</div>
+
+  </div>
+  
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-116553793-1', 'auto');
+  ga('send', 'pageview');
+</script> <!-- End Analytics -->
+
+</body>
+</html>
