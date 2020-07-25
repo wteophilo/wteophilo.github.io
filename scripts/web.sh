@@ -1,3 +1,3 @@
 #!/bin/sh
 set -e
-bundle exec jekyll serve --skip-initial-build --host localhost
+bundle exec jekyll serve --host=0.0.0.0 --force_polling --watch --config _config.yml
