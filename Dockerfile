@@ -4,6 +4,8 @@ ENV LANG C.UTF-8
 
 WORKDIR /app
 
+EXPOSE 6000
+
 COPY . /app
 
 RUN gem install bundler:2.0.1 && \

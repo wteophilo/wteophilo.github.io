@@ -4,11 +4,13 @@ services:
   web:
     tty: true
     stdin_open: true
+    environment:
+      - JEKYLL_ENV=docker
     image: blog_will
     build:
       context: .
     volumes:
       - ".:/app"
     container_name: blog_will
-    expose:
-      - 4000
+    ports:
+      - 4000:4000

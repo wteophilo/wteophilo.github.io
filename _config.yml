@@ -1,6 +1,6 @@
 title: Willian Teophilo
 description: Willian Teophilo
-url: "https://wteophilo.github.io/"
+url: "https://wteophilo.github.io"
 # Author Settings
 author: Willian Teophilo
 # add your photo
@@ -33,7 +33,29 @@ plugins:
 paginate: 5
 paginate_path: "/page/:num"
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+exclude: ["scripts/web.sh", 
+          "Dockerfile", 
+          "docker-compose.yml", 
+          "node_modules", 
+          "gulpfile.js", 
+          "package.json",
+          "yarn.lock",
+          "README"]
 
-host: 0.0.0.0
-port: 4000
+# Serving
+detach              : false
+show_dir_listing    : false
+
+
+# Outputting
+permalink           : date
+timezone            : null
+
+quiet               : false
+verbose             : false
+defaults            : []
+
+liquid:
+  error_mode        : warn
+  strict_filters    : false
+  strict_variables  : false
