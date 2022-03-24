@@ -74,9 +74,9 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Docker | Willian Teophilo</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Docker" />
 <meta name="author" content="Willian Teophilo" />
 <meta property="og:locale" content="en_US" />
@@ -87,8 +87,10 @@
 <meta property="og:site_name" content="Willian Teophilo" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-02T20:09:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Docker" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://wteophilo.github.io/2020/07/02/docker.html","headline":"Docker","dateModified":"2020-07-02T20:09:00+00:00","datePublished":"2020-07-02T20:09:00+00:00","author":{"@type":"Person","name":"Willian Teophilo"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2020/07/02/docker.html"},"description":"Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância…","@context":"http://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Willian Teophilo"},"dateModified":"2020-07-02T20:09:00+00:00","datePublished":"2020-07-02T20:09:00+00:00","description":"Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância…","headline":"Docker","mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2020/07/02/docker.html"},"url":"https://wteophilo.github.io/2020/07/02/docker.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <body>
@@ -126,7 +128,7 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2020 &copy; Willian Teophilo</p>
+      <p>2022 &copy; Willian Teophilo</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
@@ -174,7 +176,7 @@
 
 <p>Exemplo Dockerfile:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ruby:2.7.1-alpine3.10
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ruby:2.7.1-alpine3.10
 
 WORKDIR /app
 EXPOSE 80
@@ -201,7 +203,7 @@ RUN apk update &amp;&amp; \
 
 <p>O Docker Compose é uma ferramenta para orquestar contêineres, com ela podemos subir vários containers ao mesmo tempo por exemplo nosso mais um banco de dados. Para utiliza-lo é preciso um arquivo <a href="http://yaml.org/">YAML</a> para configurar os serviços do seu aplicativo.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.6"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.6"
 services:
   web:
     image: api
@@ -245,43 +247,43 @@ volumes:
 
 <h3 id="comandos-básicos-docker">Comandos básicos Docker</h3>
 
-<p>Criando uma imagem basta utilizar o comando <code class="highlighter-rouge">build</code></p>
+<p>Criando uma imagem basta utilizar o comando <code class="language-plaintext highlighter-rouge">build</code></p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build .
 </code></pre></div></div>
 
-<p>Podemos adicionar tag na nossa nova imagem usando <code class="highlighter-rouge">-t</code>:</p>
+<p>Podemos adicionar tag na nossa nova imagem usando <code class="language-plaintext highlighter-rouge">-t</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t "minha-image" .
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t "minha-image" .
 </code></pre></div></div>
 
 <h5 id="acessando-container">Acessando container</h5>
 
-<p>Para executar um comando dentro do container por exemplo executar um bundle install, caso não tenha especificado no Dockerfile usamos <code class="highlighter-rouge">run</code> e o comando:</p>
+<p>Para executar um comando dentro do container por exemplo executar um bundle install, caso não tenha especificado no Dockerfile usamos <code class="language-plaintext highlighter-rouge">run</code> e o comando:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it minha-imagem comando
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it minha-imagem comando
 </code></pre></div></div>
 
-<p>Se o container estiver em pé e não queria subir outro container basta usar o comando <code class="highlighter-rouge">exec</code>:</p>
+<p>Se o container estiver em pé e não queria subir outro container basta usar o comando <code class="language-plaintext highlighter-rouge">exec</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it minha-imagem comando
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it minha-imagem comando
 </code></pre></div></div>
 
 <h4 id="listando-imagens">Listando imagens</h4>
 
 <p>O comando para listar todas as imagens baixadas em seu computador:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker images
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker images
 </code></pre></div></div>
 
 <p>Podemos mesclar os comandos do Docker com do terminal, digamos que queremos localizar uma imagem em específico.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker imagens | grep minha-imagem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker imagens | grep minha-imagem
 </code></pre></div></div>
 
 <p>Para verificar quais containers estão rodando no momento em sua máquina use o comando baixo:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
 </code></pre></div></div>
 
 <p>Na coluna status terão dois valores:</p>
@@ -293,42 +295,42 @@ volumes:
 
 <h4 id="apagando-imagens">Apagando imagens</h4>
 
-<p>Para apagar uma image basta utilizar o comando <code class="highlighter-rouge">rmi</code>:</p>
+<p>Para apagar uma image basta utilizar o comando <code class="language-plaintext highlighter-rouge">rmi</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi hash-imagem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi hash-imagem
 </code></pre></div></div>
 
 <p>Apagando várias imagens</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi $(docker images | grep minha-imagem)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi $(docker images | grep minha-imagem)
 </code></pre></div></div>
 
 <h4 id="logs">Logs</h4>
 
-<p>Podemos verificar também os logs de um de nossos containers usando o comando <code class="highlighter-rouge">logs</code>:</p>
+<p>Podemos verificar também os logs de um de nossos containers usando o comando <code class="language-plaintext highlighter-rouge">logs</code>:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs minha-imagem
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs minha-imagem
 </code></pre></div></div>
 
 <h4 id="volumes">Volumes</h4>
 
 <p>O <a href="https://docs.docker.com/storage/volumes/">volume</a> é o mecanismo preferido para persistir os dados gerados e usados ​​pelos contêineres do Docker, embora as montagens de ligação dependam da estrutura de diretórios da máquina host, os volumes são completamente gerenciados pelo Docker.</p>
 
-<p>Podemos criar um volume usando o comando <code class="highlighter-rouge">create</code> como mostra o exemplo a seguir:</p>
+<p>Podemos criar um volume usando o comando <code class="language-plaintext highlighter-rouge">create</code> como mostra o exemplo a seguir:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;nome/hash&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;nome/hash&gt;
 </code></pre></div></div>
 
-<p>Para listar todos os volumes basta usar <code class="highlighter-rouge">ls</code>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume ls
+<p>Para listar todos os volumes basta usar <code class="language-plaintext highlighter-rouge">ls</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume ls
 </code></pre></div></div>
 
 <p>Apagando um volume:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume rm &lt;nome/hash&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume rm &lt;nome/hash&gt;
 </code></pre></div></div>
 
-<p>Caso queria apagar todos os volumes de uma vez utilize o comando <code class="highlighter-rouge">prune</code>:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume prune
+<p>Caso queria apagar todos os volumes de uma vez utilize o comando <code class="language-plaintext highlighter-rouge">prune</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume prune
 </code></pre></div></div>
 
 <h4 id="networks">Networks</h4>
@@ -339,22 +341,22 @@ volumes:
 
 <p>Criando volume:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network create &lt;nome/hash&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network create &lt;nome/hash&gt;
 </code></pre></div></div>
 
 <p>Listando volume:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network ls
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network ls
 </code></pre></div></div>
 
 <p>Delete volume:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network rm &lt;nome/hash&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network rm &lt;nome/hash&gt;
 </code></pre></div></div>
 
 <p>Por fim algumas dicas para finalizar esse post. Todos estes comandos podem ser usados com o docker-compose caso esteja usando o compose em seu projeto. 
 Como existem vários comandos do docker e se tiver alguma dúvida em relação de algum deles basta adicionar –help:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build --help
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build --help
 </code></pre></div></div>
 
 <p>ou consultar a documentação oficial do <a href="https://docs.docker.com/">docker</a>. 

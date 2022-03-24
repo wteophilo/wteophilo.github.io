@@ -1,0 +1,85 @@
+I"�<p>Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:</p>
+
+<ul>
+  <li>If / elsif / else</li>
+  <li>unless</li>
+  <li>case</li>
+</ul>
+
+<p>Mas não podemos falar de condicionais se não falarmos de operadores relacionais e os operadores lógicos.</p>
+
+<h2 id="operadores-relacionais">Operadores relacionais</h2>
+
+<ul>
+  <li>Igualdade <strong>==</strong></li>
+  <li>Diferente <strong>!=</strong></li>
+  <li>Maior que <strong>&gt;</strong></li>
+  <li>Maior ou igual <strong>&gt;=</strong></li>
+  <li>Menor <strong>&lt;</strong></li>
+  <li>Menor ou igual <strong>&lt;=</strong></li>
+</ul>
+
+<h2 id="operadores-lógicos">Operadores Lógicos</h2>
+<ul>
+  <li>&amp;&amp; (and)</li>
+  <li>|| (or)</li>
+</ul>
+
+<p>Vamos explorar um pouco mais sobre as condicionais com um pouco dos operadores relacionais.</p>
+
+<h2 id="if">IF</h2>
+<p>O if verifica se uma condição é verdadeira e apartir dessa verificação executa um trecho de código, segue o código abaixo utilizando também a igualdade:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">30</span>
+	<span class="nb">puts</span> <span class="s2">"Isso é verdade!"</span>
+<span class="k">end</span></code></pre></figure>
+
+<h2 id="else">ELSE</h2>
+<p>O else seria um complemento do If, caso a verificação do if seja falsa o trecho de  código executado é o else, segue o exemplo abaixo:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">10</span>
+	<span class="nb">puts</span> <span class="s2">"valor menor que 10"</span>
+<span class="k">else</span>
+	<span class="nb">puts</span> <span class="s2">"valor igual a 30"</span>	
+<span class="k">end</span></code></pre></figure>
+
+<h2 id="elsif">ELSIF</h2>
+<p>O elsif é utilizado quando precisamos de mais condicionais em nosso if, segue abaixo um exemplo:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">10</span>
+ 	<span class="nb">puts</span> <span class="s2">"valor menor que 10"</span>
+<span class="k">elsif</span> <span class="n">value</span> <span class="o">&lt;</span><span class="mi">20</span>
+	<span class="nb">puts</span> <span class="s2">"valor igual a 20"</span>
+<span class="k">elsif</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="mi">50</span>
+	<span class="nb">puts</span> <span class="s2">"valor maior de 50"</span>
+<span class="k">else</span>
+	<span class="nb">puts</span> <span class="s2">"valor igual a 30"</span>
+<span class="k">end</span></code></pre></figure>
+
+<h2 id="unless">UNLESS</h2>
+<p>O Unless é o oposto do if ou seja ele é executado  quando a resposta da condição for falsa(false).</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">unless</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span>
+	<span class="nb">puts</span> <span class="s2">"valor = 30"</span>
+<span class="k">end</span></code></pre></figure>
+
+<h2 id="case">CASE</h2>
+
+<p>O Case é muito parecido com o If, mas podemos utilizar quando existem vários Ifs encadiados onde cada condição é testada com a cláusula <strong>when</strong>,segue o código abaixo:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">mes_do_aniversario</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">case</span> <span class="n">mes_do_aniversario</span>
+<span class="k">when</span> <span class="mi">1</span><span class="o">..</span><span class="mi">6</span>
+	<span class="nb">puts</span> <span class="s2">"Você nasceu do primeiro semestre"</span>
+<span class="k">when</span> <span class="mi">7</span><span class="o">..</span><span class="mi">12</span>
+	<span class="nb">puts</span> <span class="s2">"Você nasceu do primeiro semestre"</span>
+<span class="k">else</span>
+ <span class="nb">puts</span> <span class="s2">"Não existe esse mês"</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+:ET

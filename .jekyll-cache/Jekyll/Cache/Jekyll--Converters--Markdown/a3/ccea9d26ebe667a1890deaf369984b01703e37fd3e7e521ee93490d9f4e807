@@ -1,0 +1,77 @@
+I"<p>O RSpec é um framework de testes escrito em Ruby que segue <a href="https://pt.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a>(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.</p>
+
+<h2 id="instalando">Instalando</h2>
+
+<p>Para usar o RSpec basta instalar a gem:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">rspec</span></code></pre></figure>
+
+<p>ou em seu projeto rails adicione as seguintes linhas:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span>  <span class="k">do</span>  
+  <span class="n">gem</span> <span class="s1">'rspec-rails'</span>  
+<span class="k">end</span></code></pre></figure>
+
+<p>Após instalado a gem basta executar o seguinte comando no terminal:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nt">--init</span></code></pre></figure>
+
+<p>Após a executar o comando serão adicionados ao projeto a pasta <strong>spec</strong>  e o arquivo <strong>spec_helper.rb</strong> neste arquivo podemos realizar algumas configurações do rspec, vamos falar mais sobre em um outro post.</p>
+
+<p>Além dos arquivos citados anteriormente ganhamos alguns novos generators: models,job,feature etc, veja <a href="https://relishapp.com/rspec/rspec-rails/docs/generators">aqui</a>.</p>
+
+<h2 id="usando-o-rspec">Usando o RSpec</h2>
+
+<p>Então temos nosso model <strong>Item</strong> com uma validação:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Item</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>  
+  <span class="n">validates</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:quantity</span><span class="p">,</span> <span class="ss">presence: </span><span class="kp">true</span>
+<span class="k">end</span></code></pre></figure>
+
+<p>E nosso teste onde queremos fazer dois testes:</p>
+<ul>
+  <li>Verificar se o campo <strong>name</strong> está preenchido.</li>
+  <li>Mostrar uma mensagem caso não esteja.</li>
+  <li>Estamos usando a gem <a href="https://github.com/thoughtbot/factory_bot_rails">FactoryBot</a>.</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	  
+<span class="nb">require</span>  <span class="s1">'rails_helper'</span>  
+      
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">Item</span><span class="p">,</span> <span class="ss">type: :model</span>  <span class="k">do</span>  
+    <span class="n">let</span><span class="p">(</span><span class="ss">:item</span><span class="p">){</span><span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:item</span><span class="p">}</span>  
+    <span class="n">it</span> <span class="s2">"Create a Item with all fields fill"</span>  <span class="k">do</span>  
+    	 <span class="n">expect</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">valid?</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_truthy</span>  
+    <span class="k">end</span>  
+     
+    
+    <span class="n">it</span> <span class="s2">"Create a Item without a name"</span>  <span class="k">do</span>  
+        <span class="n">item</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span>  <span class="s2">""</span>  
+        <span class="n">expect</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">valid?</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_falsey</span>  
+    <span class="k">end</span>  
+<span class="k">end</span></code></pre></figure>
+
+<p>Então vamos por partes e mostrar o que significa cada comando em nosso teste:</p>
+
+<ul>
+  <li><strong>RSpec.describe Item, type: :model  do:</strong> Nesta linha estamos mostrando para o RSpec qual classe queremos testar e qual é tipo desta classe podem ser model,controller etc.</li>
+  <li><strong>Context</strong>: O contexto do nosso teste separando assim nossos testes por funcionalidade.</li>
+  <li><strong>It</strong>: É usado para descrever o cenário que estamos testando.</li>
+  <li><strong>Expect</strong>: Resultado esperado do teste, pode ser tanto um resultado positivo quando negativo.</li>
+</ul>
+
+<h2 id="executando-testes">Executando Testes</h2>
+
+<p>Para executar os testes basta executar o seguinte comando:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rake</span><span class="w"> </span><span class="nx">spec</span></code></pre></figure>
+
+<p>Como nossos teste são bem simples todos vão passar sem problemas então o resultado é :</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="o">...................</span><span class="w">
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">1.5</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">5.56</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">2</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
+:ET
