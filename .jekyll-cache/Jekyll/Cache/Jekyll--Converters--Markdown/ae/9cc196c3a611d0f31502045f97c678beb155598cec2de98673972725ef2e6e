@@ -1,0 +1,21 @@
+I"�<p>Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa.</p>
+
+<h3 id="rspec-caminho">RSpec caminho</h3>
+<p>Digamos que estamos fazendo um projeto em ruby, separamos nossos testes por pasta e queremos executar apenas um arquivo, então basta executar o comando:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/pasta/arquivo_spec.rb</span></code></pre></figure>
+
+<p>Assim todos os teste dentro do arquivo serão executados.</p>
+
+<h3 id="executando-teste-pelo-título">Executando teste pelo título</h3>
+<p>As vezes queremos executar apenas um teste dentro do nosso arquivo de teste, podemos fazer isso usando o sufixo -e “título”, por exemplo:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"título"</span></code></pre></figure>
+
+<h3 id="executando-teste-pela-linha">Executando teste pela linha</h3>
+<p>Podemos também executar um teste por uma linha do arquivo,vamos utilizar o mesmo conceito do item anterior mas ao invés de buscar o título apenas utilizamos a linha que queremos executar.</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb:linha</span></code></pre></figure>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+:ET

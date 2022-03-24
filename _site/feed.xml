@@ -1,72 +1,72 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://wteophilo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wteophilo.github.io/" rel="alternate" type="text/html" /><updated>2020-08-10T12:15:42+00:00</updated><id>https://wteophilo.github.io/feed.xml</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Docker</title><link href="https://wteophilo.github.io/2020/07/02/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2020-07-02T20:09:00+00:00</published><updated>2020-07-02T20:09:00+00:00</updated><id>https://wteophilo.github.io/2020/07/02/docker</id><content type="html" xml:base="https://wteophilo.github.io/2020/07/02/docker.html">&lt;p&gt;Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este &lt;a href=&quot;https://docs.docker.com/get-docker/&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://wteophilo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wteophilo.github.io/" rel="alternate" type="text/html" /><updated>2022-03-24T21:24:46+00:00</updated><id>https://wteophilo.github.io/feed.xml</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Docker</title><link href="https://wteophilo.github.io/2020/07/02/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2020-07-02T20:09:00+00:00</published><updated>2020-07-02T20:09:00+00:00</updated><id>https://wteophilo.github.io/2020/07/02/docker</id><content type="html" xml:base="https://wteophilo.github.io/2020/07/02/docker.html"><![CDATA[<p>Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este <a href="https://docs.docker.com/get-docker/">link</a>.</p>
 
-&lt;p&gt;Neste post vamos falar sobre:&lt;/p&gt;
+<p>Neste post vamos falar sobre:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Docker x VMs&lt;/li&gt;
-  &lt;li&gt;Dockerfile&lt;/li&gt;
-  &lt;li&gt;Docker Compose&lt;/li&gt;
-  &lt;li&gt;Comandos básicos Docker&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Docker x VMs</li>
+  <li>Dockerfile</li>
+  <li>Docker Compose</li>
+  <li>Comandos básicos Docker</li>
+</ul>
 
-&lt;h3 id=&quot;docker-x-vms&quot;&gt;Docker x VMs&lt;/h3&gt;
+<h3 id="docker-x-vms">Docker x VMs</h3>
 
-&lt;h4 id=&quot;máquinas-virtuais-vms&quot;&gt;Máquinas virtuais (VMs)&lt;/h4&gt;
+<h4 id="máquinas-virtuais-vms">Máquinas virtuais (VMs)</h4>
 
-&lt;p&gt;Máquinas virtuais (VMs) são uma abstração de hardware físico que transforma um servidor em muitos servidores. O hypervisor permite que várias VMs sejam executadas em uma única máquina. Cada VM inclui uma cópia completa de um sistema operacional, aplicativo, binários e bibliotecas necessários  ocupando dezenas de GBs.&lt;/p&gt;
+<p>Máquinas virtuais (VMs) são uma abstração de hardware físico que transforma um servidor em muitos servidores. O hypervisor permite que várias VMs sejam executadas em uma única máquina. Cada VM inclui uma cópia completa de um sistema operacional, aplicativo, binários e bibliotecas necessários  ocupando dezenas de GBs.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/docker/container-vm.png&quot; alt=&quot;container-vm&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/img/docker/container-vm.png" alt="container-vm" /></p>
 
-&lt;h5 id=&quot;docker&quot;&gt;Docker&lt;/h5&gt;
+<h5 id="docker">Docker</h5>
 
-&lt;p&gt;Os contêineres são uma abstração na camada de aplicativo que agrupa código e dependências juntos. Vários contêineres podem ser executados na mesma máquina e compartilhar o kernel do sistema operacional com outros contêineres, cada um executando como processos isolados Os contêineres ocupam menos espaço que as VMs podem lidar com mais aplicativos e requerem menos VMs e sistemas operacionais.&lt;/p&gt;
+<p>Os contêineres são uma abstração na camada de aplicativo que agrupa código e dependências juntos. Vários contêineres podem ser executados na mesma máquina e compartilhar o kernel do sistema operacional com outros contêineres, cada um executando como processos isolados Os contêineres ocupam menos espaço que as VMs podem lidar com mais aplicativos e requerem menos VMs e sistemas operacionais.</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/img/docker/docker-containerized.png&quot; alt=&quot;dockercontainerized&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/img/docker/docker-containerized.png" alt="dockercontainerized" /></p>
 
-&lt;h3 id=&quot;dockerfile&quot;&gt;Dockerfile&lt;/h3&gt;
+<h3 id="dockerfile">Dockerfile</h3>
 
-&lt;p&gt;Um Dockerfile é um documento de texto que contém as instruções  para montar uma imagem.&lt;/p&gt;
+<p>Um Dockerfile é um documento de texto que contém as instruções  para montar uma imagem.</p>
 
-&lt;p&gt;Exemplo Dockerfile:&lt;/p&gt;
+<p>Exemplo Dockerfile:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;FROM ruby:2.7.1-alpine3.10
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ruby:2.7.1-alpine3.10
 
 WORKDIR /app
 EXPOSE 80
 
 COPY . /app
 
-RUN apk update &amp;amp;&amp;amp; \
-    apk add libxslt-dev build-base libxml2-dev curl jq tzdata sqlite-dev yarn &amp;amp;&amp;amp; \
-    bundle install &amp;amp;&amp;amp; \
+RUN apk update &amp;&amp; \
+    apk add libxslt-dev build-base libxml2-dev curl jq tzdata sqlite-dev yarn &amp;&amp; \
+    bundle install &amp;&amp; \
     yarn install 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;O que faz cada instrução do exemplo acima:&lt;/p&gt;
+<p>O que faz cada instrução do exemplo acima:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;FROM: imagem a ser utilizada, no exemplo estávamos usando uma imagem de Ubuntu alpine + Ruby 2.7&lt;/li&gt;
-  &lt;li&gt;WORKDIR: pasta de trabalho normalmente ao acessar o container&lt;/li&gt;
-  &lt;li&gt;EXPOSE: expõe a porta do container&lt;/li&gt;
-  &lt;li&gt;COPY: copia o conteúdo da sua máquina e adiciona em uma pasta no container&lt;/li&gt;
-  &lt;li&gt;RUN: executa comandos durante o build da imagem por exemplo instala algumas bibliotecas necessárias para o funcionamento do container&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>FROM: imagem a ser utilizada, no exemplo estávamos usando uma imagem de Ubuntu alpine + Ruby 2.7</li>
+  <li>WORKDIR: pasta de trabalho normalmente ao acessar o container</li>
+  <li>EXPOSE: expõe a porta do container</li>
+  <li>COPY: copia o conteúdo da sua máquina e adiciona em uma pasta no container</li>
+  <li>RUN: executa comandos durante o build da imagem por exemplo instala algumas bibliotecas necessárias para o funcionamento do container</li>
+</ul>
 
-&lt;h3 id=&quot;docker-compose&quot;&gt;Docker Compose&lt;/h3&gt;
+<h3 id="docker-compose">Docker Compose</h3>
 
-&lt;p&gt;O Docker Compose é uma ferramenta para orquestar contêineres, com ela podemos subir vários containers ao mesmo tempo por exemplo nosso mais um banco de dados. Para utiliza-lo é preciso um arquivo &lt;a href=&quot;http://yaml.org/&quot;&gt;YAML&lt;/a&gt; para configurar os serviços do seu aplicativo.&lt;/p&gt;
+<p>O Docker Compose é uma ferramenta para orquestar contêineres, com ela podemos subir vários containers ao mesmo tempo por exemplo nosso mais um banco de dados. Para utiliza-lo é preciso um arquivo <a href="http://yaml.org/">YAML</a> para configurar os serviços do seu aplicativo.</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;version: &quot;3.6&quot;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: "3.6"
 services:
   web:
     image: api
     build:
       context: .
       volumes:
-      - &quot;/app/.bundle&quot;
-      - &quot;/app/vendor&quot;
-      - &quot;.:/app&quot;
-      - &quot;bundle:/usr/local/bundle&quot;
+      - "/app/.bundle"
+      - "/app/vendor"
+      - ".:/app"
+      - "bundle:/usr/local/bundle"
     container_name: api_app
     ports:
       - 80:3000
@@ -96,128 +96,128 @@ services:
        - 6379:6379
 volumes:
   bundle:
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;h3 id=&quot;comandos-básicos-docker&quot;&gt;Comandos básicos Docker&lt;/h3&gt;
+<h3 id="comandos-básicos-docker">Comandos básicos Docker</h3>
 
-&lt;p&gt;Criando uma imagem basta utilizar o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;build&lt;/code&gt;&lt;/p&gt;
+<p>Criando uma imagem basta utilizar o comando <code class="language-plaintext highlighter-rouge">build</code></p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build .
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build .
+</code></pre></div></div>
 
-&lt;p&gt;Podemos adicionar tag na nossa nova imagem usando &lt;code class=&quot;highlighter-rouge&quot;&gt;-t&lt;/code&gt;:&lt;/p&gt;
+<p>Podemos adicionar tag na nossa nova imagem usando <code class="language-plaintext highlighter-rouge">-t</code>:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build -t &quot;minha-image&quot; .
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build -t "minha-image" .
+</code></pre></div></div>
 
-&lt;h5 id=&quot;acessando-container&quot;&gt;Acessando container&lt;/h5&gt;
+<h5 id="acessando-container">Acessando container</h5>
 
-&lt;p&gt;Para executar um comando dentro do container por exemplo executar um bundle install, caso não tenha especificado no Dockerfile usamos &lt;code class=&quot;highlighter-rouge&quot;&gt;run&lt;/code&gt; e o comando:&lt;/p&gt;
+<p>Para executar um comando dentro do container por exemplo executar um bundle install, caso não tenha especificado no Dockerfile usamos <code class="language-plaintext highlighter-rouge">run</code> e o comando:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -it minha-imagem comando
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run -it minha-imagem comando
+</code></pre></div></div>
 
-&lt;p&gt;Se o container estiver em pé e não queria subir outro container basta usar o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt;:&lt;/p&gt;
+<p>Se o container estiver em pé e não queria subir outro container basta usar o comando <code class="language-plaintext highlighter-rouge">exec</code>:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker exec -it minha-imagem comando
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it minha-imagem comando
+</code></pre></div></div>
 
-&lt;h4 id=&quot;listando-imagens&quot;&gt;Listando imagens&lt;/h4&gt;
+<h4 id="listando-imagens">Listando imagens</h4>
 
-&lt;p&gt;O comando para listar todas as imagens baixadas em seu computador:&lt;/p&gt;
+<p>O comando para listar todas as imagens baixadas em seu computador:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker images
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker images
+</code></pre></div></div>
 
-&lt;p&gt;Podemos mesclar os comandos do Docker com do terminal, digamos que queremos localizar uma imagem em específico.&lt;/p&gt;
+<p>Podemos mesclar os comandos do Docker com do terminal, digamos que queremos localizar uma imagem em específico.</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker imagens | grep minha-imagem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker imagens | grep minha-imagem
+</code></pre></div></div>
 
-&lt;p&gt;Para verificar quais containers estão rodando no momento em sua máquina use o comando baixo:&lt;/p&gt;
+<p>Para verificar quais containers estão rodando no momento em sua máquina use o comando baixo:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker ps
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker ps
+</code></pre></div></div>
 
-&lt;p&gt;Na coluna status terão dois valores:&lt;/p&gt;
+<p>Na coluna status terão dois valores:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Up - funcionando&lt;/li&gt;
-  &lt;li&gt;Exit - não funcionado&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Up - funcionando</li>
+  <li>Exit - não funcionado</li>
+</ul>
 
-&lt;h4 id=&quot;apagando-imagens&quot;&gt;Apagando imagens&lt;/h4&gt;
+<h4 id="apagando-imagens">Apagando imagens</h4>
 
-&lt;p&gt;Para apagar uma image basta utilizar o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;rmi&lt;/code&gt;:&lt;/p&gt;
+<p>Para apagar uma image basta utilizar o comando <code class="language-plaintext highlighter-rouge">rmi</code>:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rmi hash-imagem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi hash-imagem
+</code></pre></div></div>
 
-&lt;p&gt;Apagando várias imagens&lt;/p&gt;
+<p>Apagando várias imagens</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker rmi $(docker images | grep minha-imagem)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker rmi $(docker images | grep minha-imagem)
+</code></pre></div></div>
 
-&lt;h4 id=&quot;logs&quot;&gt;Logs&lt;/h4&gt;
+<h4 id="logs">Logs</h4>
 
-&lt;p&gt;Podemos verificar também os logs de um de nossos containers usando o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;logs&lt;/code&gt;:&lt;/p&gt;
+<p>Podemos verificar também os logs de um de nossos containers usando o comando <code class="language-plaintext highlighter-rouge">logs</code>:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker logs minha-imagem
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker logs minha-imagem
+</code></pre></div></div>
 
-&lt;h4 id=&quot;volumes&quot;&gt;Volumes&lt;/h4&gt;
+<h4 id="volumes">Volumes</h4>
 
-&lt;p&gt;O &lt;a href=&quot;https://docs.docker.com/storage/volumes/&quot;&gt;volume&lt;/a&gt; é o mecanismo preferido para persistir os dados gerados e usados ​​pelos contêineres do Docker, embora as montagens de ligação dependam da estrutura de diretórios da máquina host, os volumes são completamente gerenciados pelo Docker.&lt;/p&gt;
+<p>O <a href="https://docs.docker.com/storage/volumes/">volume</a> é o mecanismo preferido para persistir os dados gerados e usados ​​pelos contêineres do Docker, embora as montagens de ligação dependam da estrutura de diretórios da máquina host, os volumes são completamente gerenciados pelo Docker.</p>
 
-&lt;p&gt;Podemos criar um volume usando o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt; como mostra o exemplo a seguir:&lt;/p&gt;
+<p>Podemos criar um volume usando o comando <code class="language-plaintext highlighter-rouge">create</code> como mostra o exemplo a seguir:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker volume create &amp;lt;nome/hash&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume create &lt;nome/hash&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Para listar todos os volumes basta usar &lt;code class=&quot;highlighter-rouge&quot;&gt;ls&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker volume ls
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>Para listar todos os volumes basta usar <code class="language-plaintext highlighter-rouge">ls</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume ls
+</code></pre></div></div>
 
-&lt;p&gt;Apagando um volume:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker volume rm &amp;lt;nome/hash&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>Apagando um volume:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume rm &lt;nome/hash&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Caso queria apagar todos os volumes de uma vez utilize o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;prune&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker volume prune
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>Caso queria apagar todos os volumes de uma vez utilize o comando <code class="language-plaintext highlighter-rouge">prune</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker volume prune
+</code></pre></div></div>
 
-&lt;h4 id=&quot;networks&quot;&gt;Networks&lt;/h4&gt;
+<h4 id="networks">Networks</h4>
 
-&lt;p&gt;Um dos motivos pelos quais os contêineres e serviços do Docker são tão poderosos é que você pode conectá-los ou conectá-los a cargas de trabalho que não são do Docker, para mais informações sobre networks no docker segue o &lt;a href=&quot;https://docs.docker.com/network/&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+<p>Um dos motivos pelos quais os contêineres e serviços do Docker são tão poderosos é que você pode conectá-los ou conectá-los a cargas de trabalho que não são do Docker, para mais informações sobre networks no docker segue o <a href="https://docs.docker.com/network/">link</a>.</p>
 
-&lt;p&gt;Os comandos para manipular um network são os mesmos mostrados nos volumes:&lt;/p&gt;
+<p>Os comandos para manipular um network são os mesmos mostrados nos volumes:</p>
 
-&lt;p&gt;Criando volume:&lt;/p&gt;
+<p>Criando volume:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker network create &amp;lt;nome/hash&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network create &lt;nome/hash&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Listando volume:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker network ls
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p>Listando volume:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network ls
+</code></pre></div></div>
 
-&lt;p&gt;Delete volume:&lt;/p&gt;
+<p>Delete volume:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker network rm &amp;lt;nome/hash&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker network rm &lt;nome/hash&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Por fim algumas dicas para finalizar esse post. Todos estes comandos podem ser usados com o docker-compose caso esteja usando o compose em seu projeto. 
-Como existem vários comandos do docker e se tiver alguma dúvida em relação de algum deles basta adicionar –help:&lt;/p&gt;
+<p>Por fim algumas dicas para finalizar esse post. Todos estes comandos podem ser usados com o docker-compose caso esteja usando o compose em seu projeto. 
+Como existem vários comandos do docker e se tiver alguma dúvida em relação de algum deles basta adicionar –help:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker build --help
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker build --help
+</code></pre></div></div>
 
-&lt;p&gt;ou consultar a documentação oficial do &lt;a href=&quot;https://docs.docker.com/&quot;&gt;docker&lt;/a&gt;. 
-E como uma última dica caso tenha um PC com HD/SSD pequeno sempre fique de olho no volume.&lt;/p&gt;
+<p>ou consultar a documentação oficial do <a href="https://docs.docker.com/">docker</a>. 
+E como uma última dica caso tenha um PC com HD/SSD pequeno sempre fique de olho no volume.</p>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Docker" /><summary type="html">Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância...</summary></entry><entry><title type="html">Introdução FactoryBot</title><link href="https://wteophilo.github.io/2019/02/10/intro-factorybot.html" rel="alternate" type="text/html" title="Introdução FactoryBot" /><published>2019-02-10T22:38:00+00:00</published><updated>2019-02-10T22:38:00+00:00</updated><id>https://wteophilo.github.io/2019/02/10/intro-factorybot</id><content type="html" xml:base="https://wteophilo.github.io/2019/02/10/intro-factorybot.html">&lt;p&gt;Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot. Nos primórdios do Rails era utilizados arquivos YAML/CSV  onde cada arquivo conter dados de um único modelo esses arquivos são conhecidos como &lt;a href=&quot;https://api.rubyonrails.org/v3.1/classes/ActiveRecord/Fixtures.html&quot;&gt;fixtures&lt;/a&gt;, segue exemplo:&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="Docker" /><summary type="html"><![CDATA[Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância...]]></summary></entry><entry><title type="html">Introdução FactoryBot</title><link href="https://wteophilo.github.io/2019/02/10/intro-factorybot.html" rel="alternate" type="text/html" title="Introdução FactoryBot" /><published>2019-02-10T22:38:00+00:00</published><updated>2019-02-10T22:38:00+00:00</updated><id>https://wteophilo.github.io/2019/02/10/intro-factorybot</id><content type="html" xml:base="https://wteophilo.github.io/2019/02/10/intro-factorybot.html"><![CDATA[<p>Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot. Nos primórdios do Rails era utilizados arquivos YAML/CSV  onde cada arquivo conter dados de um único modelo esses arquivos são conhecidos como <a href="https://api.rubyonrails.org/v3.1/classes/ActiveRecord/Fixtures.html">fixtures</a>, segue exemplo:</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rubyonrails:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rubyonrails:
   id: 1
   name: Ruby on Rails
   url: http://www.rubyonrails.org
@@ -226,630 +226,630 @@ google:
   id: 2
   name: Google
   url: http://www.google.com
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;E aplicação em nossos testes utilizando a gem padrão do rails:&lt;/p&gt;
+<p>E aplicação em nossos testes utilizando a gem padrão do rails:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;find&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;assert_equal&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Ruby on Rails&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;web_sites&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:rubyonrails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">test</span> <span class="s2">"find"</span> <span class="k">do</span>
+  <span class="n">assert_equal</span> <span class="s2">"Ruby on Rails"</span><span class="p">,</span> <span class="n">web_sites</span><span class="p">(</span><span class="ss">:rubyonrails</span><span class="p">).</span><span class="nf">name</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-&lt;p&gt;Com o tempo  a gem FactoryGirl foi criada usando boa parte funcionalidades que fixtures utilizam e outras mais. Em 24-08-2017 o nome do projeto foi trocado para &lt;a href=&quot;https://github.com/thoughtbot/factory_bot&quot;&gt;factorybot&lt;/a&gt;.&lt;/p&gt;
+<p>Com o tempo  a gem FactoryGirl foi criada usando boa parte funcionalidades que fixtures utilizam e outras mais. Em 24-08-2017 o nome do projeto foi trocado para <a href="https://github.com/thoughtbot/factory_bot">factorybot</a>.</p>
 
-&lt;p&gt;O FactoryBot possui duas gems uma que pode ser utilizadas para projetos em Ruby puro e outra para projetos em Rails, ambos podem ser adicionadas no GemFile no group de testes.&lt;/p&gt;
+<p>O FactoryBot possui duas gems uma que pode ser utilizadas para projetos em Ruby puro e outra para projetos em Rails, ambos podem ser adicionadas no GemFile no group de testes.</p>
 
-&lt;p&gt;Ruby Puro:&lt;/p&gt;
+<p>Ruby Puro:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:test&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'factory_bot'&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s1">'factory_bot'</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-&lt;p&gt;Rails (&lt;a href=&quot;https://github.com/thoughtbot/factory_bot_rails&quot;&gt;factory_bot_rails&lt;/a&gt;)&lt;/p&gt;
+<p>Rails (<a href="https://github.com/thoughtbot/factory_bot_rails">factory_bot_rails</a>)</p>
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;group :development, :test do
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :development, :test do
 	gem 'factory_bot_rails' 
 end
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;No decorrer deste post vamos utilizar utilizar a gem factory_bot _rails. Para utiliza-la devemos adicionar o seguinte trecho de código a seguir na pasta &lt;strong&gt;spec/rails_helper.rb&lt;/strong&gt;, assim o Rails vai se integrar ao FactoryBot.&lt;/p&gt;
+<p>No decorrer deste post vamos utilizar utilizar a gem factory_bot _rails. Para utiliza-la devemos adicionar o seguinte trecho de código a seguir na pasta <strong>spec/rails_helper.rb</strong>, assim o Rails vai se integrar ao FactoryBot.</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;configure&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;FactoryBot&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Syntax&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Methods&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">RSpec</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+    <span class="n">config</span><span class="p">.</span><span class="nf">include</span> <span class="no">FactoryBot</span><span class="o">::</span><span class="no">Syntax</span><span class="o">::</span><span class="no">Methods</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-&lt;p&gt;A pasta spec é criada ao usar a gem Rspec temos um post sobre o assunto caso tenha interesse basta &lt;a href=&quot;https://wteophilo.github.io/2018/04/11/ola-rspec.html&quot;&gt;clicar aqui&lt;/a&gt;. Agora que sabemos o que é o FactoryBot e suas configurações vamos utiliza-lo. Temos uma classe bem básica de usuário com alguns atributos e um método que imprimi o nome completo&lt;/p&gt;
+<p>A pasta spec é criada ao usar a gem Rspec temos um post sobre o assunto caso tenha interesse basta <a href="https://wteophilo.github.io/2018/04/11/ola-rspec.html">clicar aqui</a>. Agora que sabemos o que é o FactoryBot e suas configurações vamos utiliza-lo. Temos uma classe bem básica de usuário com alguns atributos e um método que imprimi o nome completo</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;User&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationRecord&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:first_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:last_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:age&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;presence: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;full_name&lt;/span&gt;
-        &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first_name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;last_name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+    <span class="n">validates</span> <span class="ss">:first_name</span><span class="p">,</span> <span class="ss">:last_name</span><span class="p">,</span> <span class="ss">:age</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">presence: </span><span class="kp">true</span>
+    <span class="k">def</span> <span class="nf">full_name</span>
+        <span class="s2">"</span><span class="si">#{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-&lt;p&gt;E queremos realizar alguns testes nesta classe e é ai que entra nossa factory,  por convenção devemos nossa factory com o mesmo nome da nossa classe ou seja &lt;strong&gt;user.rb&lt;/strong&gt; na pasta &lt;strong&gt;spec/factories&lt;/strong&gt;  seguinte conteúdo:&lt;/p&gt;
+<p>E queremos realizar alguns testes nesta classe e é ai que entra nossa factory,  por convenção devemos nossa factory com o mesmo nome da nossa classe ou seja <strong>user.rb</strong> na pasta <strong>spec/factories</strong>  seguinte conteúdo:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;FactoryBot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:user&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;first_name&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-        &lt;span class=&quot;n&quot;&gt;last_name&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Teophilo&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wteophilo@gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; 
-        &lt;span class=&quot;n&quot;&gt;age&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">FactoryBot</span><span class="p">.</span><span class="nf">define</span> <span class="k">do</span>
+    <span class="n">factory</span> <span class="ss">:user</span> <span class="k">do</span>
+        <span class="n">first_name</span>  <span class="p">{</span><span class="s2">"Willian"</span><span class="p">}</span> 
+        <span class="n">last_name</span>  <span class="p">{</span><span class="s2">"Teophilo"</span> <span class="p">}</span>
+        <span class="n">email</span>  <span class="p">{</span><span class="s2">"wteophilo@gmail.com"</span><span class="p">}</span> 
+        <span class="n">age</span> <span class="p">{</span> <span class="mi">28</span> <span class="p">}</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-&lt;p&gt;Como vimos no inicio do post nossa facory basicamente vai popular todos os atribuitos da nossa classe User, deixando os nossos testes mais simples pois já sabemos a entrada de dados. No FactoryBot existe duas maneiras de criar um objeto a partir de uma factory são eles:&lt;/p&gt;
+<p>Como vimos no inicio do post nossa facory basicamente vai popular todos os atribuitos da nossa classe User, deixando os nossos testes mais simples pois já sabemos a entrada de dados. No FactoryBot existe duas maneiras de criar um objeto a partir de uma factory são eles:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;create&lt;/strong&gt; : Cria e persiste o objeto no banco de dados&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;build&lt;/strong&gt;: Apenas cria o objeto em memória&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>create</strong> : Cria e persiste o objeto no banco de dados</li>
+  <li><strong>build</strong>: Apenas cria o objeto em memória</li>
+</ul>
 
-&lt;p&gt;Por fim o nosso teste da classe User utilizando o FactoryBot, segue o código abaixo:&lt;/p&gt;
+<p>Por fim o nosso teste da classe User utilizando o FactoryBot, segue o código abaixo:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rails_helper'&lt;/span&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rails_helper'</span>
 
-&lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;type: :model&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;    
-    &lt;span class=&quot;n&quot;&gt;before&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;build&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">User</span><span class="p">,</span> <span class="ss">type: :model</span> <span class="k">do</span>    
+    <span class="n">before</span><span class="p">(</span><span class="ss">:each</span><span class="p">)</span> <span class="k">do</span>
+        <span class="vi">@user</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="ss">:user</span><span class="p">)</span>
+    <span class="k">end</span>
     
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'should show user with full name'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;full_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Willian Teophilo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    <span class="n">it</span> <span class="s1">'should show user with full name'</span> <span class="k">do</span>
+        <span class="n">expect</span><span class="p">(</span><span class="vi">@user</span><span class="p">.</span><span class="nf">full_name</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="s2">"Willian Teophilo"</span><span class="p">)</span>
+    <span class="k">end</span>
     
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'should have the same attributes of factory'&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;have_attributes&lt;/span&gt;
-			&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:first_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-			&lt;span class=&quot;ss&quot;&gt;:last_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Teophilo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-			&lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;wteophilo@gmail.com&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
-			&lt;span class=&quot;ss&quot;&gt;:age&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="n">it</span> <span class="s1">'should have the same attributes of factory'</span> <span class="k">do</span>
+		<span class="n">expect</span><span class="p">(</span><span class="vi">@user</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_attributes</span>
+			<span class="p">(</span><span class="ss">:first_name</span> <span class="o">=&gt;</span> <span class="s2">"Willian"</span><span class="p">,</span> 
+			<span class="ss">:last_name</span> <span class="o">=&gt;</span> <span class="s2">"Teophilo"</span><span class="p">,</span>
+			<span class="ss">:email</span> <span class="o">=&gt;</span><span class="s2">"wteophilo@gmail.com"</span><span class="p">,</span> 
+			<span class="ss">:age</span> <span class="o">=&gt;</span> <span class="mi">28</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
 
-&lt;p&gt;Este é um post bem introdutório sobre o FactoryBot e pretendo criar outros sobre ele, não se esqueça de comentar o que achou ou suas dúvidas.&lt;/p&gt;
+<p>Este é um post bem introdutório sobre o FactoryBot e pretendo criar outros sobre ele, não se esqueça de comentar o que achou ou suas dúvidas.</p>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot...</summary></entry><entry><title type="html">Escopos de Variáveis em Ruby</title><link href="https://wteophilo.github.io/2018/10/07/escopos-variaveis-ruby.html" rel="alternate" type="text/html" title="Escopos de Variáveis em Ruby" /><published>2018-10-07T19:11:00+00:00</published><updated>2018-10-07T19:11:00+00:00</updated><id>https://wteophilo.github.io/2018/10/07/escopos-variaveis-ruby</id><content type="html" xml:base="https://wteophilo.github.io/2018/10/07/escopos-variaveis-ruby.html">&lt;p&gt;Anteriormente falamos sobre os &lt;a href=&quot;https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html&quot;&gt;tipos de variáveis&lt;/a&gt;  que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html"><![CDATA[Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot...]]></summary></entry><entry><title type="html">Escopos de Variáveis em Ruby</title><link href="https://wteophilo.github.io/2018/10/07/escopos-variaveis-ruby.html" rel="alternate" type="text/html" title="Escopos de Variáveis em Ruby" /><published>2018-10-07T19:11:00+00:00</published><updated>2018-10-07T19:11:00+00:00</updated><id>https://wteophilo.github.io/2018/10/07/escopos-variaveis-ruby</id><content type="html" xml:base="https://wteophilo.github.io/2018/10/07/escopos-variaveis-ruby.html"><![CDATA[<p>Anteriormente falamos sobre os <a href="https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html">tipos de variáveis</a>  que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.</p>
 
-&lt;p&gt;O Ruby não possui nenhuma palavra chave para definir um escopo, usamos simbolos para identifica-los. Os escopos são:&lt;/p&gt;
+<p>O Ruby não possui nenhuma palavra chave para definir um escopo, usamos simbolos para identifica-los. Os escopos são:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Local&lt;/li&gt;
-  &lt;li&gt;Global($)&lt;/li&gt;
-  &lt;li&gt;Instância(@)&lt;/li&gt;
-  &lt;li&gt;Classe(@@)&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Local</li>
+  <li>Global($)</li>
+  <li>Instância(@)</li>
+  <li>Classe(@@)</li>
+</ul>
 
-&lt;p&gt;Com o decorrer deste post vamos mostrar exemplos da utilização dessas variáveis.&lt;/p&gt;
+<p>Com o decorrer deste post vamos mostrar exemplos da utilização dessas variáveis.</p>
 
-&lt;h2 id=&quot;variáveis-locais&quot;&gt;Variáveis Locais&lt;/h2&gt;
+<h2 id="variáveis-locais">Variáveis Locais</h2>
 
-&lt;p&gt;As variáveis locais só podem ser acessadas dentro do método/bloco onde foram declaradas, veja o código abaixo:&lt;/p&gt;
+<p>As variáveis locais só podem ser acessadas dentro do método/bloco onde foram declaradas, veja o código abaixo:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;conta_ate_dez&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">conta_ate_dez</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">..</span><span class="mi">10</span>
+        <span class="nb">p</span> <span class="n">i</span>
+    <span class="k">end</span>
+<span class="k">end</span> 
 
-&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<span class="nb">p</span> <span class="n">i</span>
+<span class="o">=&gt;</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="o">...</span> <span class="mi">10</span>
+</code></pre></div></div>
 
-&lt;p&gt;Ao tentar acessar a variável &lt;strong&gt;“i”&lt;/strong&gt; fora do método o erro abaixo será exibido:&lt;/p&gt;
+<p>Ao tentar acessar a variável <strong>“i”</strong> fora do método o erro abaixo será exibido:</p>
 
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; undefined &lt;span class=&quot;nb&quot;&gt;local &lt;/span&gt;variable or method &lt;span class=&quot;se&quot;&gt;`i&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' for main:Object (NameError)
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">=</span><span class="err">&gt;</span><span class="w"> </span><span class="n">undefined</span><span class="w"> </span><span class="nx">local</span><span class="w"> </span><span class="nx">variable</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="se">`i</span><span class="s1">' for main:Object (NameError)
+</span></code></pre></div></div>
 
-&lt;h2 id=&quot;variáveis-globais&quot;&gt;Variáveis Globais($)&lt;/h2&gt;
+<h2 id="variáveis-globais">Variáveis Globais($)</h2>
 
-&lt;p&gt;As variáveis globais  podem ser acessadas em qualquer parte de do código, por conveção o simbolo &lt;strong&gt;$&lt;/strong&gt; (cifrão) deve ser utilizado. Segue o exemplo abaixo:&lt;/p&gt;
+<p>As variáveis globais  podem ser acessadas em qualquer parte de do código, por conveção o simbolo <strong>$</strong> (cifrão) deve ser utilizado. Segue o exemplo abaixo:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;vg&quot;&gt;$global&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;2.5.3&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;The scope is &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;defined?&lt;/span&gt; &lt;span class=&quot;vg&quot;&gt;$global&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;The&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scope&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;global&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;variable&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vg">$global</span> <span class="o">=</span> <span class="s2">"2.5.3"</span>
+<span class="nb">puts</span> <span class="s2">"The scope is </span><span class="si">#{</span><span class="k">defined?</span> <span class="vg">$global</span><span class="si">}</span><span class="s2">"</span> 
+<span class="o">=&gt;</span> <span class="no">The</span> <span class="n">scope</span> <span class="n">is</span> <span class="n">global</span><span class="o">-</span><span class="n">variable</span>
+</code></pre></div></div>
 
-&lt;h2 id=&quot;variáveis-de-instância&quot;&gt;Variáveis de Instância(@)&lt;/h2&gt;
+<h2 id="variáveis-de-instância">Variáveis de Instância(@)</h2>
 
-&lt;p&gt;Uma variável de instância é uma variável cujo valor é específico ao objeto e não à classe. Em geral possui uma valor diferente em cada objeto membro da classe, utilizamos o &lt;strong&gt;@&lt;/strong&gt; para identificar esse tipo de variável. Abaixo um exemplo desse tipo de variável:&lt;/p&gt;
+<p>Uma variável de instância é uma variável cujo valor é específico ao objeto e não à classe. Em geral possui uma valor diferente em cada objeto membro da classe, utilizamos o <strong>@</strong> para identificar esse tipo de variável. Abaixo um exemplo desse tipo de variável:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ComicBook&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Boku no Hero&quot;&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@year&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2014&lt;/span&gt;
-        &lt;span class=&quot;vi&quot;&gt;@author&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Kōhei Horikoshi'&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ComicBook</span>
+    <span class="k">def</span> <span class="nf">initialize</span>
+        <span class="vi">@name</span> <span class="o">=</span> <span class="s2">"Boku no Hero"</span>
+        <span class="vi">@year</span> <span class="o">=</span> <span class="mi">2014</span>
+        <span class="vi">@author</span> <span class="o">=</span> <span class="s1">'Kōhei Horikoshi'</span>
+    <span class="k">end</span> 
+<span class="k">end</span> 
+</code></pre></div></div>
 
-&lt;p&gt;Um método bem legal para listar todas as variáveis de instância de um objeto é &lt;strong&gt;instance_variables&lt;/strong&gt;, vamos executar esse método na classe que criamos acima:&lt;/p&gt;
+<p>Um método bem legal para listar todas as variáveis de instância de um objeto é <strong>instance_variables</strong>, vamos executar esse método na classe que criamos acima:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;manga&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ComicBook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;manga&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance_variables&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:@year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:@autor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">manga</span> <span class="o">=</span> <span class="no">ComicBook</span><span class="p">.</span><span class="nf">new</span>
+<span class="nb">p</span> <span class="n">manga</span><span class="p">.</span><span class="nf">instance_variables</span>
+<span class="o">=&gt;</span><span class="p">[</span><span class="ss">:@name</span><span class="p">,</span> <span class="ss">:@year</span><span class="p">,</span> <span class="ss">:@autor</span><span class="p">]</span>
+</code></pre></div></div>
 
-&lt;h2 id=&quot;variáveis-de-classe&quot;&gt;Variáveis de Classe(@@)&lt;/h2&gt;
+<h2 id="variáveis-de-classe">Variáveis de Classe(@@)</h2>
 
-&lt;p&gt;Uma variável de classe é uma variável  que armazena seu próprio estado, quando o estado é alterado em algum objeto automaticamente o estado é alterado para todos os objetos, utilizamos &lt;strong&gt;@@&lt;/strong&gt; para indentificar esse tipo de variável. Abaixo um exemplo:&lt;/p&gt;
+<p>Uma variável de classe é uma variável  que armazena seu próprio estado, quando o estado é alterado em algum objeto automaticamente o estado é alterado para todos os objetos, utilizamos <strong>@@</strong> para indentificar esse tipo de variável. Abaixo um exemplo:</p>
 
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Vehicle&lt;/span&gt;
-    &lt;span class=&quot;vc&quot;&gt;@@number_of_doors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Vehicle</span>
+    <span class="vc">@@number_of_doors</span> <span class="o">=</span> <span class="mi">0</span>
     
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;number_of_doors&lt;/span&gt;
-        &lt;span class=&quot;vc&quot;&gt;@@number_of_doors&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">number_of_doors</span>
+        <span class="vc">@@number_of_doors</span>
+    <span class="k">end</span>
+<span class="k">end</span>
 
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Car&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Vehicle&lt;/span&gt;
-    &lt;span class=&quot;vc&quot;&gt;@@number_of_doors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+<span class="k">class</span> <span class="nc">Car</span> <span class="o">&lt;</span> <span class="no">Vehicle</span>
+    <span class="vc">@@number_of_doors</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">end</span>
 
-&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Number of doors &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Vehicle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;number_of_doors&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - Vehicle&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doors&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Vehicle&lt;/span&gt;
+<span class="nb">puts</span> <span class="s2">"Number of doors </span><span class="si">#{</span><span class="no">Vehicle</span><span class="p">.</span><span class="nf">number_of_doors</span><span class="si">}</span><span class="s2"> - Vehicle"</span>
+<span class="o">=&gt;</span> <span class="no">Number</span> <span class="n">of</span> <span class="n">doors</span> <span class="mi">4</span> <span class="o">-</span> <span class="no">Vehicle</span>
 
-&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Number of doors &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Car&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;number_of_doors&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; - Car&quot;&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Number&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doors&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Car&lt;/span&gt;
+<span class="nb">puts</span> <span class="s2">"Number of doors </span><span class="si">#{</span><span class="no">Car</span><span class="p">.</span><span class="nf">number_of_doors</span><span class="si">}</span><span class="s2"> - Car"</span> 
+<span class="o">=&gt;</span><span class="no">Number</span> <span class="n">of</span> <span class="n">doors</span> <span class="mi">4</span> <span class="o">-</span> <span class="no">Car</span>
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Anteriormente falamos sobre os tipos de variáveis que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis...</summary></entry><entry><title type="html">Condicionais em Ruby</title><link href="https://wteophilo.github.io/2018/09/10/condicionais-em-ruby.html" rel="alternate" type="text/html" title="Condicionais em Ruby" /><published>2018-09-10T21:51:00+00:00</published><updated>2018-09-10T21:51:00+00:00</updated><id>https://wteophilo.github.io/2018/09/10/condicionais-em-ruby</id><content type="html" xml:base="https://wteophilo.github.io/2018/09/10/condicionais-em-ruby.html">&lt;p&gt;Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html"><![CDATA[Anteriormente falamos sobre os tipos de variáveis que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis...]]></summary></entry><entry><title type="html">Condicionais em Ruby</title><link href="https://wteophilo.github.io/2018/09/10/condicionais-em-ruby.html" rel="alternate" type="text/html" title="Condicionais em Ruby" /><published>2018-09-10T21:51:00+00:00</published><updated>2018-09-10T21:51:00+00:00</updated><id>https://wteophilo.github.io/2018/09/10/condicionais-em-ruby</id><content type="html" xml:base="https://wteophilo.github.io/2018/09/10/condicionais-em-ruby.html"><![CDATA[<p>Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby são:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;If / elsif / else&lt;/li&gt;
-  &lt;li&gt;unless&lt;/li&gt;
-  &lt;li&gt;case&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>If / elsif / else</li>
+  <li>unless</li>
+  <li>case</li>
+</ul>
 
-&lt;p&gt;Mas não podemos falar de condicionais se não falarmos de operadores relacionais e os operadores lógicos.&lt;/p&gt;
+<p>Mas não podemos falar de condicionais se não falarmos de operadores relacionais e os operadores lógicos.</p>
 
-&lt;h2 id=&quot;operadores-relacionais&quot;&gt;Operadores relacionais&lt;/h2&gt;
+<h2 id="operadores-relacionais">Operadores relacionais</h2>
 
-&lt;ul&gt;
-  &lt;li&gt;Igualdade &lt;strong&gt;==&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Diferente &lt;strong&gt;!=&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Maior que &lt;strong&gt;&amp;gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Maior ou igual &lt;strong&gt;&amp;gt;=&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Menor &lt;strong&gt;&amp;lt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Menor ou igual &lt;strong&gt;&amp;lt;=&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Igualdade <strong>==</strong></li>
+  <li>Diferente <strong>!=</strong></li>
+  <li>Maior que <strong>&gt;</strong></li>
+  <li>Maior ou igual <strong>&gt;=</strong></li>
+  <li>Menor <strong>&lt;</strong></li>
+  <li>Menor ou igual <strong>&lt;=</strong></li>
+</ul>
 
-&lt;h2 id=&quot;operadores-lógicos&quot;&gt;Operadores Lógicos&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&amp;amp;&amp;amp; (and)&lt;/li&gt;
-  &lt;li&gt;|| (or)&lt;/li&gt;
-&lt;/ul&gt;
+<h2 id="operadores-lógicos">Operadores Lógicos</h2>
+<ul>
+  <li>&amp;&amp; (and)</li>
+  <li>|| (or)</li>
+</ul>
 
-&lt;p&gt;Vamos explorar um pouco mais sobre as condicionais com um pouco dos operadores relacionais.&lt;/p&gt;
+<p>Vamos explorar um pouco mais sobre as condicionais com um pouco dos operadores relacionais.</p>
 
-&lt;h2 id=&quot;if&quot;&gt;IF&lt;/h2&gt;
-&lt;p&gt;O if verifica se uma condição é verdadeira e apartir dessa verificação executa um trecho de código, segue o código abaixo utilizando também a igualdade:&lt;/p&gt;
+<h2 id="if">IF</h2>
+<p>O if verifica se uma condição é verdadeira e apartir dessa verificação executa um trecho de código, segue o código abaixo utilizando também a igualdade:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Isso é verdade!&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">if</span> <span class="n">value</span> <span class="o">==</span> <span class="mi">30</span>
+	<span class="nb">puts</span> <span class="s2">"Isso é verdade!"</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;h2 id=&quot;else&quot;&gt;ELSE&lt;/h2&gt;
-&lt;p&gt;O else seria um complemento do If, caso a verificação do if seja falsa o trecho de  código executado é o else, segue o exemplo abaixo:&lt;/p&gt;
+<h2 id="else">ELSE</h2>
+<p>O else seria um complemento do If, caso a verificação do if seja falsa o trecho de  código executado é o else, segue o exemplo abaixo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor menor que 10&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor igual a 30&quot;&lt;/span&gt;	
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">10</span>
+	<span class="nb">puts</span> <span class="s2">"valor menor que 10"</span>
+<span class="k">else</span>
+	<span class="nb">puts</span> <span class="s2">"valor igual a 30"</span>	
+<span class="k">end</span></code></pre></figure>
 
-&lt;h2 id=&quot;elsif&quot;&gt;ELSIF&lt;/h2&gt;
-&lt;p&gt;O elsif é utilizado quando precisamos de mais condicionais em nosso if, segue abaixo um exemplo:&lt;/p&gt;
+<h2 id="elsif">ELSIF</h2>
+<p>O elsif é utilizado quando precisamos de mais condicionais em nosso if, segue abaixo um exemplo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
- 	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor menor que 10&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor igual a 20&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor maior de 50&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor igual a 30&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">if</span> <span class="n">value</span> <span class="o">&lt;</span> <span class="mi">10</span>
+ 	<span class="nb">puts</span> <span class="s2">"valor menor que 10"</span>
+<span class="k">elsif</span> <span class="n">value</span> <span class="o">&lt;</span><span class="mi">20</span>
+	<span class="nb">puts</span> <span class="s2">"valor igual a 20"</span>
+<span class="k">elsif</span> <span class="n">value</span> <span class="o">&gt;=</span> <span class="mi">50</span>
+	<span class="nb">puts</span> <span class="s2">"valor maior de 50"</span>
+<span class="k">else</span>
+	<span class="nb">puts</span> <span class="s2">"valor igual a 30"</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;h2 id=&quot;unless&quot;&gt;UNLESS&lt;/h2&gt;
-&lt;p&gt;O Unless é o oposto do if ou seja ele é executado  quando a resposta da condição for falsa(false).&lt;/p&gt;
+<h2 id="unless">UNLESS</h2>
+<p>O Unless é o oposto do if ou seja ele é executado  quando a resposta da condição for falsa(false).</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;valor = 30&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">value</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="k">unless</span> <span class="n">value</span> <span class="o">=</span> <span class="mi">10</span>
+	<span class="nb">puts</span> <span class="s2">"valor = 30"</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;h2 id=&quot;case&quot;&gt;CASE&lt;/h2&gt;
+<h2 id="case">CASE</h2>
 
-&lt;p&gt;O Case é muito parecido com o If, mas podemos utilizar quando existem vários Ifs encadiados onde cada condição é testada com a cláusula &lt;strong&gt;when&lt;/strong&gt;,segue o código abaixo:&lt;/p&gt;
+<p>O Case é muito parecido com o If, mas podemos utilizar quando existem vários Ifs encadiados onde cada condição é testada com a cláusula <strong>when</strong>,segue o código abaixo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;mes_do_aniversario&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mes_do_aniversario&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Você nasceu do primeiro semestre&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
-	&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Você nasceu do primeiro semestre&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
- &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Não existe esse mês&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">mes_do_aniversario</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">case</span> <span class="n">mes_do_aniversario</span>
+<span class="k">when</span> <span class="mi">1</span><span class="o">..</span><span class="mi">6</span>
+	<span class="nb">puts</span> <span class="s2">"Você nasceu do primeiro semestre"</span>
+<span class="k">when</span> <span class="mi">7</span><span class="o">..</span><span class="mi">12</span>
+	<span class="nb">puts</span> <span class="s2">"Você nasceu do primeiro semestre"</span>
+<span class="k">else</span>
+ <span class="nb">puts</span> <span class="s2">"Não existe esse mês"</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby...</summary></entry><entry><title type="html">Tipos de Variáveis em Ruby</title><link href="https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html" rel="alternate" type="text/html" title="Tipos de Variáveis em Ruby" /><published>2018-07-12T17:54:00+00:00</published><updated>2018-07-12T17:54:00+00:00</updated><id>https://wteophilo.github.io/2018/07/12/tipos-de-variaveis</id><content type="html" xml:base="https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html">&lt;p&gt;Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo:&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html"><![CDATA[Vamos falar hoje sobre estrutura de controle em ruby especificamente as condicionais. As condicionais são controles que executam um trecho de código depedendo de uma condição, as condicionais em Ruby...]]></summary></entry><entry><title type="html">Tipos de Variáveis em Ruby</title><link href="https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html" rel="alternate" type="text/html" title="Tipos de Variáveis em Ruby" /><published>2018-07-12T17:54:00+00:00</published><updated>2018-07-12T17:54:00+00:00</updated><id>https://wteophilo.github.io/2018/07/12/tipos-de-variaveis</id><content type="html" xml:base="https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html"><![CDATA[<p>Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;n&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Willian&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">nome</span> <span class="o">=</span> <span class="s">"Willian"</span></code></pre></figure>
 
-&lt;p&gt;Neste post vamos ver:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Declarando uma variável&lt;/li&gt;
-  &lt;li&gt;Tipos de variáveis&lt;/li&gt;
-  &lt;li&gt;Problemas de conversão&lt;/li&gt;
-&lt;/ul&gt;
+<p>Neste post vamos ver:</p>
+<ul>
+  <li>Declarando uma variável</li>
+  <li>Tipos de variáveis</li>
+  <li>Problemas de conversão</li>
+</ul>
 
-&lt;h2 id=&quot;declarando-uma-variável&quot;&gt;Declarando uma variável&lt;/h2&gt;
+<h2 id="declarando-uma-variável">Declarando uma variável</h2>
 
-&lt;p&gt;Para declarar uma variável é bem simples basta dar um nome e atribuir seu valor assim o tipo da variável é definido implicitamente. Veja o exemplo abaixo:&lt;/p&gt;
+<p>Para declarar uma variável é bem simples basta dar um nome e atribuir seu valor assim o tipo da variável é definido implicitamente. Veja o exemplo abaixo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;28&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">"Willian"</span> <span class="o">=&gt;</span> <span class="s2">"Willian"</span>
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">28</span> <span class="o">=&gt;</span> <span class="mi">28</span></code></pre></figure>
 
-&lt;h2 id=&quot;tipos-de-variáveis&quot;&gt;Tipos de variáveis&lt;/h2&gt;
+<h2 id="tipos-de-variáveis">Tipos de variáveis</h2>
 
-&lt;p&gt;Como falamos anteriormente o Ruby possui alguns tipos, são eles:&lt;/p&gt;
+<p>Como falamos anteriormente o Ruby possui alguns tipos, são eles:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Fixnum&lt;/strong&gt;: números inteiros&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Float&lt;/strong&gt;: números decimais&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Bignum&lt;/strong&gt;: números inteiros muito grandes&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;String&lt;/strong&gt;: valores alfanumérico&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;FalseClass/TrueClass&lt;/strong&gt;: valores booleanos&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>Fixnum</strong>: números inteiros</li>
+  <li><strong>Float</strong>: números decimais</li>
+  <li><strong>Bignum</strong>: números inteiros muito grandes</li>
+  <li><strong>String</strong>: valores alfanumérico</li>
+  <li><strong>FalseClass/TrueClass</strong>: valores booleanos</li>
+</ul>
 
-&lt;p&gt;Você deve estar se perguntando “Então podemos alterar o valor de uma variável sem precisar fazer conversões… mas isso não dá problema não?” Como podemos ver no exemplo abaixo apenas trocando os valores não tem problema&lt;/p&gt;
+<p>Você deve estar se perguntando “Então podemos alterar o valor de uma variável sem precisar fazer conversões… mas isso não dá problema não?” Como podemos ver no exemplo abaixo apenas trocando os valores não tem problema</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Willian&quot;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5000&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">"Willian"</span> <span class="o">=&gt;</span> <span class="s2">"Willian"</span>
+<span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="mi">5000</span> <span class="o">=&gt;</span> <span class="mi">5000</span></code></pre></figure>
 
-&lt;h2 id=&quot;problemas-de-conversão&quot;&gt;Problemas de conversão&lt;/h2&gt;
+<h2 id="problemas-de-conversão">Problemas de conversão</h2>
 
-&lt;p&gt;Mas em nosso código do dia a dia provavelmente vamos usar uma variável em outros lugares é ai que mora o perigo…
-Vamos analisar a seguinte situação digamos que temos uma a variável com o nome “idade” do tipo inteiro(Fixnum), por algum motivo durante o desenvolvimento achamos melhor trocar o seu valor para String mas esquecemos que somamos algum outro valor inteiro ao longo do código, o que acontece? Segue código abaixo:&lt;/p&gt;
+<p>Mas em nosso código do dia a dia provavelmente vamos usar uma variável em outros lugares é ai que mora o perigo…
+Vamos analisar a seguinte situação digamos que temos uma a variável com o nome “idade” do tipo inteiro(Fixnum), por algum motivo durante o desenvolvimento achamos melhor trocar o seu valor para String mas esquecemos que somamos algum outro valor inteiro ao longo do código, o que acontece? Segue código abaixo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'WIL'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;WIL&quot;&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;no&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;implicit&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conversion&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fixnum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;into&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`+'
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">=&gt;</span> <span class="mi">30</span> 
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="s1">'WIL'</span> <span class="o">=&gt;</span> <span class="s2">"WIL"</span> 
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="no">TypeError</span><span class="p">:</span> <span class="n">no</span> <span class="n">implicit</span> <span class="n">conversion</span> <span class="n">of</span> <span class="no">Fixnum</span> <span class="n">into</span> <span class="no">String</span>
+	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">16</span><span class="ss">:in</span> <span class="sb">`+'
 	from (irb):16
-	from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `</span><span class="o">&lt;</span><span class="n">main</span><span class="o">&gt;</span><span class="err">'</span></code></pre></figure>
 
-&lt;p&gt;Se fizermos a operação inversa e tentar somar uma String em um inteiro(Fixnum) também temos o mesmo problema de conversão:&lt;/p&gt;
+<p>Se fizermos a operação inversa e tentar somar uma String em um inteiro(Fixnum) também temos o mesmo problema de conversão:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt; 
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;idade&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;WIL&quot;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;TypeError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;can&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'t be coerced into Fixnum
-	from (irb):36:in `+'&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;36&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/home/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rvm&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rubies&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ruby&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;2.3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:in&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`&amp;lt;main&amp;gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">=&gt;</span> <span class="mi">30</span> 
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">+</span> <span class="s2">"WIL"</span>
+<span class="no">TypeError</span><span class="p">:</span> <span class="no">String</span> <span class="n">can</span><span class="s1">'t be coerced into Fixnum
+	from (irb):36:in `+'</span>
+	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">36</span>
+	<span class="n">from</span> <span class="sr">/home/</span><span class="n">wt</span><span class="o">/</span><span class="p">.</span><span class="nf">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">irb</span><span class="p">:</span><span class="mi">11</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;'</span></code></pre></figure>
 
-&lt;p&gt;Em Ruby tudo é classe inclusive os tipos são classes então se alterarmos o tipo da variável e nessa variável usamos um método exclusivo da classe também vamos ter problemas, veja o exemplo abaixo:&lt;/p&gt;
+<p>Em Ruby tudo é classe inclusive os tipos são classes então se alterarmos o tipo da variável e nessa variável usamos um método exclusivo da classe também vamos ter problemas, veja o exemplo abaixo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;caixa_alta&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upcase&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;caixa_alta&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;no&quot;&gt;NoMethodError&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;undefined&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;sb&quot;&gt;`upcase' for 30:Fixnum
-        from (irb):41:in `&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;caixa_alta&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">caixa_alta</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+<span class="o">&gt;</span>  <span class="n">nome</span><span class="p">.</span><span class="nf">upcase</span>
+<span class="o">&gt;</span> <span class="k">end</span>
+<span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="o">&gt;</span> <span class="n">caixa_alta</span> <span class="n">nome</span> <span class="o">=&gt;</span>
+<span class="no">NoMethodError</span><span class="p">:</span> <span class="n">undefined</span> <span class="nb">method</span> <span class="sb">`upcase' for 30:Fixnum
+        from (irb):41:in `</span><span class="n">caixa_alta</span><span class="s1">'
         from (irb):43
-        from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `&amp;lt;main&amp;gt;'&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+        from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `&lt;main&gt;'</span></code></pre></figure>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html">Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada quando declaramos uma variável precisamos definir também seu tipo...</summary></entry><entry><title type="html">Relatórios Rspec</title><link href="https://wteophilo.github.io/2018/05/01/relatorios-rspec.html" rel="alternate" type="text/html" title="Relatórios Rspec" /><published>2018-05-01T20:03:00+00:00</published><updated>2018-05-01T20:03:00+00:00</updated><id>https://wteophilo.github.io/2018/05/01/relatorios-rspec</id><content type="html" xml:base="https://wteophilo.github.io/2018/05/01/relatorios-rspec.html">&lt;p&gt;Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="Ruby" /><summary type="html"><![CDATA[Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada quando declaramos uma variável precisamos definir também seu tipo...]]></summary></entry><entry><title type="html">Relatórios Rspec</title><link href="https://wteophilo.github.io/2018/05/01/relatorios-rspec.html" rel="alternate" type="text/html" title="Relatórios Rspec" /><published>2018-05-01T20:03:00+00:00</published><updated>2018-05-01T20:03:00+00:00</updated><id>https://wteophilo.github.io/2018/05/01/relatorios-rspec</id><content type="html" xml:base="https://wteophilo.github.io/2018/05/01/relatorios-rspec.html"><![CDATA[<p>Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs.</p>
 
-&lt;p&gt;Digamos que estamos testando uma classe Calculator que basicamente faz a soma de dois números…&lt;/p&gt;
+<p>Digamos que estamos testando uma classe Calculator que basicamente faz a soma de dois números…</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Calculator&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Calculator</span>
+  <span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+	<span class="n">a</span><span class="o">+</span><span class="n">b</span>
+  <span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;p&gt;e nosso teste:&lt;/p&gt;
+<p>e nosso teste:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;calculator&quot;&lt;/span&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">"calculator"</span>
 
-&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Calculator&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;described_class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()}&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#sum&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with positive numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+<span class="n">describe</span> <span class="no">Calculator</span> <span class="k">do</span>
+	<span class="n">subject</span><span class="p">(</span><span class="ss">:calc</span><span class="p">){</span><span class="n">described_class</span><span class="p">.</span><span class="nf">new</span><span class="p">()}</span>
+	<span class="n">context</span> <span class="s2">"#sum"</span> <span class="k">do</span>
+		<span class="n">it</span> <span class="s2">"with positive numbers"</span> <span class="k">do</span> 
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+		<span class="k">end</span>
 
-		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with negative and positive numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+		<span class="n">it</span> <span class="s2">"with negative and positive numbers"</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+		<span class="k">end</span>
 
-		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with negative numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+		<span class="n">it</span> <span class="s2">"with negative numbers"</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
+		<span class="k">end</span>
+	<span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;p&gt;Ao executarmos esse teste temos a seguinte saida:&lt;/p&gt;
+<p>Ao executarmos esse teste temos a seguinte saida:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rspec spec
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rspec</span><span class="w"> </span><span class="nx">spec</span><span class="w">
 	
-Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.02381 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 0.17227 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-3 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">0.02381</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">0.17227</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">3</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
 
-&lt;p&gt;Mas queremos um relatório melhor com mais informações e visualmente melhor do que apenas mostrar o que deu certou ou não.
-Pensando nisso o rspec possui o comando &lt;strong&gt;–format documentation&lt;/strong&gt;, vejamos como fica ao usarmos esse comando:&lt;/p&gt;
+<p>Mas queremos um relatório melhor com mais informações e visualmente melhor do que apenas mostrar o que deu certou ou não.
+Pensando nisso o rspec possui o comando <strong>–format documentation</strong>, vejamos como fica ao usarmos esse comando:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rspec spec --format documentation
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rspec</span><span class="w"> </span><span class="nx">spec</span><span class="w"> </span><span class="nt">--format</span><span class="w"> </span><span class="nx">documentation</span><span class="w">
 
-Calculator
-  &lt;span class=&quot;c1&quot;&gt;#sum&lt;/span&gt;
-    with positive numbers
-    with negative and positive numbers
-    with negative numbers
+</span><span class="n">Calculator</span><span class="w">
+  </span><span class="c">#sum</span><span class="w">
+    </span><span class="n">with</span><span class="w"> </span><span class="nx">positive</span><span class="w"> </span><span class="nx">numbers</span><span class="w">
+    </span><span class="n">with</span><span class="w"> </span><span class="nx">negative</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">positive</span><span class="w"> </span><span class="nx">numbers</span><span class="w">
+    </span><span class="n">with</span><span class="w"> </span><span class="nx">negative</span><span class="w"> </span><span class="nx">numbers</span><span class="w">
 
-Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.00389 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 0.23323 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-3 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">0.00389</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">0.23323</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">3</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
 
-&lt;p&gt;Até mesmo com erros o log fica bem melhor de visualizar:&lt;/p&gt;
+<p>Até mesmo com erros o log fica bem melhor de visualizar:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rspec spec --format documentation
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rspec</span><span class="w"> </span><span class="nx">spec</span><span class="w"> </span><span class="nt">--format</span><span class="w"> </span><span class="nx">documentation</span><span class="w">
 
-Failures:
+</span><span class="n">Failures:</span><span class="w">
 
-  1&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; Calculator#sum with positive numbers
-     Failure/Error: expect&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;result&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.to eq&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;112&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+  </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">Calculator</span><span class="c">#sum with positive numbers</span><span class="w">
+     </span><span class="n">Failure/Error:</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="nf">to</span><span class="w"> </span><span class="n">eq</span><span class="p">(</span><span class="mi">112</span><span class="p">)</span><span class="w">
      
-       expected: 112
-            got: 12
+       </span><span class="n">expected:</span><span class="w"> </span><span class="nx">112</span><span class="w">
+            </span><span class="n">got:</span><span class="w"> </span><span class="nx">12</span><span class="w">
      
-       &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;compared &lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==)&lt;/span&gt;
-     &lt;span class=&quot;c1&quot;&gt;# ./spec/calculator/calculator_spec.rb:8:in `block (3 levels) in &amp;lt;top (required)&amp;gt;'&lt;/span&gt;
+       </span><span class="p">(</span><span class="n">compared</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="o">==</span><span class="p">)</span><span class="w">
+     </span><span class="c"># ./spec/calculator/calculator_spec.rb:8:in `block (3 levels) in &lt;top (required)&gt;'</span><span class="w">
 
-Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;0.11017 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 0.24823 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-3 examples, 1 failure
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">0.11017</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">0.24823</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">3</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">failure</span><span class="w">
 
-Failed examples:
+</span><span class="n">Failed</span><span class="w"> </span><span class="nx">examples:</span><span class="w">
 
-rspec ./spec/calculator/calculator_spec.rb:6 &lt;span class=&quot;c1&quot;&gt;# Calculator#sum with positive numbers&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</span><span class="n">rspec</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/calculator/calculator_spec.rb:6</span><span class="w"> </span><span class="c"># Calculator#sum with positive numbers</span></code></pre></figure>
 
-&lt;p&gt;Você deve estar se perguntando “Pô legal mas sempre vou precisar digitar tudo isso??”A resposta é &lt;strong&gt;não&lt;/strong&gt; e para resolvermos existem duas maneiras.&lt;/p&gt;
+<p>Você deve estar se perguntando “Pô legal mas sempre vou precisar digitar tudo isso??”A resposta é <strong>não</strong> e para resolvermos existem duas maneiras.</p>
 
-&lt;p&gt;A primeira solução é criar dentro do projeto o arquivo .rspec e adicionar nossas configurações nele como por exemplo:&lt;/p&gt;
+<p>A primeira solução é criar dentro do projeto o arquivo .rspec e adicionar nossas configurações nele como por exemplo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;--require spec_helper
---format documentation
---color&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nt">--require</span><span class="w"> </span><span class="n">spec_helper</span><span class="w">
+</span><span class="nt">--format</span><span class="w"> </span><span class="nx">documentation</span><span class="w">
+</span><span class="nt">--color</span></code></pre></figure>
 
-&lt;p&gt;A segunda maneira seria alterar o arquivo spec_help.rb localizado no projeto rails na pasta spec, basta adicionar a seguinte linha:&lt;/p&gt;
+<p>A segunda maneira seria alterar o arquivo spec_help.rb localizado no projeto rails na pasta spec, basta adicionar a seguinte linha:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;RSpec.configure &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; |config|
-  config.formatter &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; :documentation
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">RSpec.configure</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span><span class="w">
+  </span><span class="n">config.formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">documentation</span><span class="w">
+</span><span class="nx">end</span></code></pre></figure>
 
-&lt;p&gt;As duas maneiras vão carregar as configurações e aplicar ao executar os nossos testes.Para mais informações de output do rspec sempre leia a &lt;a href=&quot;https://relishapp.com/rspec/rspec-core/v/2-5/docs/command-line/format-option&quot;&gt;documentação&lt;/a&gt;.&lt;/p&gt;
+<p>As duas maneiras vão carregar as configurações e aplicar ao executar os nossos testes.Para mais informações de output do rspec sempre leia a <a href="https://relishapp.com/rspec/rspec-core/v/2-5/docs/command-line/format-option">documentação</a>.</p>
 
-&lt;p&gt;E para finalizar podemos também exportar o conteúdo de nossos teste para um arquivo txt ou html, para fazer isso basta adicionar a seguinte instrução:&lt;/p&gt;
+<p>E para finalizar podemos também exportar o conteúdo de nossos teste para um arquivo txt ou html, para fazer isso basta adicionar a seguinte instrução:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;--format html --out nome_arquivo.html&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nt">--format</span><span class="w"> </span><span class="n">html</span><span class="w"> </span><span class="nt">--out</span><span class="w"> </span><span class="nx">nome_arquivo.html</span></code></pre></figure>
 
-&lt;p&gt;Assim teremos uma página html como imagem no início do nosso post.&lt;/p&gt;
+<p>Assim teremos uma página html como imagem no início do nosso post.</p>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs...</summary></entry><entry><title type="html">Estrutura Vuejs</title><link href="https://wteophilo.github.io/2018/05/01/estrutura-vuejs.html" rel="alternate" type="text/html" title="Estrutura Vuejs" /><published>2018-05-01T17:20:00+00:00</published><updated>2018-05-01T17:20:00+00:00</updated><id>https://wteophilo.github.io/2018/05/01/estrutura-vuejs</id><content type="html" xml:base="https://wteophilo.github.io/2018/05/01/estrutura-vuejs.html">&lt;p&gt;Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Estrutura de pastas de um projeto Vuejs&lt;/li&gt;
-  &lt;li&gt;Templates webpack&lt;/li&gt;
-&lt;/ul&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs...]]></summary></entry><entry><title type="html">Estrutura Vuejs</title><link href="https://wteophilo.github.io/2018/05/01/estrutura-vuejs.html" rel="alternate" type="text/html" title="Estrutura Vuejs" /><published>2018-05-01T17:20:00+00:00</published><updated>2018-05-01T17:20:00+00:00</updated><id>https://wteophilo.github.io/2018/05/01/estrutura-vuejs</id><content type="html" xml:base="https://wteophilo.github.io/2018/05/01/estrutura-vuejs.html"><![CDATA[<p>Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes:</p>
+<ul>
+  <li>Estrutura de pastas de um projeto Vuejs</li>
+  <li>Templates webpack</li>
+</ul>
 
-&lt;p&gt;Caso não tenha visto o primeiro post clique &lt;a href=&quot;https://wteophilo.github.io/2018/04/03/ola-vuejs.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+<p>Caso não tenha visto o primeiro post clique <a href="https://wteophilo.github.io/2018/04/03/ola-vuejs.html">aqui</a>.</p>
 
-&lt;h2 id=&quot;estrutura-vuejs&quot;&gt;Estrutura Vuejs&lt;/h2&gt;
+<h2 id="estrutura-vuejs">Estrutura Vuejs</h2>
 
-&lt;p&gt;Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto, abaixo listei as pastas ou arquivos mais comuns:&lt;/p&gt;
+<p>Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto, abaixo listei as pastas ou arquivos mais comuns:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;build/&lt;/strong&gt;
-Esse diretório contém as configurações reais do servidor de desenvolvimento e da compilação do webpack de produção.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;src/&lt;/strong&gt;
-Contêm todos código fonte da sua aplicação, a estrutura de como ficarão os arquivos é da escolha do desenvolvedor… então organize com cuidado.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;static/&lt;/strong&gt;:
-Diretório onde serão inseridos os arquivos estaticos(css,imagens etc) a ser processados pelo webpack, estes arquivos serão copiados diretamente no mesmo diretório em que os assets gerados pelo Werbpack, consulte qual gerenciador que você utilizará para mais detalhes.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;test/unit&lt;/strong&gt;:
-Contêm arquivos relcionados aos testes unitários.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;test/e2e&lt;/strong&gt;:
-Contêm arquivos testes e2e(&lt;a href=&quot;https://vuejs-templates.github.io/webpack/e2e.html&quot;&gt;End-to-End Testing&lt;/a&gt;).&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;index.html&lt;/strong&gt;:
-Este é o template para single page. Durante o desenvolvimento e as compilações, o Webpack gera assets e URLs desses assets gerados serão automaticamente injetadas nesse modelo para renderizar o HTML final.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;strong&gt;package.json&lt;/strong&gt;:
-Contém todas as dependências do projeto.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>
+    <p><strong>build/</strong>
+Esse diretório contém as configurações reais do servidor de desenvolvimento e da compilação do webpack de produção.</p>
+  </li>
+  <li>
+    <p><strong>src/</strong>
+Contêm todos código fonte da sua aplicação, a estrutura de como ficarão os arquivos é da escolha do desenvolvedor… então organize com cuidado.</p>
+  </li>
+  <li>
+    <p><strong>static/</strong>:
+Diretório onde serão inseridos os arquivos estaticos(css,imagens etc) a ser processados pelo webpack, estes arquivos serão copiados diretamente no mesmo diretório em que os assets gerados pelo Werbpack, consulte qual gerenciador que você utilizará para mais detalhes.</p>
+  </li>
+  <li>
+    <p><strong>test/unit</strong>:
+Contêm arquivos relcionados aos testes unitários.</p>
+  </li>
+  <li>
+    <p><strong>test/e2e</strong>:
+Contêm arquivos testes e2e(<a href="https://vuejs-templates.github.io/webpack/e2e.html">End-to-End Testing</a>).</p>
+  </li>
+  <li>
+    <p><strong>index.html</strong>:
+Este é o template para single page. Durante o desenvolvimento e as compilações, o Webpack gera assets e URLs desses assets gerados serão automaticamente injetadas nesse modelo para renderizar o HTML final.</p>
+  </li>
+  <li>
+    <p><strong>package.json</strong>:
+Contém todas as dependências do projeto.</p>
+  </li>
+</ul>
 
-&lt;h2 id=&quot;templates-webpack&quot;&gt;Templates WebPack&lt;/h2&gt;
+<h2 id="templates-webpack">Templates WebPack</h2>
 
-&lt;p&gt;Quando vamos criar um projeto vimos que podemos escolher a estrutura(template) do projeto, cada um desses templates utilizam estruturas de pasta diferente. O Vuejs utiliza como bundler tanto &lt;a href=&quot;https://webpack.js.org/&quot;&gt;webpack&lt;/a&gt; quanto o &lt;a href=&quot;http://browserify.org/&quot;&gt;browserify&lt;/a&gt;. Neste &lt;a href=&quot;https://medium.freecodecamp.org/browserify-vs-webpack-b3d7ca08a0a9&quot;&gt;link&lt;/a&gt; existe um post comparando os templates.&lt;/p&gt;
+<p>Quando vamos criar um projeto vimos que podemos escolher a estrutura(template) do projeto, cada um desses templates utilizam estruturas de pasta diferente. O Vuejs utiliza como bundler tanto <a href="https://webpack.js.org/">webpack</a> quanto o <a href="http://browserify.org/">browserify</a>. Neste <a href="https://medium.freecodecamp.org/browserify-vs-webpack-b3d7ca08a0a9">link</a> existe um post comparando os templates.</p>
 
-&lt;h3 id=&quot;tipos-templates&quot;&gt;Tipos Templates&lt;/h3&gt;
+<h3 id="tipos-templates">Tipos Templates</h3>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/webpack&quot;&gt;webpack&lt;/a&gt;: É o pacote mais completo ou seja ele utiliza o webpack como bundler,possui   vue-loader com hot reload, javascript lint e testes unitários.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/webpack-simple&quot;&gt;webpack-simple&lt;/a&gt;: utiliza o webpack como bundler mas com menos recursos.O webpack-simple não possui hot reload, javascript lint e nem testes unitários.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/browserify&quot;&gt;browserify&lt;/a&gt;: usa o browserify como module bundler. Possui o vue-loader com hot reload, javascript lint e testes unitários.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/browserify-simple&quot;&gt;browserify-simple&lt;/a&gt;: usa o browserify como module bundler, sem hot reload, lint ou testes unitários.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/vuejs-templates/simple&quot;&gt;simple&lt;/a&gt;: o template mais simples, não utiliza nenhum bundle possui apenas uma única página com o Vue sendo carregado através de um endereço &lt;a href=&quot;Content Delivery Network&quot;&gt;CDN&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/vuejs-templates/webpack">webpack</a>: É o pacote mais completo ou seja ele utiliza o webpack como bundler,possui   vue-loader com hot reload, javascript lint e testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/webpack-simple">webpack-simple</a>: utiliza o webpack como bundler mas com menos recursos.O webpack-simple não possui hot reload, javascript lint e nem testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/browserify">browserify</a>: usa o browserify como module bundler. Possui o vue-loader com hot reload, javascript lint e testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/browserify-simple">browserify-simple</a>: usa o browserify como module bundler, sem hot reload, lint ou testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/simple">simple</a>: o template mais simples, não utiliza nenhum bundle possui apenas uma única página com o Vue sendo carregado através de um endereço <a href="Content Delivery Network">CDN</a>.</li>
+</ul>
 
-&lt;h3 id=&quot;buildjs&quot;&gt;Build.js&lt;/h3&gt;
-&lt;p&gt;Se você já conhece o Vuejs provavelmente está se perguntando porque não falei sobre o arquivo build.js, não esqueci dele apenas deixe-o por último.&lt;/p&gt;
+<h3 id="buildjs">Build.js</h3>
+<p>Se você já conhece o Vuejs provavelmente está se perguntando porque não falei sobre o arquivo build.js, não esqueci dele apenas deixe-o por último.</p>
 
-&lt;p&gt;Basicamente o arquivo build.js é todo o conteúdo da pasta &lt;strong&gt;src&lt;/strong&gt;, onde as páginas se transformam em javascript e assim são carregados em memória, deixando que toda alteração feita pelo desenvolvedor seja carrega e exibida em instantes.&lt;/p&gt;
+<p>Basicamente o arquivo build.js é todo o conteúdo da pasta <strong>src</strong>, onde as páginas se transformam em javascript e assim são carregados em memória, deixando que toda alteração feita pelo desenvolvedor seja carrega e exibida em instantes.</p>
 
-&lt;h3 id=&quot;babel&quot;&gt;Babel&lt;/h3&gt;
-&lt;p&gt;Mas quem faz essa transformação dos arquivos? O Vuejs utiliza o transpilador &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; basicamente transcreve código escrito em ES2015(ecmascript 6) para ES5(ecmascript 5) garantindo assim compatibilidade entre os browsers.&lt;/p&gt;
+<h3 id="babel">Babel</h3>
+<p>Mas quem faz essa transformação dos arquivos? O Vuejs utiliza o transpilador <a href="https://babeljs.io/">Babel</a> basicamente transcreve código escrito em ES2015(ecmascript 6) para ES5(ecmascript 5) garantindo assim compatibilidade entre os browsers.</p>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="vuejs" /><summary type="html">Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto...</summary></entry><entry><title type="html">RSpec-It vs Xit</title><link href="https://wteophilo.github.io/2018/04/14/rspec-it-vs-xit.html" rel="alternate" type="text/html" title="RSpec-It vs Xit" /><published>2018-04-14T12:41:00+00:00</published><updated>2018-04-14T12:41:00+00:00</updated><id>https://wteophilo.github.io/2018/04/14/rspec-it-vs-xit</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/14/rspec-it-vs-xit.html">&lt;p&gt;Hoje vamos falar um pouco mais sobre o rspec e como pular alguns testes…
-Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma feature e os testes quebram em outros locais…sei que você vai voltar e resolver o problema ;).&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="vuejs" /><summary type="html"><![CDATA[Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto...]]></summary></entry><entry><title type="html">RSpec-It vs Xit</title><link href="https://wteophilo.github.io/2018/04/14/rspec-it-vs-xit.html" rel="alternate" type="text/html" title="RSpec-It vs Xit" /><published>2018-04-14T12:41:00+00:00</published><updated>2018-04-14T12:41:00+00:00</updated><id>https://wteophilo.github.io/2018/04/14/rspec-it-vs-xit</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/14/rspec-it-vs-xit.html"><![CDATA[<p>Hoje vamos falar um pouco mais sobre o rspec e como pular alguns testes…
+Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma feature e os testes quebram em outros locais…sei que você vai voltar e resolver o problema ;).</p>
 
-&lt;p&gt;Sabemos que quando declaramos um novo teste e não o preenchemos o log é exibido como pendente.&lt;/p&gt;
+<p>Sabemos que quando declaramos um novo teste e não o preenchemos o log é exibido como pendente.</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Deve fazer alguma coisa&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">it</span> <span class="s2">"Deve fazer alguma coisa"</span></code></pre></figure>
 
-&lt;p&gt;Resultado:&lt;/p&gt;
+<p>Resultado:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;Pending: &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Failures listed here are expected and &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;not affect your suite&lt;span class=&quot;s1&quot;&gt;'s status)
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Pending:</span><span class="w"> </span><span class="p">(</span><span class="n">Failures</span><span class="w"> </span><span class="nx">listed</span><span class="w"> </span><span class="nx">here</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">affect</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">suite</span><span class="s1">'s status)
 
   1) Calculator#sum Deve fazer algo
-     # Not yet implemented&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+     # Not yet implemented</span></code></pre></figure>
 
-&lt;p&gt;Agora para pularmos um item de nossos testes é necessário apenas adicionarmos o comando &lt;strong&gt;xit&lt;/strong&gt; ao invés do it na descrição do teste. Abaixo existe um treço de código mostrando o compartamento do xit:&lt;/p&gt;
+<p>Agora para pularmos um item de nossos testes é necessário apenas adicionarmos o comando <strong>xit</strong> ao invés do it na descrição do teste. Abaixo existe um treço de código mostrando o compartamento do xit:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;calculator&quot;&lt;/span&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">"calculator"</span>
 
-&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Calculator&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;described_class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()}&lt;/span&gt;
-	&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;#sum&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-		&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with positive numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; 
-			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+<span class="n">describe</span> <span class="no">Calculator</span> <span class="k">do</span>
+	<span class="n">subject</span><span class="p">(</span><span class="ss">:calc</span><span class="p">){</span><span class="n">described_class</span><span class="p">.</span><span class="nf">new</span><span class="p">()}</span>
+	<span class="n">context</span> <span class="s2">"#sum"</span> <span class="k">do</span>
+		<span class="n">it</span> <span class="s2">"with positive numbers"</span> <span class="k">do</span> 
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+		<span class="k">end</span>
 
-		&lt;span class=&quot;n&quot;&gt;xit&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with negative and positive numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+		<span class="n">xit</span> <span class="s2">"with negative and positive numbers"</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+		<span class="k">end</span>
 
-		&lt;span class=&quot;n&quot;&gt;xit&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;with negative numbers&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-			&lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eq&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-		&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+		<span class="n">xit</span> <span class="s2">"with negative numbers"</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
+		<span class="k">end</span>
 
-	&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	<span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;Pending: &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;Failures listed here are expected and &lt;span class=&quot;k&quot;&gt;do &lt;/span&gt;not affect your suite&lt;span class=&quot;s1&quot;&gt;'s status)
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Pending:</span><span class="w"> </span><span class="p">(</span><span class="n">Failures</span><span class="w"> </span><span class="nx">listed</span><span class="w"> </span><span class="nx">here</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">affect</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">suite</span><span class="s1">'s status)
 
   1) Calculator#sum with negative and positive numbers
-     # Temporarily skipped with xit&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+     # Temporarily skipped with xit</span></code></pre></figure>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">Para pularmos um item de nossos testes é necessário apenas adicionarmos o comando xit ao invés do it na descrição do teste...</summary></entry><entry><title type="html">RSpec-Executando apenas um teste</title><link href="https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste.html" rel="alternate" type="text/html" title="RSpec-Executando apenas um teste" /><published>2018-04-12T00:03:00+00:00</published><updated>2018-04-12T00:03:00+00:00</updated><id>https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste.html">&lt;p&gt;Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa.&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Para pularmos um item de nossos testes é necessário apenas adicionarmos o comando xit ao invés do it na descrição do teste...]]></summary></entry><entry><title type="html">RSpec-Executando apenas um teste</title><link href="https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste.html" rel="alternate" type="text/html" title="RSpec-Executando apenas um teste" /><published>2018-04-12T00:03:00+00:00</published><updated>2018-04-12T00:03:00+00:00</updated><id>https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste.html"><![CDATA[<p>Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa.</p>
 
-&lt;h3 id=&quot;rspec-caminho&quot;&gt;RSpec caminho&lt;/h3&gt;
-&lt;p&gt;Digamos que estamos fazendo um projeto em ruby, separamos nossos testes por pasta e queremos executar apenas um arquivo, então basta executar o comando:&lt;/p&gt;
+<h3 id="rspec-caminho">RSpec caminho</h3>
+<p>Digamos que estamos fazendo um projeto em ruby, separamos nossos testes por pasta e queremos executar apenas um arquivo, então basta executar o comando:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec /pasta/arquivo_spec.rb&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/pasta/arquivo_spec.rb</span></code></pre></figure>
 
-&lt;p&gt;Assim todos os teste dentro do arquivo serão executados.&lt;/p&gt;
+<p>Assim todos os teste dentro do arquivo serão executados.</p>
 
-&lt;h3 id=&quot;executando-teste-pelo-título&quot;&gt;Executando teste pelo título&lt;/h3&gt;
-&lt;p&gt;As vezes queremos executar apenas um teste dentro do nosso arquivo de teste, podemos fazer isso usando o sufixo -e “título”, por exemplo:&lt;/p&gt;
+<h3 id="executando-teste-pelo-título">Executando teste pelo título</h3>
+<p>As vezes queremos executar apenas um teste dentro do nosso arquivo de teste, podemos fazer isso usando o sufixo -e “título”, por exemplo:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec /nome_classe/arquivo_spec.rb -e &lt;span class=&quot;s2&quot;&gt;&quot;título&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"título"</span></code></pre></figure>
 
-&lt;h3 id=&quot;executando-teste-pela-linha&quot;&gt;Executando teste pela linha&lt;/h3&gt;
-&lt;p&gt;Podemos também executar um teste por uma linha do arquivo,vamos utilizar o mesmo conceito do item anterior mas ao invés de buscar o título apenas utilizamos a linha que queremos executar.&lt;/p&gt;
+<h3 id="executando-teste-pela-linha">Executando teste pela linha</h3>
+<p>Podemos também executar um teste por uma linha do arquivo,vamos utilizar o mesmo conceito do item anterior mas ao invés de buscar o título apenas utilizamos a linha que queremos executar.</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec /nome_classe/arquivo_spec.rb:linha&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb:linha</span></code></pre></figure>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa...</summary></entry><entry><title type="html">Olá RSpec</title><link href="https://wteophilo.github.io/2018/04/11/ola-rspec.html" rel="alternate" type="text/html" title="Olá RSpec" /><published>2018-04-11T23:50:00+00:00</published><updated>2018-04-11T23:50:00+00:00</updated><id>https://wteophilo.github.io/2018/04/11/ola-rspec</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/11/ola-rspec.html">&lt;p&gt;O RSpec é um framework de testes escrito em Ruby que segue &lt;a href=&quot;https://pt.wikipedia.org/wiki/Behavior_Driven_Development&quot;&gt;BDD&lt;/a&gt;(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.&lt;/p&gt;
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa...]]></summary></entry><entry><title type="html">Olá RSpec</title><link href="https://wteophilo.github.io/2018/04/11/ola-rspec.html" rel="alternate" type="text/html" title="Olá RSpec" /><published>2018-04-11T23:50:00+00:00</published><updated>2018-04-11T23:50:00+00:00</updated><id>https://wteophilo.github.io/2018/04/11/ola-rspec</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/11/ola-rspec.html"><![CDATA[<p>O RSpec é um framework de testes escrito em Ruby que segue <a href="https://pt.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a>(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.</p>
 
-&lt;h2 id=&quot;instalando&quot;&gt;Instalando&lt;/h2&gt;
+<h2 id="instalando">Instalando</h2>
 
-&lt;p&gt;Para usar o RSpec basta instalar a gem:&lt;/p&gt;
+<p>Para usar o RSpec basta instalar a gem:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;rspec&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">rspec</span></code></pre></figure>
 
-&lt;p&gt;ou em seu projeto rails adicione as seguintes linhas:&lt;/p&gt;
+<p>ou em seu projeto rails adicione as seguintes linhas:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:development&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:test&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
-  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'rspec-rails'&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span>  <span class="k">do</span>  
+  <span class="n">gem</span> <span class="s1">'rspec-rails'</span>  
+<span class="k">end</span></code></pre></figure>
 
-&lt;p&gt;Após instalado a gem basta executar o seguinte comando no terminal:&lt;/p&gt;
+<p>Após instalado a gem basta executar o seguinte comando no terminal:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rspec --init&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nt">--init</span></code></pre></figure>
 
-&lt;p&gt;Após a executar o comando serão adicionados ao projeto a pasta &lt;strong&gt;spec&lt;/strong&gt;  e o arquivo &lt;strong&gt;spec_helper.rb&lt;/strong&gt; neste arquivo podemos realizar algumas configurações do rspec, vamos falar mais sobre em um outro post.&lt;/p&gt;
+<p>Após a executar o comando serão adicionados ao projeto a pasta <strong>spec</strong>  e o arquivo <strong>spec_helper.rb</strong> neste arquivo podemos realizar algumas configurações do rspec, vamos falar mais sobre em um outro post.</p>
 
-&lt;p&gt;Além dos arquivos citados anteriormente ganhamos alguns novos generators: models,job,feature etc, veja &lt;a href=&quot;https://relishapp.com/rspec/rspec-rails/docs/generators&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+<p>Além dos arquivos citados anteriormente ganhamos alguns novos generators: models,job,feature etc, veja <a href="https://relishapp.com/rspec/rspec-rails/docs/generators">aqui</a>.</p>
 
-&lt;h2 id=&quot;usando-o-rspec&quot;&gt;Usando o RSpec&lt;/h2&gt;
+<h2 id="usando-o-rspec">Usando o RSpec</h2>
 
-&lt;p&gt;Então temos nosso model &lt;strong&gt;Item&lt;/strong&gt; com uma validação:&lt;/p&gt;
+<p>Então temos nosso model <strong>Item</strong> com uma validação:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Item&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationRecord&lt;/span&gt;  
-  &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:quantity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;presence: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Item</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>  
+  <span class="n">validates</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:quantity</span><span class="p">,</span> <span class="ss">presence: </span><span class="kp">true</span>
+<span class="k">end</span></code></pre></figure>
 
-&lt;p&gt;E nosso teste onde queremos fazer dois testes:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Verificar se o campo &lt;strong&gt;name&lt;/strong&gt; está preenchido.&lt;/li&gt;
-  &lt;li&gt;Mostrar uma mensagem caso não esteja.&lt;/li&gt;
-  &lt;li&gt;Estamos usando a gem &lt;a href=&quot;https://github.com/thoughtbot/factory_bot_rails&quot;&gt;FactoryBot&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
+<p>E nosso teste onde queremos fazer dois testes:</p>
+<ul>
+  <li>Verificar se o campo <strong>name</strong> está preenchido.</li>
+  <li>Mostrar uma mensagem caso não esteja.</li>
+  <li>Estamos usando a gem <a href="https://github.com/thoughtbot/factory_bot_rails">FactoryBot</a>.</li>
+</ul>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;	  
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;'rails_helper'&lt;/span&gt;  
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	  
+<span class="nb">require</span>  <span class="s1">'rails_helper'</span>  
       
-&lt;span class=&quot;no&quot;&gt;RSpec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;type: :model&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
-    &lt;span class=&quot;n&quot;&gt;let&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;FactoryBot&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;  
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Create a Item with all fields fill&quot;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
-    	 &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;valid?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_truthy&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;  
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">Item</span><span class="p">,</span> <span class="ss">type: :model</span>  <span class="k">do</span>  
+    <span class="n">let</span><span class="p">(</span><span class="ss">:item</span><span class="p">){</span><span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:item</span><span class="p">}</span>  
+    <span class="n">it</span> <span class="s2">"Create a Item with all fields fill"</span>  <span class="k">do</span>  
+    	 <span class="n">expect</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">valid?</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_truthy</span>  
+    <span class="k">end</span>  
      
     
-    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Create a Item without a name&quot;&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;  &lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;  
-        &lt;span class=&quot;n&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;valid?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;be_falsey&lt;/span&gt;  
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;  
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+    <span class="n">it</span> <span class="s2">"Create a Item without a name"</span>  <span class="k">do</span>  
+        <span class="n">item</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span>  <span class="s2">""</span>  
+        <span class="n">expect</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">valid?</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_falsey</span>  
+    <span class="k">end</span>  
+<span class="k">end</span></code></pre></figure>
 
-&lt;p&gt;Então vamos por partes e mostrar o que significa cada comando em nosso teste:&lt;/p&gt;
+<p>Então vamos por partes e mostrar o que significa cada comando em nosso teste:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;RSpec.describe Item, type: :model  do:&lt;/strong&gt; Nesta linha estamos mostrando para o RSpec qual classe queremos testar e qual é tipo desta classe podem ser model,controller etc.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Context&lt;/strong&gt;: O contexto do nosso teste separando assim nossos testes por funcionalidade.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;It&lt;/strong&gt;: É usado para descrever o cenário que estamos testando.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Expect&lt;/strong&gt;: Resultado esperado do teste, pode ser tanto um resultado positivo quando negativo.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><strong>RSpec.describe Item, type: :model  do:</strong> Nesta linha estamos mostrando para o RSpec qual classe queremos testar e qual é tipo desta classe podem ser model,controller etc.</li>
+  <li><strong>Context</strong>: O contexto do nosso teste separando assim nossos testes por funcionalidade.</li>
+  <li><strong>It</strong>: É usado para descrever o cenário que estamos testando.</li>
+  <li><strong>Expect</strong>: Resultado esperado do teste, pode ser tanto um resultado positivo quando negativo.</li>
+</ul>
 
-&lt;h2 id=&quot;executando-testes&quot;&gt;Executando Testes&lt;/h2&gt;
+<h2 id="executando-testes">Executando Testes</h2>
 
-&lt;p&gt;Para executar os testes basta executar o seguinte comando:&lt;/p&gt;
+<p>Para executar os testes basta executar o seguinte comando:</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;rake spec&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rake</span><span class="w"> </span><span class="nx">spec</span></code></pre></figure>
 
-&lt;p&gt;Como nossos teste são bem simples todos vão passar sem problemas então o resultado é :&lt;/p&gt;
+<p>Como nossos teste são bem simples todos vão passar sem problemas então o resultado é :</p>
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;...................
-Finished &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;1.5 seconds &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;files took 5.56 seconds to load&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-2 examples, 0 failures&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="o">...................</span><span class="w">
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">1.5</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">5.56</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">2</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
 
-&lt;p&gt;Por enquanto é só isso, nos vemos na próxima.&lt;/p&gt;</content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html">O RSpec é um framework de testes escrito em Ruby que segue BDD,nos códigos a seguir vou mostrar o RSpec no Rails...</summary></entry></feed>
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[O RSpec é um framework de testes escrito em Ruby que segue BDD,nos códigos a seguir vou mostrar o RSpec no Rails...]]></summary></entry></feed>

@@ -1,0 +1,102 @@
+I"$!<p>Quando estamos testando nossa aplicação muitas vezes queremos que os dados seja já pré definidos mas não queremos fixa-los no código então vamos falar sobre a gem FactoryBot. Nos primórdios do Rails era utilizados arquivos YAML/CSV  onde cada arquivo conter dados de um único modelo esses arquivos são conhecidos como <a href="https://api.rubyonrails.org/v3.1/classes/ActiveRecord/Fixtures.html">fixtures</a>, segue exemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rubyonrails:
+  id: 1
+  name: Ruby on Rails
+  url: http://www.rubyonrails.org
+
+google:
+  id: 2
+  name: Google
+  url: http://www.google.com
+</code></pre></div></div>
+
+<p>E aplicação em nossos testes utilizando a gem padrão do rails:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">test</span> <span class="s2">"find"</span> <span class="k">do</span>
+  <span class="n">assert_equal</span> <span class="s2">"Ruby on Rails"</span><span class="p">,</span> <span class="n">web_sites</span><span class="p">(</span><span class="ss">:rubyonrails</span><span class="p">).</span><span class="nf">name</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Com o tempo  a gem FactoryGirl foi criada usando boa parte funcionalidades que fixtures utilizam e outras mais. Em 24-08-2017 o nome do projeto foi trocado para <a href="https://github.com/thoughtbot/factory_bot">factorybot</a>.</p>
+
+<p>O FactoryBot possui duas gems uma que pode ser utilizadas para projetos em Ruby puro e outra para projetos em Rails, ambos podem ser adicionadas no GemFile no group de testes.</p>
+
+<p>Ruby Puro:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+    <span class="n">gem</span> <span class="s1">'factory_bot'</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Rails (<a href="https://github.com/thoughtbot/factory_bot_rails">factory_bot_rails</a>)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>group :development, :test do
+	gem 'factory_bot_rails' 
+end
+</code></pre></div></div>
+
+<p>No decorrer deste post vamos utilizar utilizar a gem factory_bot _rails. Para utiliza-la devemos adicionar o seguinte trecho de código a seguir na pasta <strong>spec/rails_helper.rb</strong>, assim o Rails vai se integrar ao FactoryBot.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">RSpec</span><span class="p">.</span><span class="nf">configure</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
+    <span class="n">config</span><span class="p">.</span><span class="nf">include</span> <span class="no">FactoryBot</span><span class="o">::</span><span class="no">Syntax</span><span class="o">::</span><span class="no">Methods</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>A pasta spec é criada ao usar a gem Rspec temos um post sobre o assunto caso tenha interesse basta <a href="https://wteophilo.github.io/2018/04/11/ola-rspec.html">clicar aqui</a>. Agora que sabemos o que é o FactoryBot e suas configurações vamos utiliza-lo. Temos uma classe bem básica de usuário com alguns atributos e um método que imprimi o nome completo</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+    <span class="n">validates</span> <span class="ss">:first_name</span><span class="p">,</span> <span class="ss">:last_name</span><span class="p">,</span> <span class="ss">:age</span><span class="p">,</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">presence: </span><span class="kp">true</span>
+    <span class="k">def</span> <span class="nf">full_name</span>
+        <span class="s2">"</span><span class="si">#{</span><span class="n">first_name</span><span class="si">}</span><span class="s2"> </span><span class="si">#{</span><span class="n">last_name</span><span class="si">}</span><span class="s2">"</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>E queremos realizar alguns testes nesta classe e é ai que entra nossa factory,  por convenção devemos nossa factory com o mesmo nome da nossa classe ou seja <strong>user.rb</strong> na pasta <strong>spec/factories</strong>  seguinte conteúdo:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">FactoryBot</span><span class="p">.</span><span class="nf">define</span> <span class="k">do</span>
+    <span class="n">factory</span> <span class="ss">:user</span> <span class="k">do</span>
+        <span class="n">first_name</span>  <span class="p">{</span><span class="s2">"Willian"</span><span class="p">}</span> 
+        <span class="n">last_name</span>  <span class="p">{</span><span class="s2">"Teophilo"</span> <span class="p">}</span>
+        <span class="n">email</span>  <span class="p">{</span><span class="s2">"wteophilo@gmail.com"</span><span class="p">}</span> 
+        <span class="n">age</span> <span class="p">{</span> <span class="mi">28</span> <span class="p">}</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Como vimos no inicio do post nossa facory basicamente vai popular todos os atribuitos da nossa classe User, deixando os nossos testes mais simples pois já sabemos a entrada de dados. No FactoryBot existe duas maneiras de criar um objeto a partir de uma factory são eles:</p>
+
+<ul>
+  <li><strong>create</strong> : Cria e persiste o objeto no banco de dados</li>
+  <li><strong>build</strong>: Apenas cria o objeto em memória</li>
+</ul>
+
+<p>Por fim o nosso teste da classe User utilizando o FactoryBot, segue o código abaixo:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">require</span> <span class="s1">'rails_helper'</span>
+
+<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">User</span><span class="p">,</span> <span class="ss">type: :model</span> <span class="k">do</span>    
+    <span class="n">before</span><span class="p">(</span><span class="ss">:each</span><span class="p">)</span> <span class="k">do</span>
+        <span class="vi">@user</span> <span class="o">=</span> <span class="n">build</span><span class="p">(</span><span class="ss">:user</span><span class="p">)</span>
+    <span class="k">end</span>
+    
+    <span class="n">it</span> <span class="s1">'should show user with full name'</span> <span class="k">do</span>
+        <span class="n">expect</span><span class="p">(</span><span class="vi">@user</span><span class="p">.</span><span class="nf">full_name</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="s2">"Willian Teophilo"</span><span class="p">)</span>
+    <span class="k">end</span>
+    
+    <span class="n">it</span> <span class="s1">'should have the same attributes of factory'</span> <span class="k">do</span>
+		<span class="n">expect</span><span class="p">(</span><span class="vi">@user</span><span class="p">).</span><span class="nf">to</span> <span class="n">have_attributes</span>
+			<span class="p">(</span><span class="ss">:first_name</span> <span class="o">=&gt;</span> <span class="s2">"Willian"</span><span class="p">,</span> 
+			<span class="ss">:last_name</span> <span class="o">=&gt;</span> <span class="s2">"Teophilo"</span><span class="p">,</span>
+			<span class="ss">:email</span> <span class="o">=&gt;</span><span class="s2">"wteophilo@gmail.com"</span><span class="p">,</span> 
+			<span class="ss">:age</span> <span class="o">=&gt;</span> <span class="mi">28</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Este é um post bem introdutório sobre o FactoryBot e pretendo criar outros sobre ele, não se esqueça de comentar o que achou ou suas dúvidas.</p>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
+:ET

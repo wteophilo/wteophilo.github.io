@@ -78,9 +78,9 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Relatórios Rspec | Willian Teophilo</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Relatórios Rspec" />
 <meta name="author" content="Willian Teophilo" />
 <meta property="og:locale" content="en_US" />
@@ -91,8 +91,10 @@
 <meta property="og:site_name" content="Willian Teophilo" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-05-01T20:03:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Relatórios Rspec" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://wteophilo.github.io/2018/05/01/relatorios-rspec.html","headline":"Relatórios Rspec","dateModified":"2018-05-01T20:03:00+00:00","datePublished":"2018-05-01T20:03:00+00:00","author":{"@type":"Person","name":"Willian Teophilo"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2018/05/01/relatorios-rspec.html"},"description":"Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs…","@context":"http://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Willian Teophilo"},"dateModified":"2018-05-01T20:03:00+00:00","datePublished":"2018-05-01T20:03:00+00:00","description":"Sabemos que o Rspec é uma ferramenta poderosa para a realização de nossos testes, mas podemos realizar algumas configurações para entedermos melhor seus logs…","headline":"Relatórios Rspec","mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2018/05/01/relatorios-rspec.html"},"url":"https://wteophilo.github.io/2018/05/01/relatorios-rspec.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <body>
@@ -130,7 +132,7 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2020 &copy; Willian Teophilo</p>
+      <p>2022 &copy; Willian Teophilo</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
@@ -183,66 +185,66 @@
 
 <p>Ao executarmos esse teste temos a seguinte saida:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">bundle <span class="nb">exec </span>rspec spec
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rspec</span><span class="w"> </span><span class="nx">spec</span><span class="w">
 	
-Finished <span class="k">in </span>0.02381 seconds <span class="o">(</span>files took 0.17227 seconds to load<span class="o">)</span>
-3 examples, 0 failures</code></pre></figure>
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">0.02381</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">0.17227</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">3</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
 
 <p>Mas queremos um relatório melhor com mais informações e visualmente melhor do que apenas mostrar o que deu certou ou não.
 Pensando nisso o rspec possui o comando <strong>–format documentation</strong>, vejamos como fica ao usarmos esse comando:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">bundle <span class="nb">exec </span>rspec spec --format documentation
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rspec</span><span class="w"> </span><span class="nx">spec</span><span class="w"> </span><span class="nt">--format</span><span class="w"> </span><span class="nx">documentation</span><span class="w">
 
-Calculator
-  <span class="c1">#sum</span>
-    with positive numbers
-    with negative and positive numbers
-    with negative numbers
+</span><span class="n">Calculator</span><span class="w">
+  </span><span class="c">#sum</span><span class="w">
+    </span><span class="n">with</span><span class="w"> </span><span class="nx">positive</span><span class="w"> </span><span class="nx">numbers</span><span class="w">
+    </span><span class="n">with</span><span class="w"> </span><span class="nx">negative</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">positive</span><span class="w"> </span><span class="nx">numbers</span><span class="w">
+    </span><span class="n">with</span><span class="w"> </span><span class="nx">negative</span><span class="w"> </span><span class="nx">numbers</span><span class="w">
 
-Finished <span class="k">in </span>0.00389 seconds <span class="o">(</span>files took 0.23323 seconds to load<span class="o">)</span>
-3 examples, 0 failures</code></pre></figure>
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">0.00389</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">0.23323</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">3</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
 
 <p>Até mesmo com erros o log fica bem melhor de visualizar:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">bundle <span class="nb">exec </span>rspec spec --format documentation
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rspec</span><span class="w"> </span><span class="nx">spec</span><span class="w"> </span><span class="nt">--format</span><span class="w"> </span><span class="nx">documentation</span><span class="w">
 
-Failures:
+</span><span class="n">Failures:</span><span class="w">
 
-  1<span class="o">)</span> Calculator#sum with positive numbers
-     Failure/Error: expect<span class="o">(</span>result<span class="o">)</span>.to eq<span class="o">(</span>112<span class="o">)</span>
+  </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">Calculator</span><span class="c">#sum with positive numbers</span><span class="w">
+     </span><span class="n">Failure/Error:</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="o">.</span><span class="nf">to</span><span class="w"> </span><span class="n">eq</span><span class="p">(</span><span class="mi">112</span><span class="p">)</span><span class="w">
      
-       expected: 112
-            got: 12
+       </span><span class="n">expected:</span><span class="w"> </span><span class="nx">112</span><span class="w">
+            </span><span class="n">got:</span><span class="w"> </span><span class="nx">12</span><span class="w">
      
-       <span class="o">(</span>compared <span class="k">using</span> <span class="o">==)</span>
-     <span class="c1"># ./spec/calculator/calculator_spec.rb:8:in `block (3 levels) in &lt;top (required)&gt;'</span>
+       </span><span class="p">(</span><span class="n">compared</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="o">==</span><span class="p">)</span><span class="w">
+     </span><span class="c"># ./spec/calculator/calculator_spec.rb:8:in `block (3 levels) in &lt;top (required)&gt;'</span><span class="w">
 
-Finished <span class="k">in </span>0.11017 seconds <span class="o">(</span>files took 0.24823 seconds to load<span class="o">)</span>
-3 examples, 1 failure
+</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">0.11017</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">0.24823</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
+</span><span class="mi">3</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">1</span><span class="w"> </span><span class="nx">failure</span><span class="w">
 
-Failed examples:
+</span><span class="n">Failed</span><span class="w"> </span><span class="nx">examples:</span><span class="w">
 
-rspec ./spec/calculator/calculator_spec.rb:6 <span class="c1"># Calculator#sum with positive numbers</span></code></pre></figure>
+</span><span class="n">rspec</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/calculator/calculator_spec.rb:6</span><span class="w"> </span><span class="c"># Calculator#sum with positive numbers</span></code></pre></figure>
 
 <p>Você deve estar se perguntando “Pô legal mas sempre vou precisar digitar tudo isso??”A resposta é <strong>não</strong> e para resolvermos existem duas maneiras.</p>
 
 <p>A primeira solução é criar dentro do projeto o arquivo .rspec e adicionar nossas configurações nele como por exemplo:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">--require spec_helper
---format documentation
---color</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nt">--require</span><span class="w"> </span><span class="n">spec_helper</span><span class="w">
+</span><span class="nt">--format</span><span class="w"> </span><span class="nx">documentation</span><span class="w">
+</span><span class="nt">--color</span></code></pre></figure>
 
 <p>A segunda maneira seria alterar o arquivo spec_help.rb localizado no projeto rails na pasta spec, basta adicionar a seguinte linha:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">RSpec.configure <span class="k">do</span> |config|
-  config.formatter <span class="o">=</span> :documentation
-<span class="k">end</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">RSpec.configure</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span><span class="w">
+  </span><span class="n">config.formatter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">:</span><span class="n">documentation</span><span class="w">
+</span><span class="nx">end</span></code></pre></figure>
 
 <p>As duas maneiras vão carregar as configurações e aplicar ao executar os nossos testes.Para mais informações de output do rspec sempre leia a <a href="https://relishapp.com/rspec/rspec-core/v/2-5/docs/command-line/format-option">documentação</a>.</p>
 
 <p>E para finalizar podemos também exportar o conteúdo de nossos teste para um arquivo txt ou html, para fazer isso basta adicionar a seguinte instrução:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">--format html --out nome_arquivo.html</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="nt">--format</span><span class="w"> </span><span class="n">html</span><span class="w"> </span><span class="nt">--out</span><span class="w"> </span><span class="nx">nome_arquivo.html</span></code></pre></figure>
 
 <p>Assim teremos uma página html como imagem no início do nosso post.</p>
 

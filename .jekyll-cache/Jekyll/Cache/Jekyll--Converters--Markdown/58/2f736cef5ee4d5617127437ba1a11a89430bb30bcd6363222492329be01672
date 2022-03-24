@@ -1,0 +1,71 @@
+I"a<p>Apesar de ser uma linguagem dinâmica o Ruby é uma linguagem fortemente tipada, diferente de outras linguagems como Java ou C++, quando declaramos uma variável precisamos definir também seu tipo, por exemplo:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">String</span> <span class="n">nome</span> <span class="o">=</span> <span class="s">"Willian"</span></code></pre></figure>
+
+<p>Neste post vamos ver:</p>
+<ul>
+  <li>Declarando uma variável</li>
+  <li>Tipos de variáveis</li>
+  <li>Problemas de conversão</li>
+</ul>
+
+<h2 id="declarando-uma-variável">Declarando uma variável</h2>
+
+<p>Para declarar uma variável é bem simples basta dar um nome e atribuir seu valor assim o tipo da variável é definido implicitamente. Veja o exemplo abaixo:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">"Willian"</span> <span class="o">=&gt;</span> <span class="s2">"Willian"</span>
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">28</span> <span class="o">=&gt;</span> <span class="mi">28</span></code></pre></figure>
+
+<h2 id="tipos-de-variáveis">Tipos de variáveis</h2>
+
+<p>Como falamos anteriormente o Ruby possui alguns tipos, são eles:</p>
+
+<ul>
+  <li><strong>Fixnum</strong>: números inteiros</li>
+  <li><strong>Float</strong>: números decimais</li>
+  <li><strong>Bignum</strong>: números inteiros muito grandes</li>
+  <li><strong>String</strong>: valores alfanumérico</li>
+  <li><strong>FalseClass/TrueClass</strong>: valores booleanos</li>
+</ul>
+
+<p>Você deve estar se perguntando “Então podemos alterar o valor de uma variável sem precisar fazer conversões… mas isso não dá problema não?” Como podemos ver no exemplo abaixo apenas trocando os valores não tem problema</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="s2">"Willian"</span> <span class="o">=&gt;</span> <span class="s2">"Willian"</span>
+<span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="mi">5000</span> <span class="o">=&gt;</span> <span class="mi">5000</span></code></pre></figure>
+
+<h2 id="problemas-de-conversão">Problemas de conversão</h2>
+
+<p>Mas em nosso código do dia a dia provavelmente vamos usar uma variável em outros lugares é ai que mora o perigo…
+Vamos analisar a seguinte situação digamos que temos uma a variável com o nome “idade” do tipo inteiro(Fixnum), por algum motivo durante o desenvolvimento achamos melhor trocar o seu valor para String mas esquecemos que somamos algum outro valor inteiro ao longo do código, o que acontece? Segue código abaixo:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">=&gt;</span> <span class="mi">30</span> 
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="s1">'WIL'</span> <span class="o">=&gt;</span> <span class="s2">"WIL"</span> 
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">+</span> <span class="mi">10</span>
+<span class="no">TypeError</span><span class="p">:</span> <span class="n">no</span> <span class="n">implicit</span> <span class="n">conversion</span> <span class="n">of</span> <span class="no">Fixnum</span> <span class="n">into</span> <span class="no">String</span>
+	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">16</span><span class="ss">:in</span> <span class="sb">`+'
+	from (irb):16
+	from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `</span><span class="o">&lt;</span><span class="n">main</span><span class="o">&gt;</span><span class="err">'</span></code></pre></figure>
+
+<p>Se fizermos a operação inversa e tentar somar uma String em um inteiro(Fixnum) também temos o mesmo problema de conversão:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="n">idade</span> <span class="o">=</span> <span class="mi">30</span> <span class="o">=&gt;</span> <span class="mi">30</span> 
+<span class="o">&gt;</span> <span class="n">idade</span> <span class="o">+</span> <span class="s2">"WIL"</span>
+<span class="no">TypeError</span><span class="p">:</span> <span class="no">String</span> <span class="n">can</span><span class="s1">'t be coerced into Fixnum
+	from (irb):36:in `+'</span>
+	<span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">36</span>
+	<span class="n">from</span> <span class="sr">/home/</span><span class="n">wt</span><span class="o">/</span><span class="p">.</span><span class="nf">rvm</span><span class="o">/</span><span class="n">rubies</span><span class="o">/</span><span class="n">ruby</span><span class="o">-</span><span class="mf">2.3</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">irb</span><span class="p">:</span><span class="mi">11</span><span class="ss">:in</span> <span class="sb">`&lt;main&gt;'</span></code></pre></figure>
+
+<p>Em Ruby tudo é classe inclusive os tipos são classes então se alterarmos o tipo da variável e nessa variável usamos um método exclusivo da classe também vamos ter problemas, veja o exemplo abaixo:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&gt;</span> <span class="k">def</span> <span class="nf">caixa_alta</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+<span class="o">&gt;</span>  <span class="n">nome</span><span class="p">.</span><span class="nf">upcase</span>
+<span class="o">&gt;</span> <span class="k">end</span>
+<span class="o">&gt;</span> <span class="n">nome</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="o">&gt;</span> <span class="n">caixa_alta</span> <span class="n">nome</span> <span class="o">=&gt;</span>
+<span class="no">NoMethodError</span><span class="p">:</span> <span class="n">undefined</span> <span class="nb">method</span> <span class="sb">`upcase' for 30:Fixnum
+        from (irb):41:in `</span><span class="n">caixa_alta</span><span class="s1">'
+        from (irb):43
+        from /home/wt/.rvm/rubies/ruby-2.3.1/bin/irb:11:in `&lt;main&gt;'</span></code></pre></figure>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+:ET

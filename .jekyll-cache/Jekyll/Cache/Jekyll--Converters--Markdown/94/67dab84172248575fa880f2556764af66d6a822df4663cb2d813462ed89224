@@ -1,0 +1,46 @@
+I"B<p>Hoje vamos falar um pouco mais sobre o rspec e como pular alguns testes…
+Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma feature e os testes quebram em outros locais…sei que você vai voltar e resolver o problema ;).</p>
+
+<p>Sabemos que quando declaramos um novo teste e não o preenchemos o log é exibido como pendente.</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">it</span> <span class="s2">"Deve fazer alguma coisa"</span></code></pre></figure>
+
+<p>Resultado:</p>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Pending:</span><span class="w"> </span><span class="p">(</span><span class="n">Failures</span><span class="w"> </span><span class="nx">listed</span><span class="w"> </span><span class="nx">here</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">affect</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">suite</span><span class="s1">'s status)
+
+  1) Calculator#sum Deve fazer algo
+     # Not yet implemented</span></code></pre></figure>
+
+<p>Agora para pularmos um item de nossos testes é necessário apenas adicionarmos o comando <strong>xit</strong> ao invés do it na descrição do teste. Abaixo existe um treço de código mostrando o compartamento do xit:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s2">"calculator"</span>
+
+<span class="n">describe</span> <span class="no">Calculator</span> <span class="k">do</span>
+	<span class="n">subject</span><span class="p">(</span><span class="ss">:calc</span><span class="p">){</span><span class="n">described_class</span><span class="p">.</span><span class="nf">new</span><span class="p">()}</span>
+	<span class="n">context</span> <span class="s2">"#sum"</span> <span class="k">do</span>
+		<span class="n">it</span> <span class="s2">"with positive numbers"</span> <span class="k">do</span> 
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+		<span class="k">end</span>
+
+		<span class="n">xit</span> <span class="s2">"with negative and positive numbers"</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+		<span class="k">end</span>
+
+		<span class="n">xit</span> <span class="s2">"with negative numbers"</span> <span class="k">do</span>
+			<span class="n">result</span> <span class="o">=</span> <span class="n">calc</span><span class="p">.</span><span class="nf">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">7</span><span class="p">)</span>
+			<span class="n">expect</span><span class="p">(</span><span class="n">result</span><span class="p">).</span><span class="nf">to</span> <span class="n">eq</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">)</span>
+		<span class="k">end</span>
+
+	<span class="k">end</span>
+<span class="k">end</span></code></pre></figure>
+
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">Pending:</span><span class="w"> </span><span class="p">(</span><span class="n">Failures</span><span class="w"> </span><span class="nx">listed</span><span class="w"> </span><span class="nx">here</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">expected</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">do</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">affect</span><span class="w"> </span><span class="nx">your</span><span class="w"> </span><span class="nx">suite</span><span class="s1">'s status)
+
+  1) Calculator#sum with negative and positive numbers
+     # Temporarily skipped with xit</span></code></pre></figure>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+:ET

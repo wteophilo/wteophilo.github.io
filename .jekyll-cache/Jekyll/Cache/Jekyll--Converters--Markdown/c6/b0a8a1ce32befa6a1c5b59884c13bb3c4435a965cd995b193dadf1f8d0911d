@@ -1,0 +1,88 @@
+I"l<p>Anteriormente falamos sobre os <a href="https://wteophilo.github.io/2018/07/12/tipos-de-variaveis.html">tipos de variáveis</a>  que podemos utilizar no Ruby, agora vamos abordar os escopos das variáveis.</p>
+
+<p>O Ruby não possui nenhuma palavra chave para definir um escopo, usamos simbolos para identifica-los. Os escopos são:</p>
+
+<ul>
+  <li>Local</li>
+  <li>Global($)</li>
+  <li>Instância(@)</li>
+  <li>Classe(@@)</li>
+</ul>
+
+<p>Com o decorrer deste post vamos mostrar exemplos da utilização dessas variáveis.</p>
+
+<h2 id="variáveis-locais">Variáveis Locais</h2>
+
+<p>As variáveis locais só podem ser acessadas dentro do método/bloco onde foram declaradas, veja o código abaixo:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">conta_ate_dez</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">..</span><span class="mi">10</span>
+        <span class="nb">p</span> <span class="n">i</span>
+    <span class="k">end</span>
+<span class="k">end</span> 
+
+<span class="nb">p</span> <span class="n">i</span>
+<span class="o">=&gt;</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="o">...</span> <span class="mi">10</span>
+</code></pre></div></div>
+
+<p>Ao tentar acessar a variável <strong>“i”</strong> fora do método o erro abaixo será exibido:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">=</span><span class="err">&gt;</span><span class="w"> </span><span class="n">undefined</span><span class="w"> </span><span class="nx">local</span><span class="w"> </span><span class="nx">variable</span><span class="w"> </span><span class="nx">or</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="se">`i</span><span class="s1">' for main:Object (NameError)
+</span></code></pre></div></div>
+
+<h2 id="variáveis-globais">Variáveis Globais($)</h2>
+
+<p>As variáveis globais  podem ser acessadas em qualquer parte de do código, por conveção o simbolo <strong>$</strong> (cifrão) deve ser utilizado. Segue o exemplo abaixo:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="vg">$global</span> <span class="o">=</span> <span class="s2">"2.5.3"</span>
+<span class="nb">puts</span> <span class="s2">"The scope is </span><span class="si">#{</span><span class="k">defined?</span> <span class="vg">$global</span><span class="si">}</span><span class="s2">"</span> 
+<span class="o">=&gt;</span> <span class="no">The</span> <span class="n">scope</span> <span class="n">is</span> <span class="n">global</span><span class="o">-</span><span class="n">variable</span>
+</code></pre></div></div>
+
+<h2 id="variáveis-de-instância">Variáveis de Instância(@)</h2>
+
+<p>Uma variável de instância é uma variável cujo valor é específico ao objeto e não à classe. Em geral possui uma valor diferente em cada objeto membro da classe, utilizamos o <strong>@</strong> para identificar esse tipo de variável. Abaixo um exemplo desse tipo de variável:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ComicBook</span>
+    <span class="k">def</span> <span class="nf">initialize</span>
+        <span class="vi">@name</span> <span class="o">=</span> <span class="s2">"Boku no Hero"</span>
+        <span class="vi">@year</span> <span class="o">=</span> <span class="mi">2014</span>
+        <span class="vi">@author</span> <span class="o">=</span> <span class="s1">'Kōhei Horikoshi'</span>
+    <span class="k">end</span> 
+<span class="k">end</span> 
+</code></pre></div></div>
+
+<p>Um método bem legal para listar todas as variáveis de instância de um objeto é <strong>instance_variables</strong>, vamos executar esse método na classe que criamos acima:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">manga</span> <span class="o">=</span> <span class="no">ComicBook</span><span class="p">.</span><span class="nf">new</span>
+<span class="nb">p</span> <span class="n">manga</span><span class="p">.</span><span class="nf">instance_variables</span>
+<span class="o">=&gt;</span><span class="p">[</span><span class="ss">:@name</span><span class="p">,</span> <span class="ss">:@year</span><span class="p">,</span> <span class="ss">:@autor</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="variáveis-de-classe">Variáveis de Classe(@@)</h2>
+
+<p>Uma variável de classe é uma variável  que armazena seu próprio estado, quando o estado é alterado em algum objeto automaticamente o estado é alterado para todos os objetos, utilizamos <strong>@@</strong> para indentificar esse tipo de variável. Abaixo um exemplo:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Vehicle</span>
+    <span class="vc">@@number_of_doors</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">number_of_doors</span>
+        <span class="vc">@@number_of_doors</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="k">class</span> <span class="nc">Car</span> <span class="o">&lt;</span> <span class="no">Vehicle</span>
+    <span class="vc">@@number_of_doors</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s2">"Number of doors </span><span class="si">#{</span><span class="no">Vehicle</span><span class="p">.</span><span class="nf">number_of_doors</span><span class="si">}</span><span class="s2"> - Vehicle"</span>
+<span class="o">=&gt;</span> <span class="no">Number</span> <span class="n">of</span> <span class="n">doors</span> <span class="mi">4</span> <span class="o">-</span> <span class="no">Vehicle</span>
+
+<span class="nb">puts</span> <span class="s2">"Number of doors </span><span class="si">#{</span><span class="no">Car</span><span class="p">.</span><span class="nf">number_of_doors</span><span class="si">}</span><span class="s2"> - Car"</span> 
+<span class="o">=&gt;</span><span class="no">Number</span> <span class="n">of</span> <span class="n">doors</span> <span class="mi">4</span> <span class="o">-</span> <span class="no">Car</span>
+
+</code></pre></div></div>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
+:ET

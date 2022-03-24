@@ -1,0 +1,68 @@
+I"�<p>Continuando nossos posts sobre o Vuejs. Esse artigo será separado em duas partes:</p>
+<ul>
+  <li>Estrutura de pastas de um projeto Vuejs</li>
+  <li>Templates webpack</li>
+</ul>
+
+<p>Caso não tenha visto o primeiro post clique <a href="https://wteophilo.github.io/2018/04/03/ola-vuejs.html">aqui</a>.</p>
+
+<h2 id="estrutura-vuejs">Estrutura Vuejs</h2>
+
+<p>Vamos começar pela estrutura do Vuejs, a estrutura do projeto vai depender muito do template escolhido durante a criação do projeto, abaixo listei as pastas ou arquivos mais comuns:</p>
+
+<ul>
+  <li>
+    <p><strong>build/</strong>
+Esse diretório contém as configurações reais do servidor de desenvolvimento e da compilação do webpack de produção.</p>
+  </li>
+  <li>
+    <p><strong>src/</strong>
+Contêm todos código fonte da sua aplicação, a estrutura de como ficarão os arquivos é da escolha do desenvolvedor… então organize com cuidado.</p>
+  </li>
+  <li>
+    <p><strong>static/</strong>:
+Diretório onde serão inseridos os arquivos estaticos(css,imagens etc) a ser processados pelo webpack, estes arquivos serão copiados diretamente no mesmo diretório em que os assets gerados pelo Werbpack, consulte qual gerenciador que você utilizará para mais detalhes.</p>
+  </li>
+  <li>
+    <p><strong>test/unit</strong>:
+Contêm arquivos relcionados aos testes unitários.</p>
+  </li>
+  <li>
+    <p><strong>test/e2e</strong>:
+Contêm arquivos testes e2e(<a href="https://vuejs-templates.github.io/webpack/e2e.html">End-to-End Testing</a>).</p>
+  </li>
+  <li>
+    <p><strong>index.html</strong>:
+Este é o template para single page. Durante o desenvolvimento e as compilações, o Webpack gera assets e URLs desses assets gerados serão automaticamente injetadas nesse modelo para renderizar o HTML final.</p>
+  </li>
+  <li>
+    <p><strong>package.json</strong>:
+Contém todas as dependências do projeto.</p>
+  </li>
+</ul>
+
+<h2 id="templates-webpack">Templates WebPack</h2>
+
+<p>Quando vamos criar um projeto vimos que podemos escolher a estrutura(template) do projeto, cada um desses templates utilizam estruturas de pasta diferente. O Vuejs utiliza como bundler tanto <a href="https://webpack.js.org/">webpack</a> quanto o <a href="http://browserify.org/">browserify</a>. Neste <a href="https://medium.freecodecamp.org/browserify-vs-webpack-b3d7ca08a0a9">link</a> existe um post comparando os templates.</p>
+
+<h3 id="tipos-templates">Tipos Templates</h3>
+
+<ul>
+  <li><a href="https://github.com/vuejs-templates/webpack">webpack</a>: É o pacote mais completo ou seja ele utiliza o webpack como bundler,possui   vue-loader com hot reload, javascript lint e testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/webpack-simple">webpack-simple</a>: utiliza o webpack como bundler mas com menos recursos.O webpack-simple não possui hot reload, javascript lint e nem testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/browserify">browserify</a>: usa o browserify como module bundler. Possui o vue-loader com hot reload, javascript lint e testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/browserify-simple">browserify-simple</a>: usa o browserify como module bundler, sem hot reload, lint ou testes unitários.</li>
+  <li><a href="https://github.com/vuejs-templates/simple">simple</a>: o template mais simples, não utiliza nenhum bundle possui apenas uma única página com o Vue sendo carregado através de um endereço <a href="Content Delivery Network">CDN</a>.</li>
+</ul>
+
+<h3 id="buildjs">Build.js</h3>
+<p>Se você já conhece o Vuejs provavelmente está se perguntando porque não falei sobre o arquivo build.js, não esqueci dele apenas deixe-o por último.</p>
+
+<p>Basicamente o arquivo build.js é todo o conteúdo da pasta <strong>src</strong>, onde as páginas se transformam em javascript e assim são carregados em memória, deixando que toda alteração feita pelo desenvolvedor seja carrega e exibida em instantes.</p>
+
+<h3 id="babel">Babel</h3>
+<p>Mas quem faz essa transformação dos arquivos? O Vuejs utiliza o transpilador <a href="https://babeljs.io/">Babel</a> basicamente transcreve código escrito em ES2015(ecmascript 6) para ES5(ecmascript 5) garantindo assim compatibilidade entre os browsers.</p>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
+:ET

@@ -1,0 +1,46 @@
+I"	<p>Quando estamos desenvolvendo uma nova aplicação precisamos pensar nos requisitos.
+Basicamente existem três tipos de requisitos:</p>
+
+<ul>
+  <li>Funcionais</li>
+  <li>Não Funcionais</li>
+  <li>Arquiteturais</li>
+</ul>
+
+<p>Neste artigo vamos focar nos <strong>requisitos arquiteturais</strong>. Este tipo de requisito é geralmente confundido com requisitos não relacionais mas a utilização é uma pouco diferente.</p>
+
+<p>Durante o levantamento de requisitos podemos classificar quando um requisito possui algum significado a nossa arquitetura, ou seja,  é necessário alguma tomada de decisão tecnológica.</p>
+
+<p>Existem algumas técnicas que podemos utilizar para validação dos requisitos arquiteturais:</p>
+
+<ul>
+  <li>Requisitos SMART.</li>
+  <li>Modelo FURPS+.</li>
+  <li>O modelo ISO/IEC 9126.</li>
+  <li>QAW</li>
+</ul>
+
+<h2 id="requisitos-smart"><strong>Requisitos SMART</strong></h2>
+
+<p>A técnica SMART nos permite avaliar se um determinado requisito é valido ou não, o ponto chave desta técnica é transformar um requisito com frases subjetivas em algum mais técnico.</p>
+
+<p>Esta transformação deve seguir cinco passos e que as iniciais do método:</p>
+
+<ul>
+  <li><strong>Specific(Especifico)</strong>: Um requisito deve ser específico ou seja com nível adequado de detalhes</li>
+  <li><strong>Measurable(Mensurável)</strong>: Com um objetivo alcançável para facilitar assim o teste de validação.</li>
+  <li><strong>Attainable(Atingível)</strong>: O requisito deve ser viável</li>
+  <li><strong>Realizable(Realizável)</strong>:O requisito deve ser realizável,muitas vezes o requisito é atingível mas não realizável no prazo determinado do projeto.</li>
+  <li><strong>Traceable(Rastreável)</strong>: O requisito deve ser rastreável  desde sua concepção e especificação até o desenho, implementação e teste.</li>
+</ul>
+
+<p>Como sempre vamos a um exemplo:</p>
+
+<p>Requisito
+“O sistema Web deve ser rápido e capaz de processar grandes quantidades de requisições simultâneas”.</p>
+
+<p>Após a aplicação do SMART: 
+“A tela de cadastro de usuários Web deve possuir um tempo de resposta menor de 8 segundos e suportar até 20 usuários simultaneamente em horários de pico( 15:00 às 19:00)”.</p>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+:ET

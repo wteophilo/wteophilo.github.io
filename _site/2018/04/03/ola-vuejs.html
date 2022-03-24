@@ -74,9 +74,9 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Olá Vuejs | Willian Teophilo</title>
-<meta name="generator" content="Jekyll v3.8.5" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Olá Vuejs" />
 <meta name="author" content="Willian Teophilo" />
 <meta property="og:locale" content="en_US" />
@@ -87,8 +87,10 @@
 <meta property="og:site_name" content="Willian Teophilo" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-04-03T17:01:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Olá Vuejs" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://wteophilo.github.io/2018/04/03/ola-vuejs.html","headline":"Olá Vuejs","dateModified":"2018-04-03T17:01:00+00:00","datePublished":"2018-04-03T17:01:00+00:00","author":{"@type":"Person","name":"Willian Teophilo"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2018/04/03/ola-vuejs.html"},"description":"Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post…","@context":"http://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Willian Teophilo"},"dateModified":"2018-04-03T17:01:00+00:00","datePublished":"2018-04-03T17:01:00+00:00","description":"Nos últimos tempos foram lançados vários frameworks Javascript e o mais novo queridinho é Vuejs,este é o meu primeiro post sobre o Vuejs onde serão abordados os seguintes assuntos neste post…","headline":"Olá Vuejs","mainEntityOfPage":{"@type":"WebPage","@id":"https://wteophilo.github.io/2018/04/03/ola-vuejs.html"},"url":"https://wteophilo.github.io/2018/04/03/ola-vuejs.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 <body>
@@ -126,7 +128,7 @@
       </ul>
     </section> <!-- End Section Contact -->
     <div class="copyright">
-      <p>2020 &copy; Willian Teophilo</p>
+      <p>2022 &copy; Willian Teophilo</p>
     </div>
   </footer> <!-- End Footer -->
 </aside> <!-- End Sidebar -->
@@ -164,14 +166,14 @@
 
 <p>Com o Node(a partir da versão 6.0) instalado vamos instalar o Vue CLI que irá nos auxiliar com a criação e manutenção de nossos projetos, para instalar o Vue CLI execute o seguinte comando no terminal:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">npm <span class="nb">install</span> -g vue-cli</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">npm</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nt">-g</span><span class="w"> </span><span class="nx">vue-cli</span></code></pre></figure>
 
 <p>Lembrando que <strong>-g</strong> significa <strong>global</strong> ou seja se seu usuário não tenha permissão de administrador podem ocorrer alguns erros… então execute o comando com permissão de administrador.</p>
 
 <p>Podemos confirmar a instalação do vue digitando o seguinte comando:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">vue --version
-2.7.0</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">vue</span><span class="w"> </span><span class="nt">--version</span><span class="w">
+</span><span class="mf">2.7</span><span class="o">.</span><span class="nf">0</span></code></pre></figure>
 
 <p>No meu caso tenho o Vue 2.7.0 instalado, mas é bem provável que já existe uma versão mais recente.</p>
 
@@ -179,7 +181,7 @@
 
 <p>Agora vamos criar um novo projeto usando o terminal execute o seguinte comando:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">vue init &lt;template-name&gt; &lt;project-name&gt;</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">vue</span><span class="w"> </span><span class="nx">init</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">template-name</span><span class="err">&gt;</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">project-name</span><span class="err">&gt;</span></code></pre></figure>
 
 <p>O que significa cada um desses comandos?</p>
 
@@ -191,43 +193,43 @@
 
 <p>Então para continuarmos o exemplo criei um projeto chamado olavue com o template <a href="https://github.com/vuejs-templates/webpack-simple">webpack-simple</a>:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">vue init webpack-simple olavue</code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">vue</span><span class="w"> </span><span class="nx">init</span><span class="w"> </span><span class="nx">webpack-simple</span><span class="w"> </span><span class="nx">olavue</span></code></pre></figure>
 
 <p>Ao executar o comando serão feitos algumas perguntas, como o nome do projeto, descrição, autor etc.</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">A newer version of vue-cli is available.
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">A</span><span class="w"> </span><span class="nx">newer</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">vue-cli</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">available.</span><span class="w">
 
-This will <span class="nb">install </span>Vue 2.x version of the template.
+</span><span class="n">This</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">Vue</span><span class="w"> </span><span class="nx">2.x</span><span class="w"> </span><span class="nx">version</span><span class="w"> </span><span class="nx">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">template.</span><span class="w">
 
-<span class="k">For </span>Vue 1.x use: vue init webpack-simple#1.0 olavue
+</span><span class="kr">For</span><span class="w"> </span><span class="n">Vue</span><span class="w"> </span><span class="nx">1.x</span><span class="w"> </span><span class="nx">use:</span><span class="w"> </span><span class="nx">vue</span><span class="w"> </span><span class="nx">init</span><span class="w"> </span><span class="nx">webpack-simple</span><span class="c">#1.0 olavue</span><span class="w">
 
-? Project name olavue
-? Project description A Vue.js project
-? Author Willian Teophilo &lt;wteophilo@gmail.com&gt;
-? License MIT
-? Use sass? No
+</span><span class="nf">?</span><span class="w"> </span><span class="nx">Project</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="nx">olavue</span><span class="w">
+</span><span class="nf">?</span><span class="w"> </span><span class="nx">Project</span><span class="w"> </span><span class="nx">description</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">Vue.js</span><span class="w"> </span><span class="nx">project</span><span class="w">
+</span><span class="nf">?</span><span class="w"> </span><span class="nx">Author</span><span class="w"> </span><span class="nx">Willian</span><span class="w"> </span><span class="nx">Teophilo</span><span class="w"> </span><span class="err">&lt;</span><span class="nx">wteophilo</span><span class="err">@</span><span class="nx">gmail.com</span><span class="err">&gt;</span><span class="w">
+</span><span class="nf">?</span><span class="w"> </span><span class="nx">License</span><span class="w"> </span><span class="nx">MIT</span><span class="w">
+</span><span class="nf">?</span><span class="w"> </span><span class="nx">Use</span><span class="w"> </span><span class="nx">sass</span><span class="nf">?</span><span class="w"> </span><span class="nx">No</span><span class="w">
 
-   vue-cli · Generated <span class="s2">"olavue"</span><span class="nb">.</span>
+   </span><span class="n">vue-cli</span><span class="w"> </span><span class="err">·</span><span class="w"> </span><span class="nx">Generated</span><span class="w"> </span><span class="s2">"olavue"</span><span class="o">.</span><span class="w">
 
-   To get started:
+   </span><span class="n">To</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="nx">started:</span><span class="w">
 
-     <span class="nb">cd </span>olavue
-     npm <span class="nb">install
-     </span>npm run dev</code></pre></figure>
+     </span><span class="n">cd</span><span class="w"> </span><span class="nx">olavue</span><span class="w">
+     </span><span class="n">npm</span><span class="w"> </span><span class="nx">install</span><span class="w">
+     </span><span class="n">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">dev</span></code></pre></figure>
 
 <p>Com o projeto criado precisamos instalar as dependências, para isso acesse a pasta do projeto e execute o seguinte comando:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">npm <span class="nb">install</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">npm</span><span class="w"> </span><span class="nx">install</span></code></pre></figure>
 
 <p>e por fim levantar o servidor:</p>
 
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell">npm run dev
+<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">npm</span><span class="w"> </span><span class="nx">run</span><span class="w"> </span><span class="nx">dev</span><span class="w">
 
-cross-env <span class="nv">NODE_ENV</span><span class="o">=</span>development webpack-dev-server --open --hot
+</span><span class="n">cross-env</span><span class="w"> </span><span class="nx">NODE_ENV</span><span class="o">=</span><span class="n">development</span><span class="w"> </span><span class="nx">webpack-dev-server</span><span class="w"> </span><span class="nt">--open</span><span class="w"> </span><span class="nt">--hot</span><span class="w">
 
-Project is running at http://localhost:8080/
-webpack output is served <span class="k">from</span> /dist/
-404s will fallback to /index.html</code></pre></figure>
+</span><span class="n">Project</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">running</span><span class="w"> </span><span class="nx">at</span><span class="w"> </span><span class="nx">http://localhost:8080/</span><span class="w">
+</span><span class="n">webpack</span><span class="w"> </span><span class="nx">output</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">served</span><span class="w"> </span><span class="nx">from</span><span class="w"> </span><span class="nx">/dist/</span><span class="w">
+</span><span class="mi">404</span><span class="n">s</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">fallback</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">/index.html</span></code></pre></figure>
 
 <p>Se tudo deu certo o projeto é disponibilizado em http://localhost:8080/ e a seguinte página é exibida:</p>
 
