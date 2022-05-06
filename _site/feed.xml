@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://wteophilo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wteophilo.github.io/" rel="alternate" type="text/html" /><updated>2022-03-24T21:24:46+00:00</updated><id>https://wteophilo.github.io/feed.xml</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Docker</title><link href="https://wteophilo.github.io/2020/07/02/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2020-07-02T20:09:00+00:00</published><updated>2020-07-02T20:09:00+00:00</updated><id>https://wteophilo.github.io/2020/07/02/docker</id><content type="html" xml:base="https://wteophilo.github.io/2020/07/02/docker.html"><![CDATA[<p>Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este <a href="https://docs.docker.com/get-docker/">link</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://wteophilo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wteophilo.github.io/" rel="alternate" type="text/html" /><updated>2022-05-06T19:29:07+00:00</updated><id>https://wteophilo.github.io/feed.xml</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Template Histórias de Usuário</title><link href="https://wteophilo.github.io/2022/03/30/template-historias-usuario.html" rel="alternate" type="text/html" title="Template Histórias de Usuário" /><published>2022-03-30T19:42:00+00:00</published><updated>2022-03-30T19:42:00+00:00</updated><id>https://wteophilo.github.io/2022/03/30/template-historias-usuario</id><content type="html" xml:base="https://wteophilo.github.io/2022/03/30/template-historias-usuario.html"><![CDATA[<p>Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.</p>
+
+<p>Durante uma retrospectiva com time foi dito que a forma como as <a href="https://agilementoring.wordpress.com/tag/user-story/">histórias</a> estavam sendo escritas eram um pouco confusas ou faltavam informações. Assim identificamos a cauza raíz do problema e como plano de ação me dei uma tarefa para ajudar o time com uma maneira de melhorar a forma de escrita das histórias e durante a minha pesquisa encontrei o <a href="https://www.amazon.com.br/dp/B097C9RHF7/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=pbb&amp;qid=1623867809&amp;sr=8-4">Product Backlog Building</a>.</p>
+
+<h3 id="o-que-é-product-backlog-building">O que é Product Backlog Building?</h3>
+
+<p>“O Product Backlog Building (PBB) consiste em vivenciar na prática a elaboração e criação de um Product Backlog efetivo e colaborativo, esclarecendo as user stories e o backlog dos times, e utilizando o PBB Canvas como ferramenta facilitação.”</p>
+
+<p>Durante a leitura do livro um template de para criação de histórias de usuário me chamou a atençãoesse template possui algumas partes:</p>
+
+<ul>
+  <li>Título da história</li>
+  <li>Criterio de aceite</li>
+  <li>Habilitadores</li>
+</ul>
+
+<p>Seguir vou passar por cada um desses itens:</p>
+
+<h3 id="título-da-história">Título da história</h3>
+
+<p>Podemos utilizar o modelo ARO</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Ação][Resultado][Objeto]
+</code></pre></div></div>
+
+<p>Exemplos:</p>
+<ul>
+  <li>Calcular a quantidade total vendida por um vendedor</li>
+  <li>Efetuar a inscrição no evento</li>
+  <li>Realizar a pesquisa do livro</li>
+</ul>
+
+<p>Descrição:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Como &lt;papel&gt; posso &lt;funcão&gt; para &lt;valor de negocio&gt;
+</code></pre></div></div>
+
+<p>Exemplos:</p>
+<ul>
+  <li>Como suporte posso logar no backoffice para desbloquear um cartão virtual</li>
+  <li>Como usuário posso visualizar o histórico da fatura no app para conferir todas as compras feitas anteriormente</li>
+</ul>
+
+<h3 id="critério-de-aceite">Critério de aceite:</h3>
+
+<p>Critério de aceite é um formato textual que descreve como validar numa história de usuario. Geralmente é uma lista de verificação que determa quando uma história de usuário está concluida e funcionando.</p>
+
+<p>Podemos utilizar a sintase <a href="https://cucumber.io/docs/gherkin/">Gherkin</a> para descrever os comportamentos desejados pelo produto, formato:</p>
+
+<p>Genérico:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenário&lt;Título&gt;
+Dado que &lt;contexto inicial&gt;
+Quando &lt;evento ou ação&gt;
+Então &lt;resultado esperado&gt;
+</code></pre></div></div>
+
+<p>Exemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenário: Saque disponivel
+Dado que o cartão é valido e a conta tem saldo maior que R$500
+Quando o cliente solicitar o saque de R$500
+Então o caixa eletronico deve dispensar R$500,00
+</code></pre></div></div>
+
+<p>Granular:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenário&lt;Título&gt;
+Dado que &lt;contexto inicial&gt;
+E &lt;contexto inicial&gt;
+Quando &lt;evento ou ação&gt;
+E &lt;evento ou ação&gt;
+Então &lt;resultado esperado&gt;
+</code></pre></div></div>
+
+<p>Exemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenario: Logar com sucesso
+Dado que estou na página de login do Outlook 360
+Quando preencho o campo email com um email válido
+E clico em avançar
+E preencho  campo enha com uma senha válido
+Então sou direcionado para minha caixa de entrada do Outlook 360
+</code></pre></div></div>
+
+<p>Uma alteração que achei melhor alterar foi ao final de cada cenário incluir o wireframe ou link do figma</p>
+
+<h3 id="habilitadores">Habilitadores<Opcional>:</Opcional></h3>
+
+<p>Os habilitadores são estimos que o time pode precisar estudar/pesquisar antes de iniciar  o desenvolvimento  da história. São separados em:</p>
+
+<ul>
+  <li>Habilitador Exploratório:</li>
+  <li>Habilitador Técnico</li>
+</ul>
+
+<p>Exemplo de  Habilitador exploratório</p>
+
+<p>Estudar o endpoint API de integração com as plataforma s e compartilhamento de apresentações on-line(SlideShare e Speaker Deck)</p>
+
+<p>Exemplo de Habilitador Técnico</p>
+
+<p>Consumir o endpoint embed como uma tag de link no cabeçalho para que possa ser detectado automaticamente quando incorporar a apresentação</p>
+
+<h3 id="observações">Observações:</h3>
+<p>Lembrando que as histórias deve seguir o padrão INVEST e se possivel as tarefas o <a href="https://wteophilo.github.io/2018/04/04/requisitos-smart.html">padrão SMART</a></p>
+
+<h3 id="referências">Referências:</h3>
+<ul>
+  <li><a href="https://agilementoring.wordpress.com/tag/user-story/">User Story</a></li>
+  <li><a href="https://medium.com/@ronilsonribeiro/escrita-do-bdd-no-processo-de-desenvolvimento-469ea46540db">Behaviour Driven Development</a></li>
+  <li><a href="https://www.amazon.com.br/dp/B097C9RHF7/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=pbb&amp;qid=1623867809&amp;sr=8-4">Product Backlog Build</a></li>
+  <li><a href="https://cucumber.io/docs/gherkin/">Gherkin</a></li>
+</ul>]]></content><author><name>Willian Teophilo</name></author><summary type="html"><![CDATA[Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.]]></summary></entry><entry><title type="html">Docker</title><link href="https://wteophilo.github.io/2020/07/02/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2020-07-02T20:09:00+00:00</published><updated>2020-07-02T20:09:00+00:00</updated><id>https://wteophilo.github.io/2020/07/02/docker</id><content type="html" xml:base="https://wteophilo.github.io/2020/07/02/docker.html"><![CDATA[<p>Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este <a href="https://docs.docker.com/get-docker/">link</a>.</p>
 
 <p>Neste post vamos falar sobre:</p>
 
@@ -778,78 +891,4 @@ Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma f
 
 <figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb:linha</span></code></pre></figure>
 
-<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa...]]></summary></entry><entry><title type="html">Olá RSpec</title><link href="https://wteophilo.github.io/2018/04/11/ola-rspec.html" rel="alternate" type="text/html" title="Olá RSpec" /><published>2018-04-11T23:50:00+00:00</published><updated>2018-04-11T23:50:00+00:00</updated><id>https://wteophilo.github.io/2018/04/11/ola-rspec</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/11/ola-rspec.html"><![CDATA[<p>O RSpec é um framework de testes escrito em Ruby que segue <a href="https://pt.wikipedia.org/wiki/Behavior_Driven_Development">BDD</a>(Behavior Driven Development),nos códigos a seguir vou mostrar o RSpec no Rails.</p>
-
-<h2 id="instalando">Instalando</h2>
-
-<p>Para usar o RSpec basta instalar a gem:</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">rspec</span></code></pre></figure>
-
-<p>ou em seu projeto rails adicione as seguintes linhas:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span>  <span class="k">do</span>  
-  <span class="n">gem</span> <span class="s1">'rspec-rails'</span>  
-<span class="k">end</span></code></pre></figure>
-
-<p>Após instalado a gem basta executar o seguinte comando no terminal:</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nt">--init</span></code></pre></figure>
-
-<p>Após a executar o comando serão adicionados ao projeto a pasta <strong>spec</strong>  e o arquivo <strong>spec_helper.rb</strong> neste arquivo podemos realizar algumas configurações do rspec, vamos falar mais sobre em um outro post.</p>
-
-<p>Além dos arquivos citados anteriormente ganhamos alguns novos generators: models,job,feature etc, veja <a href="https://relishapp.com/rspec/rspec-rails/docs/generators">aqui</a>.</p>
-
-<h2 id="usando-o-rspec">Usando o RSpec</h2>
-
-<p>Então temos nosso model <strong>Item</strong> com uma validação:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Item</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>  
-  <span class="n">validates</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:quantity</span><span class="p">,</span> <span class="ss">presence: </span><span class="kp">true</span>
-<span class="k">end</span></code></pre></figure>
-
-<p>E nosso teste onde queremos fazer dois testes:</p>
-<ul>
-  <li>Verificar se o campo <strong>name</strong> está preenchido.</li>
-  <li>Mostrar uma mensagem caso não esteja.</li>
-  <li>Estamos usando a gem <a href="https://github.com/thoughtbot/factory_bot_rails">FactoryBot</a>.</li>
-</ul>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">	  
-<span class="nb">require</span>  <span class="s1">'rails_helper'</span>  
-      
-<span class="no">RSpec</span><span class="p">.</span><span class="nf">describe</span> <span class="no">Item</span><span class="p">,</span> <span class="ss">type: :model</span>  <span class="k">do</span>  
-    <span class="n">let</span><span class="p">(</span><span class="ss">:item</span><span class="p">){</span><span class="no">FactoryBot</span><span class="p">.</span><span class="nf">create</span> <span class="ss">:item</span><span class="p">}</span>  
-    <span class="n">it</span> <span class="s2">"Create a Item with all fields fill"</span>  <span class="k">do</span>  
-    	 <span class="n">expect</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">valid?</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_truthy</span>  
-    <span class="k">end</span>  
-     
-    
-    <span class="n">it</span> <span class="s2">"Create a Item without a name"</span>  <span class="k">do</span>  
-        <span class="n">item</span><span class="p">.</span><span class="nf">name</span> <span class="o">=</span>  <span class="s2">""</span>  
-        <span class="n">expect</span><span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="nf">valid?</span><span class="p">).</span><span class="nf">to</span> <span class="n">be_falsey</span>  
-    <span class="k">end</span>  
-<span class="k">end</span></code></pre></figure>
-
-<p>Então vamos por partes e mostrar o que significa cada comando em nosso teste:</p>
-
-<ul>
-  <li><strong>RSpec.describe Item, type: :model  do:</strong> Nesta linha estamos mostrando para o RSpec qual classe queremos testar e qual é tipo desta classe podem ser model,controller etc.</li>
-  <li><strong>Context</strong>: O contexto do nosso teste separando assim nossos testes por funcionalidade.</li>
-  <li><strong>It</strong>: É usado para descrever o cenário que estamos testando.</li>
-  <li><strong>Expect</strong>: Resultado esperado do teste, pode ser tanto um resultado positivo quando negativo.</li>
-</ul>
-
-<h2 id="executando-testes">Executando Testes</h2>
-
-<p>Para executar os testes basta executar o seguinte comando:</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rake</span><span class="w"> </span><span class="nx">spec</span></code></pre></figure>
-
-<p>Como nossos teste são bem simples todos vão passar sem problemas então o resultado é :</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="o">...................</span><span class="w">
-</span><span class="n">Finished</span><span class="w"> </span><span class="nx">in</span><span class="w"> </span><span class="nx">1.5</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">files</span><span class="w"> </span><span class="nx">took</span><span class="w"> </span><span class="nx">5.56</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">load</span><span class="p">)</span><span class="w">
-</span><span class="mi">2</span><span class="w"> </span><span class="n">examples</span><span class="p">,</span><span class="w"> </span><span class="nx">0</span><span class="w"> </span><span class="nx">failures</span></code></pre></figure>
-
-<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[O RSpec é um framework de testes escrito em Ruby que segue BDD,nos códigos a seguir vou mostrar o RSpec no Rails...]]></summary></entry></feed>
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa...]]></summary></entry></feed>
