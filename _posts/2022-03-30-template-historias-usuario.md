@@ -112,6 +112,9 @@ Consumir o endpoint embed como uma tag de link no cabeçalho para que possa ser 
 ### Observações:
 Lembrando que as histórias deve seguir o padrão INVEST e se possivel as tarefas o [padrão SMART][SMART]
 
+
+Por enquanto é só isso, nos vemos na próxima.
+
 ### Referências:
 * [User Story][User Story]
 * [Behaviour Driven Development][BDD]

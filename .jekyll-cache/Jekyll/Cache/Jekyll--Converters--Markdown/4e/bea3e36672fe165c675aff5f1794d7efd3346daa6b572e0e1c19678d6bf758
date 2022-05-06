@@ -1,0 +1,118 @@
+I"�<p>Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.</p>
+
+<p>Durante uma retrospectiva com time foi dito que a forma como as <a href="https://agilementoring.wordpress.com/tag/user-story/">histórias</a> estavam sendo escritas eram um pouco confusas ou faltavam informações. Assim identificamos a cauza raíz do problema e como plano de ação me dei uma tarefa para ajudar o time com uma maneira de melhorar a forma de escrita das histórias e durante a minha pesquisa encontrei o <a href="https://www.amazon.com.br/dp/B097C9RHF7/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=pbb&amp;qid=1623867809&amp;sr=8-4">Product Backlog Building</a>.</p>
+
+<h3 id="o-que-é-product-backlog-building">O que é Product Backlog Building?</h3>
+
+<p>“O Product Backlog Building (PBB) consiste em vivenciar na prática a elaboração e criação de um Product Backlog efetivo e colaborativo, esclarecendo as user stories e o backlog dos times, e utilizando o PBB Canvas como ferramenta facilitação.”</p>
+
+<p>Durante a leitura do livro um template de para criação de histórias de usuário me chamou a atençãoesse template possui algumas partes:</p>
+
+<ul>
+  <li>Título da história</li>
+  <li>Criterio de aceite</li>
+  <li>Habilitadores</li>
+</ul>
+
+<p>Seguir vou passar por cada um desses itens:</p>
+
+<h3 id="título-da-história">Título da história</h3>
+
+<p>Podemos utilizar o modelo ARO</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[Ação][Resultado][Objeto]
+</code></pre></div></div>
+
+<p>Exemplos:</p>
+<ul>
+  <li>Calcular a quantidade total vendida por um vendedor</li>
+  <li>Efetuar a inscrição no evento</li>
+  <li>Realizar a pesquisa do livro</li>
+</ul>
+
+<p>Descrição:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Como &lt;papel&gt; posso &lt;funcão&gt; para &lt;valor de negocio&gt;
+</code></pre></div></div>
+
+<p>Exemplos:</p>
+<ul>
+  <li>Como suporte posso logar no backoffice para desbloquear um cartão virtual</li>
+  <li>Como usuário posso visualizar o histórico da fatura no app para conferir todas as compras feitas anteriormente</li>
+</ul>
+
+<h3 id="critério-de-aceite">Critério de aceite:</h3>
+
+<p>Critério de aceite é um formato textual que descreve como validar numa história de usuario. Geralmente é uma lista de verificação que determa quando uma história de usuário está concluida e funcionando.</p>
+
+<p>Podemos utilizar a sintase <a href="https://cucumber.io/docs/gherkin/">Gherkin</a> para descrever os comportamentos desejados pelo produto, formato:</p>
+
+<p>Genérico:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenário&lt;Título&gt;
+Dado que &lt;contexto inicial&gt;
+Quando &lt;evento ou ação&gt;
+Então &lt;resultado esperado&gt;
+</code></pre></div></div>
+
+<p>Exemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenário: Saque disponivel
+Dado que o cartão é valido e a conta tem saldo maior que R$500
+Quando o cliente solicitar o saque de R$500
+Então o caixa eletronico deve dispensar R$500,00
+</code></pre></div></div>
+
+<p>Granular:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenário&lt;Título&gt;
+Dado que &lt;contexto inicial&gt;
+E &lt;contexto inicial&gt;
+Quando &lt;evento ou ação&gt;
+E &lt;evento ou ação&gt;
+Então &lt;resultado esperado&gt;
+</code></pre></div></div>
+
+<p>Exemplo:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cenario: Logar com sucesso
+Dado que estou na página de login do Outlook 360
+Quando preencho o campo email com um email válido
+E clico em avançar
+E preencho  campo enha com uma senha válido
+Então sou direcionado para minha caixa de entrada do Outlook 360
+</code></pre></div></div>
+
+<p>Uma alteração que achei melhor alterar foi ao final de cada cenário incluir o wireframe ou link do figma</p>
+
+<h3 id="habilitadores">Habilitadores<Opcional>:</Opcional></h3>
+
+<p>Os habilitadores são estimos que o time pode precisar estudar/pesquisar antes de iniciar  o desenvolvimento  da história. São separados em:</p>
+
+<ul>
+  <li>Habilitador Exploratório:</li>
+  <li>Habilitador Técnico</li>
+</ul>
+
+<p>Exemplo de  Habilitador exploratório</p>
+
+<p>Estudar o endpoint API de integração com as plataforma s e compartilhamento de apresentações on-line(SlideShare e Speaker Deck)</p>
+
+<p>Exemplo de Habilitador Técnico</p>
+
+<p>Consumir o endpoint embed como uma tag de link no cabeçalho para que possa ser detectado automaticamente quando incorporar a apresentação</p>
+
+<h3 id="observações">Observações:</h3>
+<p>Lembrando que as histórias deve seguir o padrão INVEST e se possivel as tarefas o <a href="https://wteophilo.github.io/2018/04/04/requisitos-smart.html">padrão SMART</a></p>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
+<h3 id="referências">Referências:</h3>
+<ul>
+  <li><a href="https://agilementoring.wordpress.com/tag/user-story/">User Story</a></li>
+  <li><a href="https://medium.com/@ronilsonribeiro/escrita-do-bdd-no-processo-de-desenvolvimento-469ea46540db">Behaviour Driven Development</a></li>
+  <li><a href="https://www.amazon.com.br/dp/B097C9RHF7/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=pbb&amp;qid=1623867809&amp;sr=8-4">Product Backlog Build</a></li>
+  <li><a href="https://cucumber.io/docs/gherkin/">Gherkin</a></li>
+</ul>
+
+:ET

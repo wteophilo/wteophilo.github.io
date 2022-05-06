@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://wteophilo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wteophilo.github.io/" rel="alternate" type="text/html" /><updated>2022-05-06T19:37:58+00:00</updated><id>https://wteophilo.github.io/feed.xml</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Template Histórias de Usuário</title><link href="https://wteophilo.github.io/2022/03/30/template-historias-usuario.html" rel="alternate" type="text/html" title="Template Histórias de Usuário" /><published>2022-03-30T19:42:00+00:00</published><updated>2022-03-30T19:42:00+00:00</updated><id>https://wteophilo.github.io/2022/03/30/template-historias-usuario</id><content type="html" xml:base="https://wteophilo.github.io/2022/03/30/template-historias-usuario.html"><![CDATA[<p>Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://wteophilo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://wteophilo.github.io/" rel="alternate" type="text/html" /><updated>2022-05-06T21:02:52+00:00</updated><id>https://wteophilo.github.io/feed.xml</id><title type="html">Willian Teophilo</title><subtitle>Willian Teophilo</subtitle><author><name>Willian Teophilo</name></author><entry><title type="html">Template Histórias de Usuário</title><link href="https://wteophilo.github.io/2022/03/30/template-historias-usuario.html" rel="alternate" type="text/html" title="Template Histórias de Usuário" /><published>2022-03-30T19:42:00+00:00</published><updated>2022-03-30T19:42:00+00:00</updated><id>https://wteophilo.github.io/2022/03/30/template-historias-usuario</id><content type="html" xml:base="https://wteophilo.github.io/2022/03/30/template-historias-usuario.html"><![CDATA[<p>Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.</p>
 
 <p>Durante uma retrospectiva com time foi dito que a forma como as <a href="https://agilementoring.wordpress.com/tag/user-story/">histórias</a> estavam sendo escritas eram um pouco confusas ou faltavam informações. Assim identificamos a cauza raíz do problema e como plano de ação me dei uma tarefa para ajudar o time com uma maneira de melhorar a forma de escrita das histórias e durante a minha pesquisa encontrei o <a href="https://www.amazon.com.br/dp/B097C9RHF7/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=pbb&amp;qid=1623867809&amp;sr=8-4">Product Backlog Building</a>.</p>
 
@@ -105,13 +105,242 @@ Então sou direcionado para minha caixa de entrada do Outlook 360
 <h3 id="observações">Observações:</h3>
 <p>Lembrando que as histórias deve seguir o padrão INVEST e se possivel as tarefas o <a href="https://wteophilo.github.io/2018/04/04/requisitos-smart.html">padrão SMART</a></p>
 
+<p>Por enquanto é só isso, nos vemos na próxima.</p>
+
 <h3 id="referências">Referências:</h3>
 <ul>
   <li><a href="https://agilementoring.wordpress.com/tag/user-story/">User Story</a></li>
   <li><a href="https://medium.com/@ronilsonribeiro/escrita-do-bdd-no-processo-de-desenvolvimento-469ea46540db">Behaviour Driven Development</a></li>
   <li><a href="https://www.amazon.com.br/dp/B097C9RHF7/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=pbb&amp;qid=1623867809&amp;sr=8-4">Product Backlog Build</a></li>
   <li><a href="https://cucumber.io/docs/gherkin/">Gherkin</a></li>
-</ul>]]></content><author><name>Willian Teophilo</name></author><category term="Agile" /><category term="Gestão de Projetos" /><summary type="html"><![CDATA[Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.]]></summary></entry><entry><title type="html">Docker</title><link href="https://wteophilo.github.io/2020/07/02/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2020-07-02T20:09:00+00:00</published><updated>2020-07-02T20:09:00+00:00</updated><id>https://wteophilo.github.io/2020/07/02/docker</id><content type="html" xml:base="https://wteophilo.github.io/2020/07/02/docker.html"><![CDATA[<p>Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este <a href="https://docs.docker.com/get-docker/">link</a>.</p>
+</ul>]]></content><author><name>Willian Teophilo</name></author><category term="Agile" /><category term="Gestão de Projetos" /><summary type="html"><![CDATA[Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.]]></summary></entry><entry><title type="html">Matriz de GUT</title><link href="https://wteophilo.github.io/2022/02/17/matriz-de-gut.html" rel="alternate" type="text/html" title="Matriz de GUT" /><published>2022-02-17T18:59:00+00:00</published><updated>2022-02-17T18:59:00+00:00</updated><id>https://wteophilo.github.io/2022/02/17/matriz-de-gut</id><content type="html" xml:base="https://wteophilo.github.io/2022/02/17/matriz-de-gut.html"><![CDATA[<p>A matriz GUT é uma técnica útil de priorização de resolução de problemas, podemos usar esse método para definir a urgência de cada uma delas. A sigla GUT representa os três pilares usado para  priorizar uma atividade: a gravidade, urgência e tendência de cada atividade. Vamos passar por esses itens:</p>
+
+<h3 id="gravidade">Gravidade</h3>
+
+<p>O primeiro pilar que vamos abordar é o de gravidade esse pilar leva em consideração o <strong>impacto</strong> que a atividade poderá causar na organização caso não seja realizado o mais rapido possível. Então, ao analisar a gravidade da atividade é necessário se perguntar: quais efeitos a não realização dessa atividade poderá causar ao longo do tempo?</p>
+
+<h3 id="urgência">Urgência</h3>
+
+<p>O seguindo pilar é  a urgência, esse pilar leva em consideração o <strong>tempo</strong> para realizar a atividade. Quanto menor o tempo, maior a urgência. Então, ao analisar a urgência você precisa se perguntar: quanto tempo essa atividade pode esperar para ser realizado?</p>
+
+<h3 id="tendência">Tendência</h3>
+
+<p>O terceiro e último pilar é a tendência, esse pilar leva em consideração a <strong>probabilidade de crescimento do problema</strong> um bom exemplo para a tendência são problemas que podem nascer pequenos e ao passar de alguns dias se tornar algo muito grande. Então, ao analisar a tendência você precisa se perguntar: se eu não resolver esse problema hoje, com qual intensidade ele vai piorar?</p>
+
+<h3 id="matriz-gut">Matriz GUT</h3>
+
+<p>Agora que entendemos os pilares podemos organizar-los em uma matriz com valores de 1 à 5, aonde cada valor possui um peso. Segue a tabela abaixo:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nota</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Sem gravidade</td>
+      <td>Sem urgência</td>
+      <td>Sem tendência de piorar</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Pouco grave</td>
+      <td>Pouco urgente</td>
+      <td>Piorar em longo prazo</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Grave Urgente</td>
+      <td>Piorar em médio prazo</td>
+      <td>Irá piorar a médio prazo</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Muito grave</td>
+      <td>Muito urgente</td>
+      <td>Piorar em curto prazo</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Extremamente grave</td>
+      <td>Extremamente urgente</td>
+      <td>Piorar rapidamente</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="e-como-funciona">E como funciona?</h3>
+
+<p>Vamos imaginar algumas atividades que um time de suporte abriu para correção, são elas:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problema</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+      <th>Grau Criticidade(GxUxT)</th>
+      <th>Sequência de atividades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boletos sendo gerados sem dados</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Erro ao alterar senha do app</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Falha na autenticação ao validar codigo sms enviado</td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Junto com os times podemos atribuir os valores dos pilares de GUT. As pontuações são distribuídas em uma nota de 1 a 5 para cada pilar GUT.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problema</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+      <th>Grau Criticidade(GxUxT)</th>
+      <th>Sequência de atividades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boletos sendo gerados sem dados</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Erro ao alterar senha do app</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Falha na autenticação ao validar codigo sms enviado</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para obter o valor da coluna de Grau de Criticidade basta multiplicar os valores da linha:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problema</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+      <th>Grau Criticidade(GxUxT)</th>
+      <th>Sequência de atividades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boletos sendo gerados sem dados</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td>48</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Erro ao alterar senha do app</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>8</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Falha na autenticação ao validar codigo sms enviado</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>125</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Legal agora temos a criticidade de cada item. Agora basta atribuir o valor na coluna de sequência quanto maior a criticidade melhor colocado será na tabela</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problema</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+      <th>Grau Criticidade(GxUxT)</th>
+      <th>Sequência de atividades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Boletos sendo gerados sem dados</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td>48</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Erro ao alterar senha do app</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Falha na autenticação ao validar codigo sms enviado</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>125</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="Agile" /><category term="Gestão de Projetos" /><summary type="html"><![CDATA[A matriz GUT é uma técnica útil de priorização de resolução de problemas, podemos usar esse método para definir a urgência de cada uma delas. A sigla GUT representa os três pilares usado para priorizar uma atividade: a gravidade, urgência e tendência de cada atividade. Vamos passar por esses itens:]]></summary></entry><entry><title type="html">Docker</title><link href="https://wteophilo.github.io/2020/07/02/docker.html" rel="alternate" type="text/html" title="Docker" /><published>2020-07-02T20:09:00+00:00</published><updated>2020-07-02T20:09:00+00:00</updated><id>https://wteophilo.github.io/2020/07/02/docker</id><content type="html" xml:base="https://wteophilo.github.io/2020/07/02/docker.html"><![CDATA[<p>Saber linguagens de programação e paradigmas é muito importante, mas no dia a dia muitas vezes temos que usar alguns serviços de infra que não damos muita importância em aprender. Então vamos começar falando pelo Docker. Para instalar o docker basta seguir este <a href="https://docs.docker.com/get-docker/">link</a>.</p>
 
 <p>Neste post vamos falar sobre:</p>
 
@@ -872,23 +1101,4 @@ Calma a ideia não é burlar nossos testes mas as vezes estamos focados em uma f
   1) Calculator#sum with negative and positive numbers
      # Temporarily skipped with xit</span></code></pre></figure>
 
-<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Para pularmos um item de nossos testes é necessário apenas adicionarmos o comando xit ao invés do it na descrição do teste...]]></summary></entry><entry><title type="html">RSpec-Executando apenas um teste</title><link href="https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste.html" rel="alternate" type="text/html" title="RSpec-Executando apenas um teste" /><published>2018-04-12T00:03:00+00:00</published><updated>2018-04-12T00:03:00+00:00</updated><id>https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste</id><content type="html" xml:base="https://wteophilo.github.io/2018/04/12/executando-apenas-um-teste.html"><![CDATA[<p>Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa.</p>
-
-<h3 id="rspec-caminho">RSpec caminho</h3>
-<p>Digamos que estamos fazendo um projeto em ruby, separamos nossos testes por pasta e queremos executar apenas um arquivo, então basta executar o comando:</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/pasta/arquivo_spec.rb</span></code></pre></figure>
-
-<p>Assim todos os teste dentro do arquivo serão executados.</p>
-
-<h3 id="executando-teste-pelo-título">Executando teste pelo título</h3>
-<p>As vezes queremos executar apenas um teste dentro do nosso arquivo de teste, podemos fazer isso usando o sufixo -e “título”, por exemplo:</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb</span><span class="w"> </span><span class="nt">-e</span><span class="w"> </span><span class="s2">"título"</span></code></pre></figure>
-
-<h3 id="executando-teste-pela-linha">Executando teste pela linha</h3>
-<p>Podemos também executar um teste por uma linha do arquivo,vamos utilizar o mesmo conceito do item anterior mas ao invés de buscar o título apenas utilizamos a linha que queremos executar.</p>
-
-<figure class="highlight"><pre><code class="language-powershell" data-lang="powershell"><span class="n">rspec</span><span class="w"> </span><span class="nx">/nome_classe/arquivo_spec.rb:linha</span></code></pre></figure>
-
-<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Muitas vezes queremos rodar apenas um teste em nosso projeto e não toda nossa switch, para isso vamos ver alguns comandos que possam nos ajudar nessa tarefa...]]></summary></entry></feed>
+<p>Por enquanto é só isso, nos vemos na próxima.</p>]]></content><author><name>Willian Teophilo</name></author><category term="TDD" /><category term="RSpec" /><category term="Ruby on Rails" /><summary type="html"><![CDATA[Para pularmos um item de nossos testes é necessário apenas adicionarmos o comando xit ao invés do it na descrição do teste...]]></summary></entry></feed>
