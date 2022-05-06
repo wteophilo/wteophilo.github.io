@@ -1,0 +1,133 @@
+I"(<p>A matriz GUT é uma técnica útil de priorização de atividades, podemos usar esse método quantitativo para definir a urgência de cada uma delas. A sigla GUT representa os três pilares levados em conta ao priorizar uma atividade: a gravidade, urgência e tendência de cada um deles.</p>
+
+<h3 id="gravidade--mede-o-impacto">Gravidade – mede o impacto</h3>
+
+<p>O critério de gravidade leva em consideração o impacto que o projeto poderá causar na organização caso não seja realizado logo. Então, ao analisar a gravidade você precisa se perguntar: quais efeitos a não realização desse projeto poderá causar ao longo do tempo?</p>
+
+<h3 id="urgência--mede-o-tempo">Urgência – mede o tempo</h3>
+
+<p>O critério de urgência leva em consideração o prazo disponível para realizar o projeto. Quanto menor o prazo, maior a urgência (e vice-versa). Então, ao analisar a urgência você precisa se perguntar: quanto tempo esse projeto pode esperar para ser realizado?
+No caso apresentado anteriormente, o projeto para contenção de vazamentos possui um prazo de 3 dias para ser feito, enquanto que o projeto de lançamento de novo produto possui um prazo de 30 dias. Logo, o projeto para contenção de vazamentos é mais urgente do que o projeto de lançamento de novo produto.</p>
+
+<h3 id="tendência--mede-a-probabilidade-de-crescimento-do-problema">Tendência – mede a probabilidade de crescimento do problema</h3>
+
+<p>O critério de tendência leva em consideração a predisposição de um problema (que seria resolvido com a execução de um projeto) piorar com o tempo. Esse critério existe porque um problema pode nascer pequenininho e, com o passar dos dias, se tornar uma bola de neve.
+Então, ao analisar a tendência você precisa se perguntar: se eu não resolver esse problema hoje, com qual intensidade ele vai piorar? No exemplo citado anteriormente, caso o vazamento do restaurante não fosse contido em até 3 dias, ele rapidamente se transformaria em uma infiltração, agravando a situação do projeto.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>xablau</th>
+      <th> </th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="matriz-gut">Matriz GUT</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nota</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Sem gravidade</td>
+      <td>Sem urgência</td>
+      <td>Sem tendência de piorar</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Pouco grave</td>
+      <td>Pouco urgente</td>
+      <td>Piorar em longo prazo</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Grave	Urgente</td>
+      <td>Piorar em médio prazo</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Muito grave</td>
+      <td>Muito urgente</td>
+      <td>Piorar em curto prazo</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Extremamente grave</td>
+      <td>Extremamente urgente</td>
+      <td>Piorar rapidamente</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="e-como-funciona">E como funciona?</h3>
+<p>Você deve atribuir pontuações para cada atividade, seguindo os pilares GUT. Pense na gravidade daquela atividade, o quanto ela é urgente para você e qual é a tendência de ela precisar de mais atenção no futuro. As pontuações são distribuídas em uma nota de 1 a 5 para cada pilar GUT.</p>
+
+<h3 id="exemplos-gut">Exemplos GUT</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Problema</th>
+      <th>Gravidade</th>
+      <th>Urgência</th>
+      <th>Tendência</th>
+      <th>Grau Criticidade(GxUxT)</th>
+      <th>Sequência de atividades</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dados obrigatórios para gerar o boleto</td>
+      <td>4</td>
+      <td>4</td>
+      <td>3</td>
+      <td>48</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>Erro ao alterar senha do app</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>8</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>Falha ao validar codigo sms enviado</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>125</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET
