@@ -3,6 +3,7 @@ layout: post
 title: Template Histórias de Usuário
 date: 2022-03-30 19:42 +0000
 img: template-historias-usuario/pbb.png
+tags: [Agile, Gestão de Projetos]
 ---
 
 Começamos um nova feature do produto e o time estava animado para iniciar essa feature, após algumas semanas as entregas estavam sendo feitas, porem algo estava me chamando a atenção. A cada entrega dessa feature mais e mais bugs estavam sendo abertos durante a etapada de desenvolvimento.
