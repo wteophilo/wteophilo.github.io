@@ -42,3 +42,6 @@ Run a shell inside the container:
 $ make shell
 ```
 
+
+meu teste
+
