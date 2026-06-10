@@ -30,6 +30,8 @@
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    height: auto;
+    min-height: auto;
     padding: 10px;
     background-color: #ffffff;
     box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
@@ -49,7 +51,7 @@
       border-radius: 100%;
       margin-bottom: 10px;
     }
-}
+  }
 
   .content-box {
     padding: 20px 10px;
@@ -59,9 +61,14 @@
     align-items: stretch;
   }
 
-.contact-title, .copyright {
-  display: none;
-}
+  .post {
+    width: 100%;
+    margin: 0 0 20px;
+  }
+
+  .contact-title, .copyright {
+    display: none;
+  }
 
 }
 

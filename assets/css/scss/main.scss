@@ -49,18 +49,21 @@ pre {
 }
 
 table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border: 1px solid #aaa;
   background-color: #eee;
-  width: 100%;
   text-align: left;
   border-collapse: collapse;
 }
 table td, table.blueTable th {
   border: 1px solid #aaa;
-  padding: 3px 2px;
+  padding: 6px 12px; // improved padding for readability
 }
 table tbody td {
-  font-size: 13px;
+  font-size: 14px; // slightly larger for mobile readability
 }
 table tr:nth-child(even) {
   background: #adbecc;
@@ -75,6 +78,7 @@ table thead th {
   font-weight: bold;
   color: #fff;
   border-left: 1px solid #d0e4f5;
+  padding: 8px 12px;
 }
 table thead th:first-child {
   border-left: none;
@@ -92,9 +96,52 @@ table tfoot td {
   font-size: 14px;
 }
 
+// Inline code wrap to prevent overflow
+code.highlighter-rouge {
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+// Block code container overflow handling
+div.highlighter-rouge, figure.highlight {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Styled responsive pagination
+.pagination {
+  width: 100%;
+  margin: 30px 0;
+  
+  ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    flex-wrap: wrap; // wraps nicely on extra narrow screens
+    
+    p {
+      margin: 5px 15px;
+      display: inline-block;
+    }
+  }
+  
+  .page-number {
+    font-size: 14px;
+    color: $body-color;
+    font-weight: 500;
+  }
+}
+
 .wrapper {
   max-width: 1250px;
   position: relative;
+  margin: 0 auto; // center wrapper on larger displays
 }
 
 .post, .article-page {
