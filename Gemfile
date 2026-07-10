@@ -10,8 +10,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem 'jekyll', '~> 4.2', '>= 4.2.2'
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem 'minima', '~> 2.5', '>= 2.5.1'
+# Theme for the blog
+gem 'jekyll-bear-theme', '~> 0.3.1'
 
 gem 'kramdown-parser-gfm', '~> 1.1'
 
