@@ -35,8 +35,10 @@
 yarn-debug.log*
 .yarn-integrity
 
-/_site/Gemfile
-/_site/Gemfile.lock
-/_site/docker-compose
-/_site/Makefile
+# Ignore Jekyll build output and cache
+/_site/
+/.sass-cache/
+/.jekyll-cache/
+/.jekyll-metadata
+
 
