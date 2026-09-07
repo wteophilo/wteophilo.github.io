@@ -1,19 +1,22 @@
 ---
-layout: main
+layout: page
+title: Quem sou eu?
 ---
-{% for post in paginator.posts %}
-<article class="post">
-  {% if post.img %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: post_url | append : post.img}})" href="{{post.url | prepend: post_url}}"></a>
-  {% else %}
-  {% endif %}
-  <div class="post-content">
-    <h2 class="post-title"><a href="{{post.url | prepend: post_url}}">{{post.title}}</a></h2>
-    <p>{{ post.content | strip_html | truncatewords: 15 }}</p>
-    <span class="post-date">{{post.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
-    <span class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minute read" }}{% endunless %}</span>
-  </div>
-</article>
-{% endfor %}
 
-{% include pagination.html %}
+<p>
+    Olá eu sou o Willian! Trabalho com TI desde 2011 e nesse tempo
+    trabalhei com desenvolvimento de software, passando por diversas tecnologias(Java, Visual Basic 6, OpenGL, Ruby, JS,
+    React)
+    e arquiteturas. Recentemente tenho trabalhado com agilidade e gestão de pessoas
+</p>
+
+
+<p>
+    Entre em contato comigo
+</p>
+
+<ul>
+    <li><a href="{{ site.social-linkedin }}">LinkedIn</a> </li>
+    <li><a href="{{ site.social-github }}">GitHub</a></li>
+    <li><a href="mailto:{{ site.social-email }}">Email</a> </li>
+</ul>

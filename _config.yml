@@ -1,6 +1,7 @@
 title: Willian Teophilo
 description: Willian Teophilo
 url: "https://wteophilo.github.io"
+theme: jekyll-bear-theme
 # Author Settings
 author: Willian Teophilo
 # add your photo
@@ -10,9 +11,9 @@ about-author: Sempre em busca de algo novo para aprender.
 # add your Twitter handle
 social-twitter: wilteophilo 
 # add your github handle
-social-github: wteophilo
+social-github: https://github.com/wteophilo
 # add your linkedin handle
-social-linkedin: wteophilo
+social-linkedin: https://www.linkedin.com/in/wteophilo/
 social-email: wteophilo@gmail.com
 
 # Disqus
@@ -53,7 +54,21 @@ timezone            : null
 
 quiet               : false
 verbose             : false
-defaults            : []
+collections:
+  my_tags:
+    output: true
+    permalink: /tagged/:slug/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: my_tags
+    values:
+      layout: tagged
+
+Blog: "/blog/"
+
 
 liquid:
   error_mode        : warn

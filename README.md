@@ -1,6 +1,6 @@
 # Meu Blog
 #### url: https://wteophilo.github.io
-#### theme: [Flexible-Jekyll](https://artemsheludko.github.io/flexible-jekyll/)
+#### theme: [jekyllBear](https://github.com/knhash/jekyllBear)
 
 ## Dependencies
 This blog depends on
